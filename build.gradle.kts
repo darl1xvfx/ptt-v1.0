@@ -108,7 +108,7 @@ tasks {
   jar {
     val gitSuffix = if(gitBranch.isNotEmpty() && gitCommitHash.isNotEmpty()) "/$gitBranch+${gitCommitHash.take(8)}" else ""
 
-    archiveBaseName.set("PTT")
+    archiveBaseName.set("ptt-v1.0")
     archiveVersion.set("${project.version}")
 
     manifest {
@@ -123,7 +123,7 @@ tasks {
   shadowJar {
     val gitSuffix = if(gitBranch.isNotEmpty() && gitCommitHash.isNotEmpty()) "/$gitBranch+${gitCommitHash.take(8)}" else ""
 
-    archiveBaseName.set("PTT")
+    archiveBaseName.set("")
     archiveVersion.set("${project.version}")
 
     manifest {

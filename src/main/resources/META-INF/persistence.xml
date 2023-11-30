@@ -33,7 +33,6 @@
 
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
-      <!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect" /> -->
 
       <property name="hibernate.show_sql" value="false" />
       <property name="hibernate.format_sql" value="false" />
@@ -47,14 +46,11 @@
       <property name="hibernate.connection.provider_class" value="org.hibernate.hikaricp.internal.HikariCPConnectionProvider" />
 
       <property name="hibernate.hikari.dataSourceClassName" value="org.h2.jdbcx.JdbcDataSource" />
-      <!-- <property name="hibernate.hikari.dataSourceClassName" value="org.mariadb.jdbc.MariaDbDataSource" /> -->
 
-      <!-- <property name="hibernate.hikari.dataSource.url" value="jdbc:h2:mem:PTT" /> -->
-      <property name="hibernate.hikari.dataSource.url" value="jdbc:h2:file:./PTT" />
-      <!-- <property name="hibernate.hikari.dataSource.url" value="jdbc:mariadb://localhost:3306/PTT" /> -->
+      <property name="hibernate.hikari.dataSource.url" value="jdbc:h2:file:./ptt-v1.0" />
 
-      <property name="hibernate.hikari.username" value="PTT" />
-      <property name="hibernate.hikari.password" value="PTT" />
+      <property name="hibernate.hikari.username" value="username" />
+      <property name="hibernate.hikari.password" value="password" />
 
       <property name="hibernate.hikari.minimumIdle" value="20" />
       <property name="hibernate.hikari.maximumPoolSize" value="100" />
