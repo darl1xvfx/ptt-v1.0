@@ -118,7 +118,7 @@ class SocketServer : ISocketServer {
   }
 
   override suspend fun stop() {
-    // PTT(Dr1llfix): Hack to prevent ConcurrentModificationException
+    // ptt-(Drlxzar): Hack to prevent ConcurrentModificationException
     players.toList().forEach { player -> player.deactivate() }
     acceptJob?.cancel()
     withContext(Dispatchers.IO) { server.close() }

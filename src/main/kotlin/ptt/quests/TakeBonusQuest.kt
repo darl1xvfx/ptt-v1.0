@@ -33,7 +33,7 @@ class TakeBonusQuest(
   new, completed,
   rewards
 ) {
-  // PTT(Dr1llfix): Localize bonus name
+  // ptt-(Drlxzar): Localize bonus name
   override val description: LocalizedString
     get() = mapOf(
       SocketLocale.English to "Take ${bonus.name}",

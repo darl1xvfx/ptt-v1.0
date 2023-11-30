@@ -268,7 +268,7 @@ class BattleTank(
   }
 
   fun updateSpawnPosition() {
-    // PTT(Dr1llfix): Special handling for CP: https://web.archive.org/web/20160310101712/http://ru.tankiwiki.com/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C_%D1%82%D0%BE%D1%87%D0%B5%D0%BA
+    // ptt-(Drlxzar): Special handling for CP: https://web.archive.org/web/20160310101712/http://ru.tankiwiki.com/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C_%D1%82%D0%BE%D1%87%D0%B5%D0%BA
     val point = battle.map.spawnPoints
       .filter { point -> point.mode == null || point.mode == battle.modeHandler.mode }
       .filter { point -> point.team == null || point.team == player.team }
@@ -298,7 +298,7 @@ class BattleTank(
   suspend fun spawn() {
     state = TankState.SemiActive
 
-    // PTT(Dr1llfix): Add spawn event?
+    // ptt-(Drlxzar): Add spawn event?
     if(player.equipmentChanged) {
       player.equipmentChanged = false
       player.changeEquipment()
@@ -381,7 +381,7 @@ fun BattleTank.getInitTank() = InitTankData(
   impact_force = weapon.item.modification.physics.impactForce,
 
   // Weapon visual
-  sfxData = (weapon.item.modification.visual ?: weapon.item.marketItem.modifications[0]!!.visual)!!.toJson() // PTT(Dr1llfix)
+  sfxData = (weapon.item.modification.visual ?: weapon.item.marketItem.modifications[0]!!.visual)!!.toJson() // ptt-(Drlxzar)
 )
 
 fun BattleTank.getSpawnTank() = SpawnTankData(

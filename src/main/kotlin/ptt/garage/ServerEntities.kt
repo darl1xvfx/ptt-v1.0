@@ -277,12 +277,12 @@ class ServerGarageItemWeaponModification(
   price: Int,
   properties: List<ServerGarageItemProperty>,
 
-  @Json val damage: WeaponDamage = WeaponDamage( // PTT(Dr1llfix)
+  @Json val damage: WeaponDamage = WeaponDamage( // ptt-(Drlxzar)
     discrete = WeaponDamage.Discrete(),
     fixed = WeaponDamage.Fixed(21.12)
   ),
 
-  override val physics: WeaponPhysics = WeaponPhysics( // PTT(Dr1llfix)
+  override val physics: WeaponPhysics = WeaponPhysics( // ptt-(Drlxzar)
     turretRotationSpeed = 2.094395,
     turretTurnAcceleration = 2.094395,
     impactForce = 3.3,
@@ -299,7 +299,7 @@ class ServerGarageItemHullModification(
   price: Int,
   properties: List<ServerGarageItemProperty>,
 
-  override val physics: HullPhysics = HullPhysics( // PTT(Dr1llfix)
+  override val physics: HullPhysics = HullPhysics( // ptt-(Drlxzar)
     speed = 10.8,
     turnSpeed = 1.6388642,
     acceleration = 9.4,
@@ -394,7 +394,7 @@ class ServerGarageUserItemWeapon(
     get() = marketRegistry.get(id.itemName).cast()
 
   override val modification: ServerGarageItemWeaponModification
-    get() = marketItem.modifications[modificationIndex]!! // PTT(Dr1llfix)
+    get() = marketItem.modifications[modificationIndex]!! // ptt-(Drlxzar)
 }
 
 @Entity
@@ -409,7 +409,7 @@ class ServerGarageUserItemHull(
     get() = marketRegistry.get(id.itemName).cast()
 
   override val modification: ServerGarageItemHullModification
-    get() = marketItem.modifications[modificationIndex]!! // PTT(Dr1llfix)
+    get() = marketItem.modifications[modificationIndex]!! // ptt-(Drlxzar)
 }
 
 @Entity

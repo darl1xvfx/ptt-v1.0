@@ -47,13 +47,13 @@ class CaptureTheFlagModeHandler(battle: Battle) : TeamModeHandler(battle), KoinC
   private val flagOffsetZ = 80
 
   suspend fun captureFlag(flagTeam: BattleTeam, carrier: BattleTank) {
-    flags[flagTeam] = flags[flagTeam]!!.asCarrying(carrier) // PTT(Dr1llfix): Non-null assertion
+    flags[flagTeam] = flags[flagTeam]!!.asCarrying(carrier) // ptt-(Drlxzar): Non-null assertion
 
     Command(CommandName.FlagCaptured, carrier.id, flagTeam.key).sendTo(battle)
   }
 
   suspend fun dropFlag(flagTeam: BattleTeam, carrier: BattleTank, position: Vector3) {
-    flags[flagTeam] = flags[flagTeam]!!.asDropped(position) // PTT(Dr1llfix): Non-null assertion
+    flags[flagTeam] = flags[flagTeam]!!.asDropped(position) // ptt-(Drlxzar): Non-null assertion
     battle.coroutineScope.launchDelayed(20.seconds) {
       val flagState = flags[flagTeam]
       if (flagState is FlagDroppedState && flagState.position == position) {
@@ -73,7 +73,7 @@ class CaptureTheFlagModeHandler(battle: Battle) : TeamModeHandler(battle), KoinC
   }
 
   suspend fun deliverFlag(enemyFlagTeam: BattleTeam, flagTeam: BattleTeam, carrier: BattleTank) {
-    flags[enemyFlagTeam] = flags[enemyFlagTeam]!!.asOnPedestal() // PTT(Dr1llfix): Non-null assertion
+    flags[enemyFlagTeam] = flags[enemyFlagTeam]!!.asOnPedestal() // ptt-(Drlxzar): Non-null assertion
     teamScores.merge(flagTeam, 1, Int::plus)
 
     Command(CommandName.FlagDelivered, flagTeam.key, carrier.id).sendTo(battle)
@@ -122,7 +122,7 @@ class CaptureTheFlagModeHandler(battle: Battle) : TeamModeHandler(battle), KoinC
   }
 
   suspend fun returnFlag(flagTeam: BattleTeam, carrier: BattleTank?) {
-    flags[flagTeam] = flags[flagTeam]!!.asOnPedestal() // PTT(Dr1llfix): Non-null assertion
+    flags[flagTeam] = flags[flagTeam]!!.asOnPedestal() // ptt-(Drlxzar): Non-null assertion
 
     Command(
       CommandName.FlagReturned,

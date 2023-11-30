@@ -26,7 +26,7 @@ class BattleProperty<T : Any> private constructor(val key: String, val type: KCl
 
     val privateBattle = BattleProperty("privateBattle", Boolean::class, false)
 
-    // PTT(Dr1llfix): Use UserRank?
+    // ptt-(Drlxzar): Use UserRank?
     val MinRank = BattleProperty("min_rank", Int::class, 1)
     val MaxRank = BattleProperty("min_rank", Int::class, 31)
 
@@ -34,7 +34,7 @@ class BattleProperty<T : Any> private constructor(val key: String, val type: KCl
     val WithoutCrystals = BattleProperty("withoutCrystals", Boolean::class, false)
     val WithoutSupplies = BattleProperty("withoutSupplies", Boolean::class, false)
 
-    // PTT(Dr1llfix): BattleProperty does not allow null values
+    // ptt-(Drlxzar): BattleProperty does not allow null values
     val ScoreLimit = BattleProperty("score_limit", Int::class, 0)
     val TimeLimit = BattleProperty("time_limit", Int::class, 0)
 

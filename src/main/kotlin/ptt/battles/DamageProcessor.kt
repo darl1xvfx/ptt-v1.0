@@ -84,7 +84,7 @@ class DamageProcessor(
         false
     }
     if (source == target && battle.properties[BattleProperty.SelfDamageEnabled]) dealDamage =
-      true // PTT(Dr1llfix): Check weapon
+      true // ptt-(Drlxzar): Check weapon
     if (!dealDamage) return
 
     if (!ignoreSourceEffects) {

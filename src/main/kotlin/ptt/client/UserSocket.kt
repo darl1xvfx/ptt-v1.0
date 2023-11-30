@@ -192,7 +192,7 @@ class UserSocket(
   val dependencies: MutableMap<Int, ClientDependency> = mutableMapOf()
   private var lastDependencyId = 1
 
-  // PTT(Dr1llfix): Rename
+  // ptt-(Drlxzar): Rename
   suspend fun loadDependency(resources: String): ClientDependency {
     val dependency = ClientDependency(
       id = lastDependencyId++,

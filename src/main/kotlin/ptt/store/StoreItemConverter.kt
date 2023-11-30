@@ -24,8 +24,8 @@ class StoreItemConverter : IStoreItemConverter {
       category_id = item.category.id,
       item_id = item.id,
       properties = StoreItemProperties(
-        price = item.price[StoreCurrency.JPY]!!, // PTT(Dr1llfix)
-        currency = StoreCurrency.JPY.displayName, // PTT(Dr1llfix)
+        price = item.price[StoreCurrency.JPY]!!, // ptt-(Drlxzar)
+        currency = StoreCurrency.JPY.displayName, // ptt-(Drlxzar)
 
         crystals = item.crystals?.base,
         bonusCrystals = item.crystals?.bonus,

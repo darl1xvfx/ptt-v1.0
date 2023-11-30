@@ -9,7 +9,7 @@ interface IQuestConverter {
 
 class QuestConverter : IQuestConverter, KoinComponent {
   override fun toClientDailyQuest(quest: ServerDailyQuest, locale: SocketLocale): DailyQuest {
-    // PTT(Dr1llfix): Quest information
+    // ptt-(Drlxzar): Quest information
     return DailyQuest(
       canSkipForFree = false,
       description = quest.description.get(locale),

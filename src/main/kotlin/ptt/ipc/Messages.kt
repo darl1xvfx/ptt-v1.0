@@ -6,7 +6,7 @@ abstract class ProcessMessage {
   override fun toString() = "${this::class.simpleName}"
 }
 
-// PTT(Dr1llfix): Automatic Response messages
+// ptt-(Drlxzar): Automatic Response messages
 
 class ServerStartingMessage : ProcessMessage()
 class ServerStartedMessage : ProcessMessage()

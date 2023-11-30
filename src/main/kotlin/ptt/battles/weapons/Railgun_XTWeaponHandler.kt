@@ -27,7 +27,7 @@ class Railgun_XTWeaponHandler(
     val battle = player.battle
 
     // Preserve order of targets
-    // PTT(Dr1llfix): Replace with a more efficient algorithm
+    // ptt-(Drlxzar): Replace with a more efficient algorithm
     val targetTanks = target.targets
       .mapNotNull { username -> battle.players.singleOrNull { player -> player.user.username == username } }
       .mapNotNull { player -> player.tank }

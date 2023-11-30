@@ -433,7 +433,7 @@ class Server : KoinComponent {
         }
 
         handler {
-          val amount: Int = arguments.get<String>("amount").toInt() // PTT(Dr1llfix)
+          val amount: Int = arguments.get<String>("amount").toInt() // ptt-(Drlxzar)
           val username: String? = arguments.getOrNull("user")
 
           val player = if (username != null) socketServer.players.find { it.user?.username == username } else socket
@@ -674,7 +674,7 @@ class Server : KoinComponent {
         }
 
         handler {
-          val amount: Int = arguments.get<String>("amount").toInt() // PTT(Dr1llfix)
+          val amount: Int = arguments.get<String>("amount").toInt() // ptt-(Drlxzar)
           val battleId: String? = arguments.getOrNull("battle")
 
           val battle =
@@ -951,7 +951,7 @@ class Server : KoinComponent {
           }
 
           handler {
-            val amount: Int = arguments.get<String>("amount").toInt() // PTT(Dr1llfix)
+            val amount: Int = arguments.get<String>("amount").toInt() // ptt-(Drlxzar)
             val username: String? = arguments.getOrNull("user")
 
             val player = if (username != null) socketServer.players.find { it.user?.username == username } else socket
@@ -1191,7 +1191,7 @@ class Server : KoinComponent {
           }
 
           handler {
-            val amount: Int = arguments.get<String>("amount").toInt() // PTT(Dr1llfix)
+            val amount: Int = arguments.get<String>("amount").toInt() // ptt-(Drlxzar)
             val battleId: String? = arguments.getOrNull("battle")
 
             val battle =

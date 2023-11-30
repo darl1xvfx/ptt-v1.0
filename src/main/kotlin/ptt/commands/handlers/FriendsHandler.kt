@@ -58,13 +58,13 @@ class FriendsHandler : ICommandHandler, KoinComponent {
 
   @CommandHandler(CommandName.FriendRemoveNewAccepted)
   suspend fun friendRemoveNewAccepted(socket: UserSocket, username: String) {
-    // PTT(Dr1llfix): Save in DB?
+    // ptt-(Drlxzar): Save in DB?
     Command(CommandName.ClientFriendRemoveNewAccepted, username).send(socket)
   }
 
   @CommandHandler(CommandName.FriendRemoveNewIncoming)
   suspend fun friendRemoveNewIncoming(socket: UserSocket, username: String) {
-    // PTT(Dr1llfix): Save in DB?
+    // ptt-(Drlxzar): Save in DB?
     Command(CommandName.ClientFriendRemoveNewIncoming, username).send(socket)
   }
 }

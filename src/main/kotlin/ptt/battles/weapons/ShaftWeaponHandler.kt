@@ -19,7 +19,7 @@ class ShaftWeaponHandler(
   suspend fun startEnergyDrain(time: Int) {
     val tank = player.tank ?: throw Exception("No Tank")
 
-    // PTT(Dr1llfix)
+    // ptt-(Drlxzar)
   }
 
   suspend fun enterSnipingMode() {

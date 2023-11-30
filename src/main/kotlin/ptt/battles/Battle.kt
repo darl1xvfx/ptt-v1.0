@@ -234,7 +234,7 @@ class Battle(
   }
 
   fun toBattleData(): BattleData {
-    // PTT(Dr1llfix)
+    // ptt-(Drlxzar)
     return when(modeHandler) {
       is DeathmatchModeHandler -> DmBattleData(
         battleId = id,

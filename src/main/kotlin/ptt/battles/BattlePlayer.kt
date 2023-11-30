@@ -378,7 +378,7 @@ class BattlePlayer(
               Command(CommandName.ClientActivateTank, tank.id).send(socket)
             }
 
-            // PTT(Dr1llfix)
+            // ptt-(Drlxzar)
             TankState.Dead       -> Unit
             TankState.Respawn    -> Unit
             TankState.SemiActive -> Unit

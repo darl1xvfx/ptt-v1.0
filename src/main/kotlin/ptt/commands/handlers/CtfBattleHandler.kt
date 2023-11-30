@@ -31,7 +31,7 @@ class CtfBattleHandler : ICommandHandler, KoinComponent {
     if(handler !is CaptureTheFlagModeHandler) throw IllegalStateException("Battle mode handler must be ${CaptureTheFlagModeHandler::class.simpleName}")
 
     val flagTeam = BattleTeam.get(rawFlagTeam) ?: throw Exception("Invalid flag team: $rawFlagTeam")
-    val flag = handler.flags[flagTeam]!! // PTT(Dr1llfix): Non-null assertion
+    val flag = handler.flags[flagTeam]!! // ptt-(Drlxzar): Non-null assertion
 
     logger.debug { "Triggered flag ${flag.team}, state: ${flag::class.simpleName}" }
     if(player.team != flag.team && flag !is FlagCarryingState) {

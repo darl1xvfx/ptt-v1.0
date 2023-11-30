@@ -1,6 +1,6 @@
 package ptt.extensions
 
-// PTT(Dr1llfix): Find a way to not specify the type of the Iterable<T> in calls
+// ptt-(Drlxzar): Find a way to not specify the type of the Iterable<T> in calls
 inline fun <T : Any, reified I : T> Iterable<T>.singleOf(predicate: (T) -> Boolean = { true }): I =
   single { it is I && predicate(it) }.cast()
 

@@ -74,7 +74,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
 
   @CommandHandler(CommandName.ShowDamageEnabled)
   suspend fun showDamageEnabled(socket: UserSocket, id: String) {
-    // PTT(Dr1llfix)
+    // ptt-(Drlxzar)
   }
 
   @OptIn(ExperimentalTime::class)
@@ -273,7 +273,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
       Command(
         CommandName.InitShotsData,
         resourceManager.get("shots-data.json").readText()
-      ).send(socket) // PTT(Dr1llfix): initBattleLoad?
+      ).send(socket) // ptt-(Drlxzar): initBattleLoad?
 
       player.initLocal()
     }
@@ -401,7 +401,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
       BattleMode.ControlPoints  -> ControlPointsModeHandler.builder()
     }
 
-    // PTT(Dr1llfix): Advanced map configuration
+    // ptt-(Drlxzar): Advanced map configuration
     val battle = Battle(
       coroutineContext,
       id = Battle.generateId(),
@@ -475,13 +475,13 @@ class LobbyHandler : ICommandHandler, KoinComponent {
 
     val subscription = userSubscriptionManager.getOrAdd(targetUser)
 
-    // PTT(Dr1llfix): Use StateFlow
+    // ptt-(Drlxzar): Use StateFlow
     Command(
       CommandName.NotifyUserOnline,
       NotifyUserOnlineData(username = targetUser.username, online = target != null).toJson()
     ).send(socket)
 
-    // PTT(Dr1llfix): Save Job
+    // ptt-(Drlxzar): Save Job
     socket.coroutineScope.launch {
       subscription.rank.collect { rank ->
         Command(
@@ -491,7 +491,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
       }
     }
 
-    // PTT(Dr1llfix): Maybe use StateFlow
+    // ptt-(Drlxzar): Maybe use StateFlow
     target?.battlePlayer?.let { player ->
       val battle = player.battle
 
@@ -510,7 +510,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
       ).send(socket)
     }
 
-    // PTT(Dr1llfix): Use StateFlow
+    // ptt-(Drlxzar): Use StateFlow
     Command(
       CommandName.NotifyUserPremium,
       NotifyUserPremiumData(username = targetUser.username, premiumTimeLeftInSeconds = -1).toJson()
@@ -519,6 +519,6 @@ class LobbyHandler : ICommandHandler, KoinComponent {
 
   @CommandHandler(CommandName.UnsubscribeUserUpdate)
   suspend fun unsubscribeUserUpdate(socket: UserSocket, username: String) {
-    // PTT(Dr1llfix): Cancel saved jobs
+    // ptt-(Drlxzar): Cancel saved jobs
   }
 }

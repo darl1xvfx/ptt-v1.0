@@ -28,7 +28,7 @@ class AuthHandler : ICommandHandler, KoinComponent {
   suspend fun login(socket: UserSocket, captcha: String, remember: Boolean = true, username: String, password: String) {
     val invite = socket.invite
     if(inviteService.enabled) {
-      // PTT(Dr1llfix): AuthDenied shows unnecessary "Password incorrect" modal
+      // ptt-(Drlxzar): AuthDenied shows unnecessary "Password incorrect" modal
       if(invite == null) {
         Command(CommandName.ShowAlert, AuthHandlerConstants.InviteRequired).send(socket)
         Command(CommandName.AuthDenied).send(socket)
@@ -74,7 +74,7 @@ class AuthHandler : ICommandHandler, KoinComponent {
       Command(CommandName.AuthDenied).send(socket)
       return
 
-      // PTT(Dr1llfix): Check username
+      // ptt-(Drlxzar): Check username
     }
 
     logger.debug { "User login by hash: $hash" }
@@ -99,7 +99,7 @@ class AuthHandler : ICommandHandler, KoinComponent {
   @CommandHandler(CommandName.CheckUsernameRegistration)
   suspend fun checkUsernameRegistration(socket: UserSocket, username: String) {
     if(userRepository.getUser(username) != null) {
-      // PTT(Dr1llfix): Use "nickname_exist"
+      // ptt-(Drlxzar): Use "nickname_exist"
       Command(CommandName.CheckUsernameRegistrationClient, "incorrect").send(socket)
       return
     }
@@ -112,7 +112,7 @@ class AuthHandler : ICommandHandler, KoinComponent {
   suspend fun registerUser(socket: UserSocket, username: String, password: String, captcha: String) {
     val invite = socket.invite
     if(inviteService.enabled) {
-      // PTT(Dr1llfix): "Reigster" button is not disabled after error
+      // ptt-(Drlxzar): "Reigster" button is not disabled after error
       if(invite == null) {
         Command(CommandName.ShowAlert, AuthHandlerConstants.InviteRequired).send(socket)
         return

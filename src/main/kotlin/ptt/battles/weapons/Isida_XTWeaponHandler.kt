@@ -51,7 +51,7 @@ class Isida_XTWeaponHandler(
     // Генерация случайного урона от 127 до 372
     val randomDamage = random.nextInt(127, 372).coerceAtMost(372).toDouble()
 
-    // PTT(Dr1llfix): Damage timing is not checked on server, exploitation is possible
+    // ptt-(Drlxzar): Damage timing is not checked on server, exploitation is possible
     if(fireStarted) {
       when(fireMode) {
         IsidaFireMode.Damage -> {

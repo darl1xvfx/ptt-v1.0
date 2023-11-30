@@ -35,7 +35,7 @@ class QuestsHandler : ICommandHandler, KoinComponent {
 
   @CommandHandler(CommandName.SkipQuestFree)
   suspend fun skipQuestFree(socket: UserSocket, questId: Int) {
-    // PTT(Dr1llfix)
+    // ptt-(Drlxzar)
     Command(
       CommandName.ClientSkipQuest,
       SkipDailyQuestResponseData(
@@ -54,7 +54,7 @@ class QuestsHandler : ICommandHandler, KoinComponent {
 
   @CommandHandler(CommandName.SkipQuestPaid)
   suspend fun skipQuestPaid(socket: UserSocket, questId: Int, price: Int) {
-    // PTT(Dr1llfix)
+    // ptt-(Drlxzar)
     Command(
       CommandName.ClientSkipQuest,
       SkipDailyQuestResponseData(

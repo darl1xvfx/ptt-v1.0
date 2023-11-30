@@ -30,7 +30,7 @@ class Freeze_XTWeaponHandler(
     val sourceTank = player.tank ?: throw Exception("No Tank")
     val battle = player.battle
 
-    // PTT(Dr1llfix): Damage timing is not checked on server, exploitation is possible
+    // ptt-(Drlxzar): Damage timing is not checked on server, exploitation is possible
     if (!fireStarted) return
 
     val targetTanks = battle.players
@@ -45,7 +45,7 @@ class Freeze_XTWeaponHandler(
       battle.damageProcessor.dealDamage(sourceTank, targetTank, randomDamage.toDouble(), isCritical = false)
     }
 
-    // PTT(Dr1llfix): No response command?
+    // ptt-(Drlxzar): No response command?
   }
 
   suspend fun fireStop(stopFire: StopFire) {

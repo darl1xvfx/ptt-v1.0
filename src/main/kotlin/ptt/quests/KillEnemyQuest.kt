@@ -33,7 +33,7 @@ class KillEnemyQuest(
   new, completed,
   rewards
 ) {
-  // PTT(Dr1llfix): Localize mode name
+  // ptt-(Drlxzar): Localize mode name
   override val description: LocalizedString
     get() = mapOf(
       SocketLocale.English to if(mode != null) "Kill enemy tanks in ${mode!!.name} mode" else "Kill enemy tanks",

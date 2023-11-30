@@ -94,7 +94,7 @@ class GarageHandler : ICommandHandler, KoinComponent {
     Command(CommandName.MountItem, currentItem.mountName, true.toString()).send(socket)
   }
 
-  // PTT(Dr1llfix): Code repeating
+  // ptt-(Drlxzar): Code repeating
   @CommandHandler(CommandName.TryBuyItem)
   suspend fun tryBuyItem(socket: UserSocket, rawItem: String, count: Int) {
     val user = socket.user ?: throw Exception("No User")
