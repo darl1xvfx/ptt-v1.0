@@ -1,0 +1,25 @@
+{
+  "id": "Regeneration",
+  "index": 999,
+
+  "name": {
+    "en": "Regeneration",
+    "ru": "Регенерация"
+  },
+  "description": {
+    "en": "The composition of this paint introduced a special chemical, developed by alien technology. Scratches and dents from shells that appear on your tank mysteriously disappear, leaving your enemies bewildered.",
+    "ru": "В состав этой краски введён особый химикат, разработанный по инопланетной технологии. Царапины и вмятины от снарядов, которые появляются на вашем танке, таинственным образом исчезают, оставляя врагов в недоумении."
+  },
+
+  "baseItemId": 16000004,
+  "previewResourceId": 16000004,
+
+  "rank": 1,
+  "price": 0,
+
+  "animatedColoring": 16000005,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

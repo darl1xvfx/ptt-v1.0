@@ -1,0 +1,25 @@
+{
+  "id": "kidnapping",
+  "index": 999,
+
+  "name": {
+    "en": "Kidnapping",
+    "ru": "Похищение"
+  },
+  "description": {
+    "en": "One patient began drawing similar images after allegedly being abducted by aliens. Every day the picture was different, but the colors and style were the same. It only remained to make animation out of these patterns. Is it kidnapping or just inspiration? Who knows...",
+    "ru": "Один пациент начал рисовать подобные изображения после якобы похищения инопланетянами. Каждый день картинка была новая, но цвета и стиль сохранялись. Оставалось только составить из этих узоров анимацию. А похищение ли это или просто вдохновение? Кто знает..."
+  },
+
+  "baseItemId": 16000008,
+  "previewResourceId": 16000008,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000009,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

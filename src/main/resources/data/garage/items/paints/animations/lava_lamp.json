@@ -1,0 +1,27 @@
+{
+  "id": "lava_lamp",
+  "index": 999,
+
+  "name": {
+    "en": "Lava-Lamp",
+    "ru": "Лава-Лампа"
+  },
+  "description": {
+    "en": "The composition of this paint contains a large amount of a special sticky liquid that creates a hypnotic swirling effect. Someone recognizes in this coating the movement of the wax mixture inside the lava lamp.",
+    "ru": "В составе этой краски содержится большое количество специальной липкой жидкости, создающей гипнотический эффект завихрения. Кто-то узнает в этом покрытии движение восковой смеси внутри лава-лампы."
+  },
+
+  "baseItemId": 16000138,
+  "previewResourceId": 16000138,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000139,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,25 @@
+{
+  "id": "spectrum",
+  "index": 999,
+
+  "name": {
+    "en": "Spectrum",
+    "ru": "Спектр"
+  },
+  "description": {
+    "en": "This paint has been developed using the latest in quantum research technologies, which allow for probability effects to be applied to a macro-world. The first thought of the creators was to finally do the Schrodinger's cat experiment, but it was blocked by animal rights activists. So instead, they made this paint. If you don't mind all of the complex mathematics and scientific research, it's just a monochromatic paint of a green... wait, Blu... wait... red color. Oh for the love of!... Yellow! AAA! Purple! That's it, I'm done, write this description yourself.",
+    "ru": "Это покрытие разработано с учётом редчайших квантовых технологий, позволяющих переносить вероятностные эффекты в макромир. Первой мыслью создателей технологии было наконец провести реальный эксперимент с суперпозицией кота Шрёдингера, но сделать это им не позволили защитники животных. Поэтому результатом их работы стала эта краска. Несмотря на всю сложную математику и научные изыскания, она представляет собой всего лишь монотонное покрытие зелёного... нет, синего цве... нет, постойте, красного... да чтоб тебя, жёлтого! ААА! ФИОЛЕТОВОГО! Так, всё, хватит с меня, сами пишите это описание!"
+  },
+
+  "baseItemId": 1409542,
+  "previewResourceId": 1409542,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 1409544,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

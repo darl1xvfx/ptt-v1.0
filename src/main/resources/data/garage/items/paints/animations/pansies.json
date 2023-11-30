@@ -1,0 +1,25 @@
+{
+  "id": "pansies",
+  "index": 999,
+
+  "name": {
+    "en": "Pansies",
+    "ru": "Анютины Глазки"
+  },
+  "description": {
+    "en": "The prototype for this cover was the face of the assistant designer of the tank factory, Anna Vikogromova.",
+    "ru": "Прототипом для этого покрытия стало лицо помощника конструктора танкового завода Анны Викогромовой."
+  },
+
+  "baseItemId": 16000016,
+  "previewResourceId": 16000016,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000017,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

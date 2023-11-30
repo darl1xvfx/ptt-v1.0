@@ -1,0 +1,27 @@
+{
+  "id": "surfing",
+  "index": 999,
+
+  "name": {
+    "en": "Surfing",
+    "ru": "Сёрфинг"
+  },
+  "description": {
+    "en": "An excellent degree of balance. Riding the waves requires the ability of the surfer to concentrate at a critical moment and the ability to relax. It is these qualities that a tanker needs. This paint will not give any advantage in battle, but it can help you catch the wave of success and stay on it for a long time.",
+    "ru": "Превосходная степень баланса. Катание на волнах требует от сёрфера способности концентрироваться в критический момент и умения расслабляться. Именно такие качества необходимы и танкисту. Эта краска не даст какого-то преимущества в бою, но может помочь поймать волну успеха и задержаться на ней надолго."
+  },
+
+  "baseItemId": 16000214,
+  "previewResourceId": 16000214,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000215,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

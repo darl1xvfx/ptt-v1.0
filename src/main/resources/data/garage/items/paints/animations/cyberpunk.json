@@ -1,0 +1,26 @@
+{
+  "id": "cyberpunk",
+  "index": 999,
+
+  "name": {
+    "en": "Cyberpunk",
+    "ru": "Киберпанк"
+  },
+  "description": {
+    "en": "This paint is such a portal to the world of cyberpunk. If you look, you can see the reflection of the neon lights of the city of the future in it.",
+    "ru": "Эта краска — такой портал в мире киберпанка. Если смотреть, в ней можно разглядеть отражение неоновых огней города будущего."
+  },
+
+  "baseItemId": 16000052,
+  "previewResourceId": 16000052,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000053,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

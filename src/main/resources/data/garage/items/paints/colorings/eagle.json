@@ -1,0 +1,27 @@
+{
+  "id": "eagle",
+  "index": 5,
+
+  "name": {
+	"en": "Eagle",
+    "ru": "Орёл"
+  },
+  "description": {
+    "en": "The paint was created for professional parkourists of the Polish community. The name and colors of the surface were not chosen by chance: they show that members of the parkour team can soar in the sky like eagles and look stylish at the same time.",
+    "ru": "Краска создана для профессиональных паркуристов польского сообщества. Название и цвета покрытия выбраны неслучайно: они показывают, что участники паркурной команды могут парить в небе, как орлы, и при этом стильно выглядеть."
+  },
+
+  "baseItemId": 526345,
+  "previewResourceId": 526345,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526346,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

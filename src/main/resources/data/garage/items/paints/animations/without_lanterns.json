@@ -1,0 +1,27 @@
+{
+  "id": "without_lanterns",
+  "index": 999,
+
+  "name": {
+    "en": "Without Lanterns",
+    "ru": "Без Фонарей"
+  },
+  "description": {
+    "en": "Despite the unique color scheme, this paint has nothing to do with lanterns and superheroes. However, the tank in this paint is guaranteed to look much cooler than any film on such topics.",
+    "ru": "Несмотря на уникальную цветовую гамму, эта краска не имеет ничего общего с фонарями и супергероями. Однако танк в этой краске гарантированно будет выглядеть намного круче, чем любой фильм на такие темы."
+  },
+
+  "baseItemId": 16000176,
+  "previewResourceId": 16000176,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000177,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

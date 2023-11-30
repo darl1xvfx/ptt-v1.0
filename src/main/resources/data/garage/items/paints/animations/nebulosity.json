@@ -1,0 +1,25 @@
+{
+  "id": "nebulosity",
+  "index": 999,
+
+  "name": {
+    "en": "Nebulosity",
+    "ru": "Туманность"
+  },
+  "description": {
+    "en": "Our research into alien lifeforms is ongoing and it has recently been discovered that alien ships are using a disguise codenamed «alien nebulosity». Here's what it looks like.",
+    "ru": "Наши исследования инопланетных форм жизни продолжаются, и недавно было обнаружено, что корабли инопланетян используют маскировку под кодовым названием «инопланетная туманность». Вот как это выглядит."
+  },
+
+  "baseItemId": 16000006,
+  "previewResourceId": 16000006,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000007,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

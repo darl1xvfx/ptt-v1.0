@@ -1,0 +1,27 @@
+{
+  "id": "nightmare",
+  "index": 999,
+
+  "name": {
+    "en": "Nightmare",
+    "ru": "Кошмар"
+  },
+  "description": {
+    "en": "Few dare to even approach the tanks in this coating. However, those who find the strength to overcome the chilling horror that the ghostly faces inspire, silently screaming in endless agony, will never feel fear again. They themselves will become the embodiment of a nightmare. Rumor has it that when a tank with this coating destroys the enemy, it becomes one more screaming face on its hull.",
+    "ru": "Немногие осмеливаются хотя бы приблизиться к танкам в этом покрытии. Однако те, кто найдёт в себе силы преодолеть леденящий ужас, который вселяют призрачные лица, безмолвно кричащие в бесконечной агонии, больше никогда не будут испытывать страх. Они сами станут воплощением кошмара. Ходят слухи, что когда танк с этим покрытием уничтожает противника, на его корпусе становится одним кричащим лицом больше."
+  },
+
+  "baseItemId": 16000172,
+  "previewResourceId": 16000172,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000173,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,158 @@
+{
+  "id": "mammoth_xt",
+  "index": 14,
+
+  "name": {
+    "en": "Mammoth XT",
+    "ru": "Мамонт XT"
+  },
+  "description": {
+    "en": "A self-propelled fortress on caterpillar tracks. The flagship of the tank corps. Solid, heavy, reinforced with super-concrete, it has low speed, which does not prevent it from successfully countering several enemy guns simultaneously. Despite its exceptional survivability, defense is not the Mammoth's main specialty. A special AT-field, activated by overdrive, allows this beast to cut through minefields and defensive lines head-on and withstand the hurricane fire of any number of enemies without any noticeable consequences for its hide. It is impossible to stop it, even if you block its way with tanks. They will simply burn under the tracks of this monster.\n\nM0 - Crisis (10) steps.\nM1 - Crisis (20) steps.\nM2 - Easing.\nM3 - Heavyweight.",
+    "ru": "Самоходная крепость на гусеничном ходу. Флагман среди танковых корпусов. Цельнолитой, тяжёлый, упрочнённый супербетоном, имеет низкую скорость, что не мешает ему с успехом противостоять одновременно нескольким вражеским орудиям. Несмотря на исключительную живучесть, оборона не является основной специализацией Мамонта. Специальное АТ-поле, активируемое овердрайвом, позволяет этому зверю продавить в лоб минные поля, защитные рубежи и выдержать ураганный огонь любого числа противников без ощутимых последствий для своей шкуры. Остановить его невозможно, даже если преградить ему дорогу танками. Они просто сгорят под траками этого монстра.\n\nM0 - Кризис (10) шагов.\nM1 - Кризис (20) шагов.\nM2 - Облегчение.\nM3 - Утяжеление."
+  },
+
+  "baseItemId": 18000120,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 18000120,
+      "object3ds": 18000121,
+
+      "rank": 5,
+      "price": 125000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 13.00 },
+        { "property": "HULL_TURN_SPEED", "value": 90 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 13 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 13,
+        "turnSpeed": 1.5708,
+        "acceleration": 13,
+        "reverseAcceleration": 12,
+        "sideAcceleration": 25,
+        "turnAcceleration": 1.7453293,
+        "reverseTurnAcceleration": 3.4906585,
+        "damping": 2000,
+        "mass": 1000,
+        "power": 13
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "1": {
+      "previewResourceId": 18000122,
+      "object3ds": 18000123,
+
+      "rank": 10,
+      "price": 250000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 15.00 },
+        { "property": "HULL_TURN_SPEED", "value": 100 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 15 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 15,
+        "turnSpeed": 1.74533,
+        "acceleration": 15,
+        "reverseAcceleration": 12,
+        "sideAcceleration": 25,
+        "turnAcceleration": 1.7453293,
+        "reverseTurnAcceleration": 3.4906585,
+        "damping": 2000,
+        "mass": 1000,
+        "power": 15
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "2": {
+      "previewResourceId": 18000124,
+      "object3ds": 18000125,
+
+      "rank": 15,
+      "price": 375000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 5.00 },
+        { "property": "HULL_TURN_SPEED", "value": 80 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 12 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 5,
+        "turnSpeed": 1.3962634,
+        "acceleration": 12,
+        "reverseAcceleration": 12,
+        "sideAcceleration": 25,
+        "turnAcceleration": 1.7453293,
+        "reverseTurnAcceleration": 3.4906585,
+        "damping": 2000,
+        "mass": 1000,
+        "power": 12
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "3": {
+      "previewResourceId": 18000126,
+      "object3ds": 18000127,
+
+      "rank": 20,
+      "price": 500000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 4000 },
+        { "property": "HULL_SPEED", "value": 5.00 },
+        { "property": "HULL_TURN_SPEED", "value": 80 },
+        { "property": "HULL_MASS", "value": 5500 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 12 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 5,
+        "turnSpeed": 1.3962634,
+        "acceleration": 12,
+        "reverseAcceleration": 12,
+        "sideAcceleration": 25,
+        "turnAcceleration": 1.7453293,
+        "reverseTurnAcceleration": 3.4906585,
+        "damping": 2000,
+        "mass": 5500,
+        "power": 12
+      },
+
+      "maxHealth": { "maxHealth": 4000.0 }
+    }
+  }
+}

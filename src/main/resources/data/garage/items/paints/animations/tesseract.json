@@ -1,0 +1,27 @@
+{
+  "id": "tesseract",
+  "index": 999,
+
+  "name": {
+    "en": "Tesseract",
+    "ru": "Тессеракт"
+  },
+  "description": {
+    "en": "This visually disruptive, animated tank camo is crafted from neon nanotubes. Its animated patterns, along with its black and blue color combination, are capable of blinding the enemy, preventing them from hitting you.",
+    "ru": "Этот визуально разрушительный, анимированный танковый камуфляж создан из неоновых нанотрубок. Его анимированные узоры вместе с комбинацией чёрного и синего цветов способны ослепить противника, что помешает ему попасть по вам."
+  },
+
+  "baseItemId": 16000226,
+  "previewResourceId": 16000226,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000227,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

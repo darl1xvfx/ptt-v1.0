@@ -1,0 +1,27 @@
+{
+  "id": "monochrome",
+  "index": 999,
+
+  "name": {
+    "en": "Monochrome",
+    "ru": "Монохром"
+  },
+  "description": {
+    "en": "The word «monochrome» means «shades of the same color, differing in brightness». But what's the difference, because the main thing is how cool the paint looks on your tank, right?",
+    "ru": "Слово «монохромный» означает «оттенки одного цвета, различающиеся по яркости». Но какая разница, ведь главное — это как круто выглядит краска на вашем танке, не так ли?"
+  },
+
+  "baseItemId": 16000252,
+  "previewResourceId": 16000252,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000253,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

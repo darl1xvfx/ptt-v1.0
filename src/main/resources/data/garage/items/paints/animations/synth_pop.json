@@ -1,0 +1,27 @@
+{
+  "id": "synth_pop",
+  "index": 999,
+
+  "name": {
+    "en": "Synth-Pop",
+    "ru": "Синти-Поп"
+  },
+  "description": {
+    "en": "Coverage for true music lovers, especially those who love electronic music. «Listen» to this paint is best on analog sound devices. So get out your cassette player and go to battle!",
+    "ru": "Покрытие для настоящих меломанов, в особенности тех, кто любит электронную музыку. «Слушать» эту краску лучше всего на аналоговых звуковых устройствах. Поэтому доставайте свой кассетный плеер и в бой!"
+  },
+
+  "baseItemId": 16000218,
+  "previewResourceId": 16000218,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000219,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

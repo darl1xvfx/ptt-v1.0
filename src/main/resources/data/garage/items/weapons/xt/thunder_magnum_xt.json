@@ -1,0 +1,232 @@
+{
+  "id": "thunder_magnum_xt",
+  "index": 23,
+
+  "name": {
+    "en": "Magnum XT",
+    "ru": "Магнум ХТ"
+  },
+  "description": {
+    "en": "The owner of the Magnum XT was brought to the battlefield by the fearsome appearance of this devastating weapon. Experienced gunners appreciate that this exclusive skin helps hit the bull's-eye on even the largest battle arenas.",
+    "ru": "Обладатель Магнума XT выделяется на поле боя благодаря устрашающему виду этой разрушительной пушки. Опытные артиллеристы утверждают, что этот эксклюзивный скин помогает попадать прямо в яблочко даже на самых больших боевых аренах."
+  },
+
+  "baseItemId": 19000024,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 19000024,
+      "object3ds": 19000025,
+
+      "rank": 1,
+      "price": 125000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 284 },
+            { "property": "DAMAGE_TO", "value": 473 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 900 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 2.3 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 124 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 70 }
+          ]
+        }
+      ],
+
+      "visual": {
+        "$type": "thunder_magnum_xt",
+
+        "explosionMarkTexture": 262233,
+        "explosionSize": 1500,
+        "explosionSound": 337971,
+        "explosionTexture": 435330,
+        "shotSound": 337972,
+        "shotTexture": 215691,
+        "lighting": [
+          {
+            "name": "hit",
+            "light": [
+              { "attenuationBegin": 200, "attenuationEnd": 800, "color": 16741656, "intensity": 0.8, "time": 0 },
+              { "attenuationBegin": 200, "attenuationEnd": 800, "color": 16741656, "intensity": 0, "time": 700 }
+            ]
+          },
+          {
+            "name": "shot",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 500, "color": 16741656, "intensity": 0.9, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16741656, "intensity": 0, "time": 250 }
+            ]
+          },
+          {
+            "name": "shellLightAnimation",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 350, "color": 16741656, "intensity": 0.5, "time": 0 }
+            ]
+          }
+        ],
+        "bcsh": [ ]
+      },
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 25, "to": 45 },
+        "weakening": { "from": 50, "to": 75, "minimum": 0.5 },
+        "splash": { "from": 0, "to": 15, "radius": 15 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 9.0,
+        "kickback": 5.5
+      }
+    },
+    "1": {
+      "previewResourceId": 19000026,
+      "object3ds": 19000027,
+
+      "rank": 1,
+      "price": 250000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 284 },
+            { "property": "DAMAGE_TO", "value": 473 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 900 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 2.3 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 124 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 70 }
+          ]
+        }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 25, "to": 45 },
+        "weakening": { "from": 50, "to": 75, "minimum": 0.5 },
+        "splash": { "from": 0, "to": 15, "radius": 15 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 9.0,
+        "kickback": 5.5
+      }
+    },
+    "2": {
+      "previewResourceId": 19000028,
+      "object3ds": 19000029,
+
+      "rank": 1,
+      "price": 375000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 284 },
+            { "property": "DAMAGE_TO", "value": 473 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 900 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 2.3 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 124 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 70 }
+          ]
+        }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 25, "to": 45 },
+        "weakening": { "from": 50, "to": 75, "minimum": 0.5 },
+        "splash": { "from": 0, "to": 15, "radius": 15 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 9.0,
+        "kickback": 5.5
+      }
+    },
+  "3": {
+      "previewResourceId": 19000030,
+      "object3ds": 19000031,
+
+      "rank": 1,
+      "price": 500000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 284 },
+            { "property": "DAMAGE_TO", "value": 473 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 900 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 2.3 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 124 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 70 }
+          ]
+        }
+      ],
+
+    "damage": {
+      "discrete": { },
+      "range": { "from": 25, "to": 45 },
+      "weakening": { "from": 50, "to": 75, "minimum": 0.5 },
+      "splash": { "from": 0, "to": 15, "radius": 15 }
+    },
+
+    "physics": {
+      "turretRotationSpeed": 2.594395,
+      "turretTurnAcceleration": 2.594395,
+      "impactForce": 9.0,
+      "kickback": 5.5
+      }
+    }
+  }
+}

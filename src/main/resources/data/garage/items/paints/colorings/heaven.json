@@ -1,0 +1,25 @@
+{
+  "id": "heaven",
+  "index": 22,
+
+  "name": {
+    "en": "Heaven",
+    "ru": "Небеса"
+  },
+  "description": {
+    "en": "Heaven is a coating designed for parkour practitioners to move stealthily in winter and foggy conditions.",
+    "ru": "Небеса — покрытие, предназначенное для скрытного передвижения паркуристов в зимних и туманных условиях."
+  },
+
+  "baseItemId": 526385,
+  "previewResourceId": 526385,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526386,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

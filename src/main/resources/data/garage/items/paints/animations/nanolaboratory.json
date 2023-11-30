@@ -1,0 +1,27 @@
+{
+  "id": "nanolaboratory",
+  "index": 999,
+
+  "name": {
+    "en": "Nanolaboratory",
+    "ru": "Нанолаборатория"
+  },
+  "description": {
+	"en": "This paint is said to sometimes sound an alarm when a nuclear bomb is nearby. However, it is not clear if the paint also reports Wasp bombs, as none of these small tanks dare to approach the wearer of this paint. After the experiments, the paint went on sale.",
+    "ru": "Говорят, эта краска иногда издаёт сигнал тревоги, когда рядом находится ядерная бомба. Однако неясно, сообщает ли краска также о бомбах Васпа, поскольку ни один из этих маленьких танков не осмеливается приблизиться к обладателю этой краски. После экспериментов краска отправилась в продажу."
+  },
+
+  "baseItemId": 16000162,
+  "previewResourceId": 16000162,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000163,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

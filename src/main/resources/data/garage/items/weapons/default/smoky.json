@@ -1,0 +1,184 @@
+{
+  "id": "smoky",
+  "index": 7,
+
+  "name": {
+    "en": "Smoky",
+    "ru": "Смоки"
+  },
+  "description": {
+    "en": "Medium-caliber tank gun which is generally used in light and training tanks. The key to its popularity is low price and ease of maintenance. Put it on a light hull and use wearing-out strategy against heavy clumsy tanks of your opponents. Several upgrades can significantly increase the damage dealt by this little baby. Remember that Smoky’s effectiveness decreases with distance.",
+    "ru": "Среднекалиберная танковая пушка. В основном, устанавливается на лёгкие истребительные и учебные танки. Получила распространение из-за дешевизны и простоты обслуживания. Установите её на быстрый корпус и, шныряя между ошарашенными врагами, берите тяжёлые неповоротливые танки на измор. Разработанные апгрейды способны существенно увеличить убойную силу этой малышки. Стоит помнить, что урон этой пушки падает на расстоянии."
+  },
+
+  "baseItemId": 651066,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 651066,
+      "object3ds": 205731,
+
+      "rank": 1,
+      "price": 0,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 344 },
+            { "property": "DAMAGE_TO", "value": 483 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 400 },
+        { "property": "TURRET_TURN_SPEED", "value": 122.6 },
+        { "property": "CRITICAL_HIT_CHANCE", "value": 30 },
+        { "property": "CRITICAL_HIT_DAMAGE", "value": 1.7 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 344, "to": 483 },
+        "weakening": { "from": 60, "to": 180, "minimum": 0.1 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 4.0,
+        "kickback": 2.5
+      },
+
+      "visual": {
+        "$type": "smoky",
+
+        "criticalHitSize": 375,
+        "criticalHitTexture": 110004,
+        "explosionMarkTexture": 1000077,
+        "explosionSize": 300,
+        "explosionSound": 667431,
+        "explosionTexture": 785656,
+        "shotSound": 223994,
+        "shotTexture": 1000076,
+        "lighting": [
+          {
+            "name": "shot",
+            "light": [
+              { "attenuationBegin": 150, "attenuationEnd": 450, "color": 16571766, "intensity": 0.9, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16571766, "intensity": 0, "time": 300 }
+            ]
+          },
+          {
+            "name": "hit",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 300, "color": 16760576, "intensity": 0.7, "time": 0 },
+              { "attenuationBegin": 100, "attenuationEnd": 300, "color": 16760576, "intensity": 0, "time": 400 }
+            ]
+          }
+        ],
+        "bcsh": [ ]
+      }
+    },
+    "1": {
+      "previewResourceId": 825544,
+      "object3ds": 31170,
+
+      "rank": 1,
+      "price": 7100,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 344 },
+            { "property": "DAMAGE_TO", "value": 483 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 400 },
+        { "property": "TURRET_TURN_SPEED", "value": 122.6 },
+        { "property": "CRITICAL_HIT_CHANCE", "value": 30 },
+        { "property": "CRITICAL_HIT_DAMAGE", "value": 1.7 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 344, "to": 483 },
+        "weakening": { "from": 60, "to": 180, "minimum": 0.1 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 4.0,
+        "kickback": 2.5
+      }
+    },
+    "2": {
+      "previewResourceId": 592136,
+      "object3ds": 458970,
+
+      "rank": 1,
+      "price": 61400,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 344 },
+            { "property": "DAMAGE_TO", "value": 483 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 400 },
+        { "property": "TURRET_TURN_SPEED", "value": 122.6 },
+        { "property": "CRITICAL_HIT_CHANCE", "value": 30 },
+        { "property": "CRITICAL_HIT_DAMAGE", "value": 1.7 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 344, "to": 483 },
+        "weakening": { "from": 60, "to": 180, "minimum": 0.1 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 4.0,
+        "kickback": 2.5
+      }
+    },
+    "3": {
+      "previewResourceId": 379077,
+      "object3ds": 768112,
+
+      "rank": 1,
+      "price": 200000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 344 },
+            { "property": "DAMAGE_TO", "value": 483 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 400 },
+        { "property": "TURRET_TURN_SPEED", "value": 122.6 },
+        { "property": "CRITICAL_HIT_CHANCE", "value": 30 },
+        { "property": "CRITICAL_HIT_DAMAGE", "value": 1.7 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 344, "to": 483 },
+        "weakening": { "from": 60, "to": 180, "minimum": 0.1 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 4.0,
+        "kickback": 2.5
+      }
+    }
+  }
+}

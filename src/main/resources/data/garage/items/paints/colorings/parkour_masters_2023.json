@@ -1,0 +1,27 @@
+{
+  "id": "parkour_masters_2023",
+  "index": 12,
+
+  "name": {
+    "en": "Parkour Masters 2023",
+    "ru": "Мастера паркура 2023"
+  },
+  "description": {
+    "en": "This temporary paint is needed to enter the Masters of Parkour 2023 competition. At the end of the competition, only the winners of the competition will have coverage.",
+    "ru": "Эта временная краска нужна для участия в конкурсе «Мастера Паркура 2023». По окончании состязания покрытие останется лишь у призёров конкурса."
+  },
+
+  "baseItemId": 526359,
+  "previewResourceId": 526359,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526360,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

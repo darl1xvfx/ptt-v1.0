@@ -1,0 +1,27 @@
+{
+  "id": "parkour_master_2017",
+  "index": 15,
+
+  "name": {
+    "en": "Parkour Master 2017",
+    "ru": "Мастер паркура 2017"
+  },
+  "description": {
+    "en": "This is a unique paint that is awarded to the winners of the «Masters of Parkour 2017» competition.",
+    "ru": "Это уникальная краска, которой награждаются победители конкурса «Мастера паркура 2017»."
+  },
+
+  "baseItemId": 526365,
+  "previewResourceId": 526365,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526366,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

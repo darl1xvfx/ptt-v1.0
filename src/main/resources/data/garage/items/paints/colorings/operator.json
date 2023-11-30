@@ -1,0 +1,27 @@
+{
+  "id": "operator",
+  "index": 8,
+
+  "name": {
+    "en": "Operator",
+    "ru": "Оператор"
+  },
+  "description": {
+    "en": "This paint was created specifically for the assistants of the «Tanki Online» video blog. Its presence suggests that the owner of the coverage is a true master of filming and editing.",
+    "ru": "Данная краска создана специально для помощников видеоблога «Танков Онлайн». Её наличие говорит о том, что владелец покрытия — настоящий мастер съёмки и монтажа."
+  },
+
+  "baseItemId": 526351,
+  "previewResourceId": 526351,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526352,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

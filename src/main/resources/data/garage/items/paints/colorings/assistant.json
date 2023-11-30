@@ -1,0 +1,27 @@
+{
+  "id": "assistant",
+  "index": 7,
+
+  "name": {
+    "en": "Assistant",
+    "ru": "Помощник"
+  },
+  "description": {
+    "en": "A unique coating that is awarded only to the best contributors to the project. The people who move it forward. Tankers for whom «Tanki Online» is more than just a game.",
+    "ru": "Уникальное покрытие, которым награждаются только лучшие помощники проекта. Люди, двигающие его вперёд. Танкисты, для которых «Танки Онлайн» — это больше чем игра."
+  },
+
+  "baseItemId": 526375,
+  "previewResourceId": 526375,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526376,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,27 @@
+{
+  "id": "onyx",
+  "index": 7,
+
+  "name": {
+    "en": "Onyx",
+    "ru": "Оникс"
+  },
+  "description": {
+    "en": "In fact, this paint was removed from tanks online a long time ago ..",
+    "ru": "На Самом деле эта краска была давным давно удалена с Танков Онлайн.."
+  },
+
+  "baseItemId": 526349,
+  "previewResourceId": 526349,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526350,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

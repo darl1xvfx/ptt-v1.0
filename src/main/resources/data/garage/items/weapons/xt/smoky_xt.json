@@ -1,0 +1,184 @@
+{
+  "id": "smoky_xt",
+  "index": 20,
+
+  "name": {
+    "en": "Smoky XT",
+    "ru": "Смоки XT"
+  },
+  "description": {
+    "en": "Creator of XT-skin for Smoky spent several years among the tropical forests of South America, learning anacondas. After returning home, he wanted to recreate the image of the giant snake in a tank turret -- and that's how it's made.",
+    "ru": "Создатель XT-скина для Смоки провёл несколько лет в тропических лесах Южной Америки, изучая жизнь анаконд. Вернувшись домой, он решил воспроизвести образ этой огромной змеи в танковой пушке — так появился этот скин."
+  },
+
+  "baseItemId": 18000040,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 18000040,
+      "object3ds": 18000041,
+
+      "rank": 1,
+      "price": 125000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 344 },
+            { "property": "DAMAGE_TO", "value": 483 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 400 },
+        { "property": "TURRET_TURN_SPEED", "value": 122.6 },
+        { "property": "CRITICAL_HIT_CHANCE", "value": 30 },
+        { "property": "CRITICAL_HIT_DAMAGE", "value": 1.7 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 344, "to": 483 },
+        "weakening": { "from": 60, "to": 180, "minimum": 0.1 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 4.0,
+        "kickback": 2.5
+      },
+
+      "visual": {
+        "$type": "smoky_xt",
+
+        "criticalHitSize": 375,
+        "criticalHitTexture": 110004,
+        "explosionMarkTexture": 1000077,
+        "explosionSize": 300,
+        "explosionSound": 667431,
+        "explosionTexture": 785656,
+        "shotSound": 223994,
+        "shotTexture": 1000076,
+        "lighting": [
+          {
+            "name": "shot",
+            "light": [
+              { "attenuationBegin": 150, "attenuationEnd": 450, "color": 16571766, "intensity": 0.9, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16571766, "intensity": 0, "time": 300 }
+            ]
+          },
+          {
+            "name": "hit",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 300, "color": 16760576, "intensity": 0.7, "time": 0 },
+              { "attenuationBegin": 100, "attenuationEnd": 300, "color": 16760576, "intensity": 0, "time": 400 }
+            ]
+          }
+        ],
+        "bcsh": [ ]
+      }
+    },
+    "1": {
+      "previewResourceId": 18000042,
+      "object3ds": 18000043,
+
+      "rank": 1,
+      "price": 250000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 344 },
+            { "property": "DAMAGE_TO", "value": 483 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 400 },
+        { "property": "TURRET_TURN_SPEED", "value": 122.6 },
+        { "property": "CRITICAL_HIT_CHANCE", "value": 30 },
+        { "property": "CRITICAL_HIT_DAMAGE", "value": 1.7 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 344, "to": 483 },
+        "weakening": { "from": 60, "to": 180, "minimum": 0.1 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 4.0,
+        "kickback": 2.5
+      }
+    },
+    "2": {
+      "previewResourceId": 18000044,
+      "object3ds": 18000045,
+
+      "rank": 1,
+      "price": 375000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 344 },
+            { "property": "DAMAGE_TO", "value": 483 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 400 },
+        { "property": "TURRET_TURN_SPEED", "value": 122.6 },
+        { "property": "CRITICAL_HIT_CHANCE", "value": 30 },
+        { "property": "CRITICAL_HIT_DAMAGE", "value": 1.7 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 344, "to": 483 },
+        "weakening": { "from": 60, "to": 180, "minimum": 0.1 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 4.0,
+        "kickback": 2.5
+      }
+    },
+    "3": {
+      "previewResourceId": 18000046,
+      "object3ds": 18000047,
+
+      "rank": 1,
+      "price": 500000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 344 },
+            { "property": "DAMAGE_TO", "value": 483 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 400 },
+        { "property": "TURRET_TURN_SPEED", "value": 122.6 },
+        { "property": "CRITICAL_HIT_CHANCE", "value": 30 },
+        { "property": "CRITICAL_HIT_DAMAGE", "value": 1.7 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 344, "to": 483 },
+        "weakening": { "from": 60, "to": 180, "minimum": 0.1 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 4.0,
+        "kickback": 2.5
+      }
+    }
+  }
+}

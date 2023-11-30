@@ -1,0 +1,27 @@
+{
+  "id": "visual_destroyer",
+  "index": 999,
+
+  "name": {
+    "en": "Visual Destroyer",
+    "ru": "Визуальный Разрушитель"
+  },
+  "description": {
+    "en": "According to scientific studies (not entirely true, but it sounds more plausible), the iridescent colors of this animated paint cause discomfort and nausea in anyone who tries to get a closer look at it ... Because of the aliens.",
+    "ru": "Согласно научным исследованиям (на самом деле это не совсем верно, но зато утверждение звучит правдоподобнее), переливы цветов этой анимированной краски вызывают дискомфорт и тошноту у любого, кто попытается приглядеться к ней… Из-за инопланетян."
+  },
+
+  "baseItemId": 16000238,
+  "previewResourceId": 16000238,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000239,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

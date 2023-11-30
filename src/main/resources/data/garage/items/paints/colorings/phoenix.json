@@ -1,0 +1,27 @@
+{
+  "id": "phoenix",
+  "index": 3,
+
+  "name": {
+    "en": "Phoenix",
+    "ru": "Феникс"
+  },
+  "description": {
+    "en": "This paint is given out to teams of the international community for outstanding achievements in parkour, and only desperate daredevils can win it! The paint consists of highly volatile particles and begins to evaporate when the concentration of adrenaline in the tanker's blood is insufficient.",
+    "ru": "Эта краска выдаётся командам международного сообщества за выдающиеся достижения в паркуре, и выиграть её могут только отчаянные сорвиголовы! Краска состоит из высоколетучих частиц и начинает испаряться при недостаточной концентрации адреналина в крови танкиста."
+  },
+
+  "baseItemId": 526341,
+  "previewResourceId": 526341,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526342,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

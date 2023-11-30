@@ -1,0 +1,26 @@
+{
+  "id": "arrested",
+  "index": 999,
+
+  "name": {
+    "en": "Arrested",
+    "ru": "Арестован"
+  },
+  "description": {
+    "en": "You are the hand of justice. Bring justice to the battlefield. Wear this cover with the pride you take in slaying chaos and crime.",
+    "ru": "Вы — рука правосудия. Принесите справедливость на поле боя. Носите это покрытие с гордостью, которую вы испытываете, уничтожая хаос и преступность."
+  },
+
+  "baseItemId": 16000028,
+  "previewResourceId": 16000028,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000029,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

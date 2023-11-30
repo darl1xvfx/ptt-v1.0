@@ -1,0 +1,27 @@
+{
+  "id": "silver_bricks",
+  "index": 999,
+
+  "name": {
+    "en": "Silver Bricks",
+    "ru": "Серебряные Кирпичи"
+  },
+  "description": {
+    "en": "This cover is a real animated chain mail made of a reinforced silver alloy. One has only to look at your tank, and it immediately becomes clear: “You better not touch me, otherwise you will regret it!”.",
+    "ru": "Это покрытие — настоящая анимированная кольчуга из усиленного сплава серебра. Стоит только взглянуть на ваш танк, и сразу становится понятно: «Лучше меня не трогай, а то пожалеешь!»."
+  },
+
+  "baseItemId": 16000200,
+  "previewResourceId": 16000200,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000201,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

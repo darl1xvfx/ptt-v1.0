@@ -1,0 +1,25 @@
+{
+  "id": "best helper 2019",
+  "index": 999,
+
+  "name": {
+    "en": "Best helper 2019",
+    "ru": "Лучший хелпер 2019"
+  },
+  "description": {
+    "en": "This paint was created especially for the most active, diligent and hardworking helpers of the year, for those who have dedicated the whole year to helping tankers and maintaining order in the community of Tanks Online. The owners of this paint are a shining example of dedication and devotion, and they are truly worthy of the title «Best helper of the year».",
+    "ru": "Эта краска была создана специально для самых активных, усердных и трудолюбивых помощников года, для тех, кто посвятил весь год помощи танкистам и поддерживал порядок в сообществе Танков Онлайн. Обладатели этой краски — яркий пример самоотдачи и преданности, и они по-настоящему достойны титула «Лучший помощник года»."
+  },
+
+  "baseItemId": 16000002,
+  "previewResourceId": 16000002,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000003,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

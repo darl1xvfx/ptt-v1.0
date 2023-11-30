@@ -1,0 +1,27 @@
+{
+  "id": "dark_x",
+  "index": 999,
+
+  "name": {
+    "en": "Dark X",
+    "ru": "Черный Х"
+  },
+  "description": {
+    "en": "This cover is a direct reference to the film noir era of the 1940s-1950s. The paint awakens in moviegoers nostalgia for old detective films, and its owners seem to declare: «Do not mess with me, otherwise you will regret it.»",
+    "ru": "Это покрытие — прямая отсылка к эпохе нуар-фильмов 1940-х — 1950-х. Краска пробуждает в киноманах ностальгию по старым детективным фильмам, а её обладатели словно заявляют: «Не связывайтесь со мной, иначе пожалеете»."
+  },
+
+  "baseItemId": 16000242,
+  "previewResourceId": 16000242,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000243,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

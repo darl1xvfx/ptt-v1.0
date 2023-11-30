@@ -1,0 +1,26 @@
+{
+  "id": "gum",
+  "index": 999,
+
+  "name": {
+    "en": "Gum",
+    "ru": "Жвачка"
+  },
+  "description": {
+    "en": "This color came about by accident. The mechanics of one workshop, before entering the work, molded chewing gum on a tank standing in front of the workshop. Over time, his entire body became covered with a thick layer of chewing gum. And after the tank was turned on and it warmed up, the coating got an interesting visual effect.",
+    "ru": "Эта краска появилась случайно. Механики одной мастерской перед входом на работу лепили жвачки на стоящий перед цехом танк. Со временем весь его корпус стал покрыт толстым слоем жевательной резинки. А после того, как танк завели и он нагрелся, покрытие получило занятный визуальный эффект."
+  },
+
+  "baseItemId": 16000022,
+  "previewResourceId": 16000022,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000023,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

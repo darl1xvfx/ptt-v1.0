@@ -1,0 +1,26 @@
+{
+  "id": "electrohive",
+  "index": 999,
+
+  "name": {
+    "en": "Electrohive",
+    "ru": "Электроулей"
+  },
+  "description": {
+    "en": "Specially trained electronic bees took part in the creation of this paint, which produced neon honey and put it into neon honeycombs. At the same time, the taste of such honey is right!",
+    "ru": "В создании этой краски принимали участие специально обученные электронные пчёлы, которые производили неоновый мёд и складывали его в неоновые соты. При этом вкус у такого мёда правильный!"
+  },
+
+  "baseItemId": 16000070,
+  "previewResourceId": 16000070,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000071,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

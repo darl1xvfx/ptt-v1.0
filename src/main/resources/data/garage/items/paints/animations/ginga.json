@@ -1,0 +1,26 @@
+{
+  "id": "ginga",
+  "index": 999,
+
+  "name": {
+    "en": "Ginga",
+    "ru": "Джинга"
+  },
+  "description": {
+    "en": "The bright colors of this cover, flowing into each other and blooming in beautiful patterns, reflect the arrival of spring. Celebrate International Women's Day with Tanki Online!",
+    "ru": "Яркие цвета этого покрытия, перетекающие друг в друга и расцветающие красивыми узорами, отражают приход весны. Празднуйте Международный женский день с «Танками Онлайн»!"
+  },
+
+  "baseItemId": 16000100,
+  "previewResourceId": 16000100,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000101,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

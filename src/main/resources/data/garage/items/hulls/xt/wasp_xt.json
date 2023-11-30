@@ -1,0 +1,158 @@
+{
+  "id": "wasp_xt",
+  "index": 8,
+
+  "name": {
+    "en": "Wasp XT",
+    "ru": "Васп ХТ"
+  },
+  "description": {
+    "en": "The Elite Wasp XT features a unique side pattern resembling the folded wings of an ancient dragon.\n\nM0 - Crisis (10) steps.\nM1 - Crisis (20) steps.\nM2 - Easing.\nM3 - Heavyweight.",
+    "ru": "Элитный Васп XT отличается уникальным боковым рисунком, напоминающим сложенные крылья древнего дракона.\n\nM0 - Кризис (10) шагов.\nM1 - Кризис (20) шагов.\nM2 - Облегчение.\nM3 - Утяжеление."
+  },
+
+  "baseItemId": 18000072,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 18000072,
+      "object3ds": 18000073,
+
+      "rank": 5,
+      "price": 125000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 18 },
+        { "property": "HULL_TURN_SPEED", "value": 138 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 16 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 18.3,
+        "turnSpeed": 2.40855,
+        "acceleration": 16.0,
+        "reverseAcceleration": 18,
+        "sideAcceleration": 24,
+        "turnAcceleration": 2.82743,
+        "reverseTurnAcceleration": 6.52753,
+        "damping": 900,
+        "mass": 1000,
+        "power": 13.0
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "1": {
+      "previewResourceId": 18000074,
+      "object3ds": 18000075,
+
+      "rank": 10,
+      "price": 250000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 20 },
+        { "property": "HULL_TURN_SPEED", "value": 143 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 16.3}
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 20.3,
+        "turnSpeed": 2.49582,
+        "acceleration": 16.3,
+        "reverseAcceleration": 18,
+        "sideAcceleration": 24,
+        "turnAcceleration": 2.89725,
+        "reverseTurnAcceleration": 6.63225,
+        "damping": 900,
+        "mass": 1070,
+        "power": 13.0
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "2": {
+      "previewResourceId": 18000076,
+      "object3ds": 18000077,
+
+      "rank": 15,
+      "price": 375000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 12 },
+        { "property": "HULL_TURN_SPEED", "value": 130 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 13 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 12,
+        "turnSpeed": 2.268928,
+        "acceleration": 12,
+        "reverseAcceleration": 18,
+        "sideAcceleration": 18,
+        "turnAcceleration": 2.617994,
+        "reverseTurnAcceleration": 6.283185,
+        "damping": 750,
+        "mass": 1050,
+        "power": 13.0
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "3": {
+      "previewResourceId": 18000078,
+      "object3ds": 18000079,
+
+      "rank": 20,
+      "price": 500000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 12 },
+        { "property": "HULL_TURN_SPEED", "value": 130 },
+        { "property": "HULL_MASS", "value": 1764 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 13 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 12.7,
+        "turnSpeed": 2.268928,
+        "acceleration": 13.0,
+        "reverseAcceleration": 18,
+        "sideAcceleration": 24,
+        "turnAcceleration": 2.617994,
+        "reverseTurnAcceleration": 6.283185,
+        "damping": 700,
+        "mass": 1764,
+        "power": 12.0
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    }
+  }
+}

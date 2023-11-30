@@ -1,0 +1,241 @@
+{
+  "id": "ricochet_hammer_xt",
+  "index": 17,
+
+  "name": {
+    "en": "Hammer XT",
+    "ru": "Молот XT"
+  },
+  "description": {
+    "en": "The Terrible Hammer XT looks like the head of a rhinoceros. With this skin you will have no equal in a duel - aim the horn at your enemy and crush him with a powerful blow.\nP.S. No rhinos were harmed in the creation of this skin.",
+    "ru": "Грозный Молот XT своим видом напоминает голову носорога. С этим скином в поединке вам не будет равных — нацельте рог на вашего врага и сокрушите его мощным ударом.\nP.S. При создании этого скина ни один носорог не пострадал."
+  },
+
+  "baseItemId": 19000032,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 19000032,
+      "object3ds": 19000033,
+
+      "rank": 1,
+      "price": 125000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 86 },
+            { "property": "DAMAGE_TO", "value": 164 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 240 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 0.47 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 139 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 80 }
+          ]
+        }
+      ],
+
+      "damage": {
+        "stream": { "capacity": 1000, "charge": 100, "discharge": 128, "interval": 470 },
+        "range": { "from": 300.00, "to": 400.00 },
+        "weakening": { "from": 10, "to": 15, "minimum": 0.25 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.4399702942880728,
+        "turretTurnAcceleration": 2.3701571242083,
+        "impactForce": 8.30,
+        "kickback": 3.40
+      },
+
+      "visual": {
+        "$type": "ricochet_hammer_xt",
+
+        "bumpFlashTexture": 110007,
+        "explosionTexture": 110007,
+        "explosionSound": 898927,
+        "ricochetSound": 700621,
+        "shotFlashTexture": 142379,
+        "shotSound": 292256,
+        "shotTexture": 110006,
+        "tailTrailTexutre": 228333,
+        "lighting": [
+          {
+            "name": "shot",
+            "light": [
+              { "attenuationBegin": 200, "attenuationEnd": 500, "color": 16777215, "intensity": 0.5, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16777215, "intensity": 0, "time": 600 }
+            ]
+          },
+          {
+            "name": "ricochet",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 400, "color": 16777215, "intensity": 0.5, "time": 0 },
+              { "attenuationBegin": 50, "attenuationEnd": 200, "color": 16777215, "intensity": 0, "time": 600 }
+            ]
+          },
+          {
+            "name": "hit",
+            "light": [
+              { "attenuationBegin": 300, "attenuationEnd": 600, "color": 16777215, "intensity": 0.5, "time": 0 },
+              { "attenuationBegin": 300, "attenuationEnd": 600, "color": 16777215, "intensity": 0, "time": 600 }
+            ]
+          },
+          {
+            "name": "bullet",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 350, "color": 16777215, "intensity": 0.5, "time": 0 }
+            ]
+          }
+        ],
+        "bcsh": [
+          { "brightness": 110, "contrast": 0, "saturation": 0, "hue": 0, "key": "shot" },
+          { "brightness": 110, "contrast": 0, "saturation": 0, "hue": 0, "key": "expl" },
+          { "brightness": 110, "contrast": 0, "saturation": 0, "hue": 0, "key": "trail" }
+        ]
+      }
+    },
+    "1": {
+      "previewResourceId": 19000034,
+      "object3ds": 19000035,
+
+      "rank": 1,
+      "price": 250000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 86 },
+            { "property": "DAMAGE_TO", "value": 164 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 240 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 0.47 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 139 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 80 }
+          ]
+        }
+      ],
+
+      "damage": {
+        "stream": { "capacity": 1000, "charge": 100, "discharge": 128, "interval": 470 },
+        "range": { "from": 300.00, "to": 400.00 },
+        "weakening": { "from": 10, "to": 15, "minimum": 0.25 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.4399702942880728,
+        "turretTurnAcceleration": 2.3701571242083,
+        "impactForce": 8.30,
+        "kickback": 3.40
+      }
+    },
+    "2": {
+      "previewResourceId": 19000036,
+      "object3ds": 19000037,
+
+      "rank": 1,
+      "price": 375000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 86 },
+            { "property": "DAMAGE_TO", "value": 164 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 240 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 0.47 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 139 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 80 }
+          ]
+        }
+      ],
+
+      "damage": {
+        "stream": { "capacity": 1000, "charge": 100, "discharge": 128, "interval": 470 },
+        "range": { "from": 300.00, "to": 400.00 },
+        "weakening": { "from": 10, "to": 15, "minimum": 0.25 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.4399702942880728,
+        "turretTurnAcceleration": 2.3701571242083,
+        "impactForce": 8.30,
+        "kickback": 3.40
+      }
+    },
+    "3": {
+      "previewResourceId": 19000038,
+      "object3ds": 19000039,
+
+      "rank": 1,
+      "price": 500000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 86 },
+            { "property": "DAMAGE_TO", "value": 164 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 240 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 0.47 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 139 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 80 }
+          ]
+        }
+      ],
+
+      "damage": {
+        "stream": { "capacity": 1000, "charge": 100, "discharge": 128, "interval": 470 },
+        "range": { "from": 300.00, "to": 400.00 },
+        "weakening": { "from": 10, "to": 15, "minimum": 0.25 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.4399702942880728,
+        "turretTurnAcceleration": 2.3701571242083,
+        "impactForce": 8.30,
+        "kickback": 3.40
+      }
+    }
+  }
+}

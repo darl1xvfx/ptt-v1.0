@@ -1,0 +1,27 @@
+{
+  "id": "radioactive_jelly",
+  "index": 999,
+
+  "name": {
+    "en": "Radioactive Jelly",
+    "ru": "Радиоактивное Желе"
+  },
+  "description": {
+    "en": "This coating is almost harmless to its wearer, as it is applied to a thick lead substrate. But you can cause horror among your rivals with your mere appearance on the battlefield. Not every tanker will dare to approach a radioactive tank. And if he dares, then let him blame himself ...",
+    "ru": "Это покрытие почти безвредно для своего носителя, так как наносится на толстую свинцовую подложку. Зато можно вызывать среди соперников ужас одним своим появлением на поле боя. Далеко не каждый танкист осмелится приблизиться к радиоактивному танку. А если и осмелится, то пусть пеняет на себя..."
+  },
+
+  "baseItemId": 16000188,
+  "previewResourceId": 16000188,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000189,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,158 @@
+{
+  "id": "juggernaut",
+  "index": 15,
+
+  "name": {
+    "en": "Juggernaut",
+    "ru": "Джаггернаут"
+  },
+  "description": {
+    "en": "This unique hull is impossible to purchase or permanently obtain in any other way. This armament with the Terminator turret as a part of the “Juggernaut” tank is intended only for Juggernaut battle modes. There is one exception - this unique tank can be used by developers of the game for testing and organizing events.",
+    "ru": "Этот уникальный корпус невозможно приобрести или иным образом получить в постоянное владение. Это вооружение, вместе с пушкой «Терминатор» в составе танка «Джаггернаут» предназначено исключительно для битв в режиме «Джаггернаут». Исключение — уникальным танком могут пользоваться разработчики игры в целях тестирования и организации мероприятий."
+  },
+
+  "baseItemId": 19000008,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 19000008,
+      "object3ds": 19000009,
+
+      "rank": 5,
+      "price": 125000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1800 },
+        { "property": "HULL_SPEED", "value": 18 },
+        { "property": "HULL_TURN_SPEED", "value": 138 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 18 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 18.3,
+        "turnSpeed": 2.40855,
+        "acceleration": 18,
+        "reverseAcceleration": 24,
+        "sideAcceleration": 15,
+        "turnAcceleration": 2.82743,
+        "reverseTurnAcceleration": 6.52753,
+        "damping": 900,
+        "mass": 1000,
+        "power": 18
+      },
+
+      "maxHealth": { "maxHealth": 1800.0 }
+    },
+    "1": {
+      "previewResourceId": 19000010,
+      "object3ds": 19000011,
+
+      "rank": 10,
+      "price": 250000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 2400 },
+        { "property": "HULL_SPEED", "value": 20 },
+        { "property": "HULL_TURN_SPEED", "value": 143 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 19}
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 20.3,
+        "turnSpeed": 2.49582,
+        "acceleration": 19,
+        "reverseAcceleration": 24,
+        "sideAcceleration": 15,
+        "turnAcceleration": 2.89725,
+        "reverseTurnAcceleration": 6.63225,
+        "damping": 900,
+        "mass": 1000,
+        "power": 19
+      },
+
+      "maxHealth": { "maxHealth": 2400.0 }
+    },
+    "2": {
+      "previewResourceId": 19000012,
+      "object3ds": 19000013,
+
+      "rank": 31,
+      "price": 375000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 5000 },
+        { "property": "HULL_SPEED", "value": 19 },
+        { "property": "HULL_TURN_SPEED", "value": 158 },
+        { "property": "HULL_MASS", "value": 1764 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 20 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 19.3,
+        "turnSpeed": 2.75762,
+        "acceleration": 20,
+        "reverseAcceleration": 24,
+        "sideAcceleration": 15,
+        "turnAcceleration": 2.93215,
+        "reverseTurnAcceleration": 6.63225,
+        "damping": 2000,
+        "mass": 1764,
+        "power": 20.0
+      },
+
+      "maxHealth": { "maxHealth": 5000.0 }
+    },
+    "3": {
+      "previewResourceId": 19000014,
+      "object3ds": 19000015,
+
+      "rank": 1,
+      "price": 500000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 6000 },
+        { "property": "HULL_SPEED", "value": 14 },
+        { "property": "HULL_TURN_SPEED", "value": 162 },
+        { "property": "HULL_MASS", "value": 1764 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 21 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 14,
+        "turnSpeed": 2.82743,
+        "acceleration": 21,
+        "reverseAcceleration": 24,
+        "sideAcceleration": 15,
+        "turnAcceleration": 2.617994,
+        "reverseTurnAcceleration": 6.283185,
+        "damping": 2000,
+        "mass": 1764,
+        "power": 21
+      },
+
+      "maxHealth": { "maxHealth": 6000.0 }
+    }
+  }
+}

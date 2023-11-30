@@ -1,0 +1,21 @@
+{
+  "id": "health",
+  "index": 1,
+
+  "name": {
+    "en": "Repair Kit",
+    "ru": "Ремкомплект"
+  },
+  "description": {
+    "en": "Instantly saves 1000 armor and reduces the effects of burning and freezing. Additionally restores 3000 points of armor over 3 seconds.",
+    "ru": "Мгновенно сохраняет 1000 единиц брони и ослабляет эффекты горения и заморозки. Дополнительно восстанавливает 3000 единиц брони за 3 секунды."
+  },
+
+  "baseItemId": 6000,
+  "previewResourceId": 6000,
+
+  "rank": 1,
+  "price": 150,
+
+  "properties": [ ]
+}

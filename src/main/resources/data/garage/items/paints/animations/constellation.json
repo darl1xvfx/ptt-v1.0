@@ -1,0 +1,26 @@
+{
+  "id": "constellation",
+  "index": 999,
+
+  "name": {
+    "en": "Constellation",
+    "ru": "Созвездие"
+  },
+  "description": {
+    "en": "The original idea was to show only one constellation on this paint. We interviewed many tankers to determine the most popular constellation. In the end, it was decided to show them one by one in order to satisfy everyone's desire. Did you find your favourite?",
+    "ru": "Первоначальная идея заключалась в том, чтобы показать на этой краске только одно созвездие. Мы опросили множество танкистов, чтобы определить наиболее популярное созвездие. В конце концов было решено показывать их одно за другим, чтобы удовлетворить желание каждого. Вы нашли своё любимое?"
+  },
+
+  "baseItemId": 16000038,
+  "previewResourceId": 16000038,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000039,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

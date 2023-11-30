@@ -1,0 +1,26 @@
+{
+  "id": "strange_medicine",
+  "index": 999,
+
+  "name": {
+    "en": "Strange Medicine",
+    "ru": "Странное Лекарство"
+  },
+  "description": {
+    "en": "Sometimes things go wrong in the pharmaceutical industry. In this case, an attempt to produce an exotic drug for tankers failed. The medicine that was supposed to be packed in the supply crates suddenly turned pink. Actually, it would have to be disposed of, but someone came up with the idea to apply it to the tank. Looks pretty good too!",
+    "ru": "В фармацевтике иногда тоже что-то идёт не так. В данном случае провалилась попытка произвести экзотический препарат для танкистов. Медикамент, который должен был быть упакован в ящики с припасами, неожиданно окрасился в розовый цвет. Собственно, его бы пришлось утилизировать, но кому-то в голову пришла идея нанести его на танк. Выглядит очень даже неплохо!"
+  },
+
+  "baseItemId": 16000094,
+  "previewResourceId": 16000094,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000095,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

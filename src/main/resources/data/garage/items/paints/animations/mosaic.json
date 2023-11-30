@@ -1,0 +1,27 @@
+{
+  "id": "mosaic",
+  "index": 999,
+
+  "name": {
+    "en": "Mosaic",
+    "ru": "Мозаика"
+  },
+  "description": {
+    "en": "Do you want to bend your enemies to your will and control them like puppets? Then you can't do without this paint! Cycling puzzle pieces will mesmerize your opponents and you can do whatever you want with them.",
+    "ru": "Хотите подчинить врагов своей воле и управлять ими как марионетками? Тогда без этой краски не обойтись! Циклично перемещающиеся детали мозаики загипнотизируют ваших противников, и вы сможете делать с ними всё, что вам вздумается."
+  },
+
+  "baseItemId": 16000158,
+  "previewResourceId": 16000158,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000159,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,25 @@
+{
+  "id": "synesthesia",
+  "index": 999,
+
+  "name": {
+    "en": "Synesthesia",
+    "ru": "Синестезия"
+  },
+  "description": {
+    "en": "Do you know how a shot from a Railgun tastes like? Did you listen to the «Flow» paint? How the flag captured in the last moments of battle smells? What Gold Box feels like to the touch? Only those who keep the gates of senses wide open deserve to transcend their discoveries. Synesthesia is a gift and a curse, alpha and omega, anomaly in the system. The rivers of eternity wash away meaning and delude reality. Tank is a sword, ego, power of will. It's Synesthesia. Action is the only path to knowledge...",
+    "ru": "Знаете ли вы, каков на вкус выстрел Рельсы? А как звучит краска «Флоу»? Чем пахнет победный флаг, доставленный в последние мгновения боя? Каков на ощупь золотой ящик? Трансцендентных откровений достойны те, кто держит врата восприятия широко распахнутыми. Синестезия — это дар и проклятие, альфа и омега, аномалия в перекрёстках системы. Потоки вечности смывают смыслы и растворяют бытие. Танк — это меч, эго, воля. Это — синестезия. Деятельность — единственный путь к знанию."
+  },
+
+  "baseItemId": 1409545,
+  "previewResourceId": 1409545,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 1409547,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "space_explosion",
+  "index": 999,
+
+  "name": {
+    "en": "Space Explosion",
+    "ru": "Космический Взрыв"
+  },
+  "description": {
+    "en": "This cover is full of surprises, just like space. Perhaps there is more to this paint than just an explosion. If you look closely, you will find one or two planets that may seem familiar to you.",
+    "ru": "Это покрытие полно сюрпризов, так же как и космос. Возможно, в этой краске скрывается нечто большее, чем просто взрыв. Если вы присмотритесь внимательнее, то обнаружите одну или две планеты, которые могут показаться вам знакомыми."
+  },
+
+  "baseItemId": 16000040,
+  "previewResourceId": 16000040,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000041,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

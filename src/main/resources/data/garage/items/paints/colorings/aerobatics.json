@@ -1,0 +1,27 @@
+{
+  "id": "aerobatics",
+  "index": 10,
+
+  "name": {
+    "en": "Aerobatics",
+    "ru": "Высший пилотаж"
+  },
+  "description": {
+    "en": "This paint was created specifically for the «Aerobatics» parkour tournament. Its owners are undisputed aces who have shown outstanding skills in parkour.",
+    "ru": "Эта краска создана специально для паркурного турнира «Высший пилотаж». Её обладатели — бесспорные асы, показавшие выдающиеся умения в паркуре."
+  },
+
+  "baseItemId": 526355,
+  "previewResourceId": 526355,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526356,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

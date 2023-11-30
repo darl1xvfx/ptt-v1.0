@@ -1,0 +1,27 @@
+{
+  "id": "paste",
+  "index": 999,
+
+  "name": {
+    "en": "Paste",
+    "ru": "Пастила"
+  },
+  "description": {
+    "en": "This coating is actually made from marshmallow with a splash of marmalade. It cheers you up in battle, and in between fights you can treat yourself to tea with dessert.",
+    "ru": "Это покрытие на самом деле сделано из пастилы с вкраплениями мармелада. Поднимает настроение в бою, а в перерывах между схватками можно побаловать себя чаем с десертом."
+  },
+
+  "baseItemId": 16000180,
+  "previewResourceId": 16000180,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000181,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

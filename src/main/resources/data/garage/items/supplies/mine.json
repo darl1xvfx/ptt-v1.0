@@ -1,0 +1,21 @@
+{
+  "id": "mine",
+  "index": 5,
+
+  "name": {
+    "en": "Mine",
+    "ru": "Мина"
+  },
+  "description": {
+    "en": "Places a mine on the battlefield. An enemy tank hit by a mine loses 76 to 127 health points (hp).",
+    "ru": "Устанавливает мину на поле боя. Вражеский танк, подорвавшийся на мине, теряет от 76 до 127 единиц здоровья (hp)."
+  },
+
+  "baseItemId": 6004,
+  "previewResourceId": 6004,
+
+  "rank": 1,
+  "price": 50,
+
+  "properties": [ ]
+}

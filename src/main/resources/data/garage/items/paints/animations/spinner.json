@@ -1,0 +1,27 @@
+{
+  "id": "spinner",
+  "index": 999,
+
+  "name": {
+    "en": "Spinner",
+    "ru": "Спиннер"
+  },
+  "description": {
+    "en": "Spinner? It is he? Yes, you didn't think so. Unsuccessful «skating rink» or bad «teammates»? Just spin the spinner and be calm.",
+    "ru": "Спиннер? Это он? Да, вам не показалось. Неудачная «катка» или плохие «тиммейты»? Просто покрутите спиннер и будьте спокойны."
+  },
+
+  "baseItemId": 16000208,
+  "previewResourceId": 16000208,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000209,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

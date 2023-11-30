@@ -1,0 +1,27 @@
+{
+  "id": "leds",
+  "index": 999,
+
+  "name": {
+    "en": "Leds",
+    "ru": "Светодиоды"
+  },
+  "description": {
+    "en": "The owner of this paint is a welcome guest at any holidays and parties, because his tank, decorated with iridescent multi-colored Leds, sparkles like a strobe.",
+    "ru": "Обладатель этой краски — желанный гость на любых праздниках и вечеринках, ведь его танк, украшенный переливающимися разноцветными светодиодами, сверкает как стробоскоп."
+  },
+
+  "baseItemId": 16000136,
+  "previewResourceId": 16000136,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000137,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

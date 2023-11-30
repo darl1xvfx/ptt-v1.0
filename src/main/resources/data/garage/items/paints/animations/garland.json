@@ -1,0 +1,27 @@
+{
+  "id": "garland",
+  "index": 999,
+
+  "name": {
+    "en": "Garland",
+    "ru": "Герлянда"
+  },
+  "description": {
+    "en": "Preparing for the New Year is a serious test for real tankers. After all, it is very difficult to decorate a Christmas tree when you have paws ... That is, caterpillars! You can also get confused in garlands and tinsel. Sometimes tankers get so carried away that they go out to destroy enemies, entangled in flashing lights. That, however, does not affect their combat effectiveness.",
+    "ru": "Подготовка к Новому году — серьёзное испытание для настоящих танкистов. Ведь весьма непросто украшать ёлку, когда у тебя лапки... То есть гусеницы! Можно и запутаться в гирляндах и мишуре. Порой танкисты настолько увлекаются, что выезжают крушить врагов, опутанные мигающими огоньками. Что, впрочем, не сказывается на их боевой эффективности."
+  },
+
+  "baseItemId": 16000120,
+  "previewResourceId": 16000120,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000121,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

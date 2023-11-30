@@ -1,0 +1,26 @@
+{
+  "id": "electric_sheep",
+  "index": 999,
+
+  "name": {
+    "en": "Electric Sheep",
+    "ru": "Электроовцы"
+  },
+  "description": {
+    "en": "Do androids dream of electric sheep? And these sheep drive electric tanks? And will these tanks be covered with this paint? No one knows.",
+    "ru": "Снятся ли андроидам электроовцы? А эти овцы водят электрические танки? И будут ли эти танки покрыты этой краской? Никто не знает."
+  },
+
+  "baseItemId": 16000068,
+  "previewResourceId": 16000068,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000069,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

@@ -1,0 +1,25 @@
+{
+  "id": "vertigo",
+  "index": 999,
+
+  "name": {
+    "en": "Vertigo",
+    "ru": "Вертиго"
+  },
+  "description": {
+    "en": "It's better not to look at this paint for too long, since the combination of rotating lines and geometrical shapes may strike you off balance. You've been warned!",
+    "ru": "На этой краске лучше не задерживать свой взгляд надолго, ведь комбинация из постоянно вращающихся линий и геометрических фигур способна заставить потерять равновесие. Если что, мы предупреждали!"
+  },
+
+  "baseItemId": 1000003,
+  "previewResourceId": 1000003,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 1000004,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

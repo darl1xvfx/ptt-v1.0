@@ -1,0 +1,27 @@
+{
+  "id": "clouds",
+  "index": 11,
+
+  "name": {
+    "en": "Clouds",
+    "ru": "Облака"
+  },
+  "description": {
+    "en": "Paint for tankers flying in the clouds - literally. It was issued to the participants of the «Parkour Survival 2017» parkour tournament after completing certain rounds. The winners of the tournament have the paint forever.",
+    "ru": "Краска для танкистов, летающих в облаках — в буквальном смысле. Выдавалась участникам паркурного турнира «Parkour Survival 2017» после прохождения определённых туров. У победителей турнира краска осталась навсегда."
+  },
+
+  "baseItemId": 526357,
+  "previewResourceId": 526357,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526358,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

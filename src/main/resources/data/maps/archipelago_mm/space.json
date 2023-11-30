@@ -1,0 +1,172 @@
+{
+  "name": "map_archipelago_mm",
+  "theme": "space",
+
+  "id": 14000002,
+  "preview": 17000002,
+
+  "lowerDeathZone": -1000.000,
+  "highDeathZone": 10156.000,
+
+  "visual": {
+    "angleX": -0.8500000238418579,
+    "angleZ": 2.5,
+
+    "lightColor": 4216936,
+    "shadowColor": 1382169,
+
+    "fogAlpha": 0.35,
+    "fogColor": 10543615,
+
+    "farLimit": 10000,
+    "nearLimit": 5000,
+
+    "gravity": 450,
+    "skyboxRevolutionSpeed": 0.015,
+    "ssaoColor": 2045258,
+
+    "dustAlpha": 0.75,
+    "dustDensity": 0.15000000596046448,
+    "dustFarDistance": 7000,
+    "dustNearDistance": 5000,
+    "dustParticle": "summer",
+    "dustSize": 200
+  },
+  "skybox": "Space",
+  "resources": {
+    "proplibs": [
+      "Land Rocks",
+      "Roadblock",
+      "Land Tiles",
+      "zamin",
+      "Fachwerk House 2",
+      "Village Builds",
+      "NuBu 9",
+      "City Buildings",
+      "Desert Houses",
+      "Fachwerk House 1",
+      "Stuffs"
+    ],
+    "map": { "id": 14000002, "version": 1 }
+  },
+  "spawnPoints": [
+    {
+      "mode": "DM",
+      "position": {"y":-2938.611405833297,"z":1,"x":88.04596070722641},
+      "rotation": { "x": 0, "y": 0, "z": 1 }
+    },
+    {
+      "mode": "DM",
+      "position": {"y":1104.6338451986298,"z":1,"x":152.2292010052356},
+      "rotation": { "x": 0, "y": 0, "z": 1 }
+    },
+    {
+      "mode": "DM",
+      "position": {"y":2672.9625274297578,"z":1,"x":13771.181928946777},
+      "rotation": { "x": 0, "y": 0, "z": 1 }
+    },
+    {
+      "mode": "DM",
+      "position": {"y":1210.6262216238797,"z":1,"x":16543.06836465427},
+      "rotation": { "x": 0, "y": 0, "z": 1 }
+    },
+    {
+      "mode": "DM",
+      "position": {"y":1300.7609943590141,"z":1,"x":14815.720572315846},
+      "rotation": { "x": 0, "y": 0, "z": 1 }
+    },
+    {
+      "mode": "DM",
+      "position": {"y":12360.563284512435,"z":1,"x":8374.00841026726},
+      "rotation": { "x": 0, "y": 0, "z": 1 }
+    },
+    {
+      "mode": "DM",
+      "position": {"y":12245.084321699804,"z":1,"x":6367.033702646458},
+      "rotation": { "x": 0, "y": 0, "z": 1 }
+    },
+    {
+      "mode": "DM",
+      "position": {"y":12174.212009925055,"z":1,"x":4201.869087860083},
+      "rotation": { "x": 0, "y": 0, "z": 1 }
+    }
+  ],
+  "flags": {
+    "RED": {
+      "position": { "x": 2250, "y": -1750, "z": 0 }
+    },
+    "BLUE": {
+      "position": { "x": -1750, "y": 2250, "z": 0 }
+    }
+  },
+  "points": [
+    {
+      "id": "A",
+      "distance": 1000,
+      "free": false,
+      "position": { "x": 250, "y": 250, "z": 0 }
+    }
+  ],
+  "bonuses": [
+    {
+      "name": "free-bonus",
+      "free": true,
+      "types": [ "double_armor" ],
+      "modes": [ "DM", "CP", "CTF", "TDM" ],
+      "parachute": true,
+      "position": {
+        "min": { "x": 1562.5, "y": 1562.5, "z": 600 },
+        "max": { "x": 2062.5, "y": 2062.5, "z": 900 }
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "name": "free-bonus",
+      "free": true,
+      "types": [ "crystal" ],
+      "modes": [ "DM", "CTF", "TDM", "CP" ],
+      "parachute": true,
+      "position": {
+        "min": { "x": 575, "y": 125, "z": 450 },
+        "max": { "x": 1175, "y": 375, "z": 900 }
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "name": "free-bonus",
+      "free": true,
+      "types": [ "double_damage" ],
+      "modes": [ "DM", "CP", "CTF", "TDM" ],
+      "parachute": true,
+      "position": {
+        "min": { "x": -1562.5, "y": -1562.5, "z": 600 },
+        "max": { "x": -1062.5, "y": -1062.5, "z": 900 }
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "name": "free-bonus",
+      "free": true,
+      "types": [ "gold", "crystal" ],
+      "modes": [ "DM", "CTF", "TDM", "CP" ],
+      "parachute": true,
+      "position": {
+        "min": { "x": 125, "y": -800, "z": 450 },
+        "max": { "x": 375, "y": -200, "z": 900 }
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "name": "free-bonus",
+      "free": true,
+      "types": [ "gold" ],
+      "modes": [ "DM", "CTF", "TDM" ],
+      "parachute": true,
+      "position": {
+        "min": { "x": -125, "y": 125, "z": 450 },
+        "max": { "x": 625, "y": 375, "z": 900 }
+      },
+      "rotation": { "x": 0, "y": 0, "z": 0 }
+    }
+  ]
+}

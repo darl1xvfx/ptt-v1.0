@@ -1,0 +1,26 @@
+{
+  "id": "poison_sea",
+  "index": 999,
+
+  "name": {
+    "en": "Poison Sea",
+    "ru": "Ядовитое Море"
+  },
+  "description": {
+    "en": "Engineers have worked hard to create this unique camouflage. Now your tank, like a chameleon, will merge with its surroundings. However, its properties will not work in the desert and the city.",
+    "ru": "Инженеры упорно трудились над созданием этого уникального камуфляжа. Теперь ваш танк, как хамелеон, будет сливаться со своим окружением. Однако его свойства не будут работать в пустыне и городе."
+  },
+
+  "baseItemId": 16000110,
+  "previewResourceId": 16000110,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000111,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

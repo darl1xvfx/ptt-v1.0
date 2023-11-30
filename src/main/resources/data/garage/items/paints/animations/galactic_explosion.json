@@ -1,0 +1,26 @@
+{
+  "id": "galactic_explosion",
+  "index": 999,
+
+  "name": {
+    "en": "Galactic Explosion",
+    "ru": "Галактический Взрыв"
+  },
+  "description": {
+    "en": "This animated paint was created for people fascinated by the infinity of outer space.",
+    "ru": "Эта анимированная краска создана для людей, очарованных бесконечностью космического пространства."
+  },
+
+  "baseItemId": 16000096,
+  "previewResourceId": 16000096,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000097,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

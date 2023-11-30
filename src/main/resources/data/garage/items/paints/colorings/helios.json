@@ -1,0 +1,27 @@
+{
+  "id": "Helios",
+  "index": 6,
+
+  "name": {
+    "en": "Helios",
+    "ru": "Гелиос"
+  },
+  "description": {
+    "en": "This unique coating was found during archaeological excavations of the ancient city, where the temple of the solar deity was located. Legends say that the owner of this paint receives the boundless energy contained in it - and can use it only for creative purposes, in creativity. Every artist dreams of owning a copy, but only a select few are allowed to wear the Helios crown.",
+    "ru": "Это уникальное покрытие найдено во время археологических раскопок древнего города, где располагался храм солнечного божества. Легенды гласят, что обладатель этой краски получает заключённую в ней безграничную энергию — и может использовать её только в созидательных целях, в творчестве. Каждый художник мечтает заполучить экземпляр, но только избранные творцы имеют право носить корону Гелиоса."
+  },
+
+  "baseItemId": 526347,
+  "previewResourceId": 526347,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526348,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,157 @@
+{
+  "id": "viking",
+  "index": 4,
+
+  "name": {
+    "en": "Viking",
+    "ru": "Викинг"
+  },
+  "description": {
+    "en": "This armor incorporates all modern military technologies. Reinforced armor and «Type 2» engine make Viking one of the most versatile hulls. Attack the enemy or cover your teammates – this hull will prove itself as a good and trustful one in any situation.",
+    "ru": "Этот корпус воплощает в себе все самые современные наработки военной инженерии. Усиленная броня и гусеничная система второго поколения делают его великолепным универсалом. Корпус прекрасно подходит для решения любых боевых задач — от удержания высоты до лобовой атаки."
+  },
+
+  "baseItemId": 730749,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 730749,
+      "object3ds": 513347,
+
+      "rank": 20,
+      "price": 700,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1588 },
+        { "property": "HULL_SPEED", "value": 8.23 },
+        { "property": "HULL_TURN_SPEED", "value": 104 },
+        { "property": "HULL_MASS", "value": 1414 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 12 }
+          ]
+        }
+      ],
+      "physics": {
+        "speed": 8.23,
+        "turnSpeed": 1.81514242,
+        "acceleration": 12.88,
+        "reverseAcceleration": 14.35,
+        "sideAcceleration": 11.18,
+        "turnAcceleration": 1.83259571,
+        "reverseTurnAcceleration": 5.28834763,
+        "damping": 2000,
+        "mass": 1414,
+        "power": 12.88
+      },
+
+      "maxHealth": { "maxHealth": 1588.0 }
+    },
+    "1": {
+      "previewResourceId": 500013,
+      "object3ds": 347843,
+
+      "rank": 20,
+      "price": 29900,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1792 },
+        { "property": "HULL_SPEED", "value": 8.76 },
+        { "property": "HULL_TURN_SPEED", "value": 119 },
+        { "property": "HULL_MASS", "value": 1693 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 14 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 8.76,
+        "turnSpeed": 2.07694181,
+        "acceleration": 14.58,
+        "reverseAcceleration": 16.71,
+        "sideAcceleration": 12.35,
+        "turnAcceleration": 1.93731547,
+        "reverseTurnAcceleration": 5.70722665,
+        "damping": 2000,
+        "mass": 1693,
+        "power": 14.58
+      },
+
+      "maxHealth": { "maxHealth": 1792.0 }
+    },
+    "2": {
+      "previewResourceId": 914016,
+      "object3ds": 153457,
+
+      "rank": 20,
+      "price": 102700,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1924 },
+        { "property": "HULL_SPEED", "value": 9.08 },
+        { "property": "HULL_TURN_SPEED", "value": 128},
+        { "property": "HULL_MASS", "value": 2083 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 16 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 9.08,
+        "turnSpeed": 2.23402144,
+        "acceleration": 16.27,
+        "reverseAcceleration": 18.12,
+        "sideAcceleration": 13.06,
+        "turnAcceleration": 2.00712864,
+        "reverseTurnAcceleration": 5.95157275,
+        "damping": 2000,
+        "mass": 2083,
+        "power": 16.27
+      },
+
+      "maxHealth": { "maxHealth": 1924.0 }
+    },
+    "3": {
+      "previewResourceId": 832320,
+      "object3ds": 937522,
+
+      "rank": 20,
+      "price": 250000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 2184 },
+        { "property": "HULL_SPEED", "value": 9.5 },
+        { "property": "HULL_TURN_SPEED", "value": 140 },
+        { "property": "HULL_MASS", "value": 2263 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 17 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 9.5,
+        "turnSpeed": 2.44346,
+        "acceleration": 17.0,
+        "reverseAcceleration": 20.0,
+        "sideAcceleration": 14,
+        "turnAcceleration": 2.0944,
+        "reverseTurnAcceleration": 6.28319,
+        "damping": 2000,
+        "mass": 2184,
+        "power": 17.0
+      },
+
+      "maxHealth": { "maxHealth": 2184.0 }
+    }
+  }
+}

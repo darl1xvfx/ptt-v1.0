@@ -1,0 +1,27 @@
+{
+  "id": "microbiology",
+  "index": 999,
+
+  "name": {
+    "en": "Microbiology",
+    "ru": "Микробиология"
+  },
+  "description": {
+    "en": "That's what it looks like under a microscope... You definitely don't want to know.",
+    "ru": "Именно так под микроскопом выглядит... Вы точно не захотите этого знать."
+  },
+
+  "baseItemId": 16000156,
+  "previewResourceId": 16000156,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000157,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

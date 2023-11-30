@@ -1,0 +1,26 @@
+{
+  "id": "cybernetic_radiance",
+  "index": 999,
+
+  "name": {
+    "en": "Cybernetic Radiance",
+    "ru": "Кибернетическое Сияние"
+  },
+  "description": {
+    "en": "Become the most beautiful northern lights the world has ever seen! Scientists have managed to create an artificial Aurora using the latest technology. Thanks to her, not only the northern sky will shine in all its splendor, but also your tank. One of the most beautiful natural phenomena can be yours in the form of garage paint.",
+    "ru": "Стань самым прекрасным северным сиянием, которое когда-либо видел мир! Учёным удалось создать искусственную Аврору с помощью новейших технологий. Благодаря ей во всём великолепии засияет не только северное небо, но и твой танк. Одно из самых красивых природных явлений может стать твоим в виде краски в гараже."
+  },
+
+  "baseItemId": 16000058,
+  "previewResourceId": 16000058,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000059,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

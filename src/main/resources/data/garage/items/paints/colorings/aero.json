@@ -1,0 +1,27 @@
+{
+  "id": "aero",
+  "index": 2,
+
+  "name": {
+    "en": "Aero",
+    "ru": "Аэро"
+  },
+  "description": {
+    "en": "This paint is given out to the teams of the international community for outstanding achievements in parkour, and only desperate daredevils can win it! The paint consists of highly volatile particles and begins to evaporate when the concentration of adrenaline in the tanker's blood is insufficient.",
+    "ru": "Эта краска выдается командам международного сообщества за выдающиеся достижения в паркуре, и выиграть её могут только отчаянные сорвиголовы! Краска состоит из высоколетучих частиц и начинает испаряться при недостаточной концентрации адреналина в крови танкиста."
+  },
+
+  "baseItemId": 526339,
+  "previewResourceId": 526339,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526340,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

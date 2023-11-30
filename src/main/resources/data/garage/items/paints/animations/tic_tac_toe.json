@@ -1,0 +1,27 @@
+{
+  "id": "tic_tac_toe",
+  "index": 999,
+
+  "name": {
+    "en": "Tic-Tac-Toe",
+    "ru": "Крестики-Нолики"
+  },
+  "description": {
+    "en": "Do not be surprised if during a hot battle you are offered to play tic-tac-toe. Most likely, you have before you a real professional, behind whom there are many successful games in this exciting game.",
+    "ru": "Не удивляйтесь, если во время жаркой баталии вам предложат сыграть в «крестики-нолики». Скорее всего, перед вами настоящий профессионал, за плечами которого множество успешных партий в эту увлекательную игру."
+  },
+
+  "baseItemId": 16000228,
+  "previewResourceId": 16000228,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000229,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

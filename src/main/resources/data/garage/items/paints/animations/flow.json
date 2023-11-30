@@ -1,0 +1,25 @@
+{
+  "id": "flow",
+  "index": 999,
+
+  "name": {
+    "en": "Flow",
+    "ru": "Флоу"
+  },
+  "description": {
+    "en": "The legendary animated tank cover is the first of its kind. Tesla's ultra-compact generators produce energy that spreads over the tank's hull and coats it in a rhythmically moving field of unstable particles. The swirls of this field create a mesmerizing pattern. This unique paint was originally named «XF-245RD», but was later renamed «Flow», which translates from English as «Flow». The paint owes this name not only to its moving pattern, but also to the crushing power of the elements of water, which is personified by tankers using this coating.",
+    "ru": "Легендарное анимированное танковое покрытие — первое в своём роде. Ультракомпактные генераторы Тесла производят энергию, которая растекается по корпусу танка и покрывает его ритмично движущимся полем из нестабильных частиц. Завихрения этого поля создают гипнотизирующий узор. Эта уникальная краска изначально была названа «XF-245RD», однако позже была переименована в «Flow», что переводится с английского языка как «поток». Этим именем краска обязана не только своему движущемуся узору, но и сокрушительной мощи стихии воды, которую олицетворяют собой танкисты, использующие это покрытие."
+  },
+
+  "baseItemId": 1000007,
+  "previewResourceId": 1000007,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 1000008,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

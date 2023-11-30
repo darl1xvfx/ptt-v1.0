@@ -1,0 +1,27 @@
+{
+  "id": "fujiyama",
+  "index": 999,
+
+  "name": {
+    "en": "Fujiyama",
+    "ru": "Фудзияма"
+  },
+  "description": {
+    "en": "This paint was considered a secret development for a long time and was used exclusively by samurai tank troops, until the samurai decided that it should also bring peace to other tankers. Forget about worries and enjoy the beauty of wildlife.",
+    "ru": "Эта краска долгое время считалась секретной разработкой и использовалась исключительно самурайскими танковыми войсками, пока самураи не решили, что она должна приносить умиротворение и другим танкистам. Забудьте о тревогах и наслаждайтесь красотой живой природы."
+  },
+
+  "baseItemId": 16000160,
+  "previewResourceId": 16000160,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000161,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

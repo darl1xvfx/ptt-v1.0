@@ -1,0 +1,21 @@
+{
+  "id": "armor",
+  "index": 2,
+
+  "name": {
+    "en": "Double armor",
+    "ru": "Двойная защита"
+  },
+  "description": {
+    "en": "Halves the amount of incoming damage of any type.\n",
+    "ru": "Уменьшает в два раза размер входящего урона любого типа."
+  },
+
+  "baseItemId": 6001,
+  "previewResourceId": 6001,
+
+  "rank": 1,
+  "price": 50,
+
+  "properties": [ ]
+}

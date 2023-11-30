@@ -1,0 +1,27 @@
+{
+  "id": "valor",
+  "index": 999,
+
+  "name": {
+    "en": "Valor",
+    "ru": "Доблесть"
+  },
+  "description": {
+    "en": "This cover is issued to the best frontline fighters. Show your grandchildren your tank, battered in battles, covered with this paint, and tell us about your two-ka-eighteenth, they will be proud of their ancestor!",
+    "ru": "Это покрытие выдаётся лучшим бойцам передовой. Покажите внукам свой потрёпанный в боях танк, покрытый этой краской, и расскажите про свой два-ка-восемнадцатый, они будут гордиться предком!"
+  },
+
+  "baseItemId": 16000236,
+  "previewResourceId": 16000236,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000237,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

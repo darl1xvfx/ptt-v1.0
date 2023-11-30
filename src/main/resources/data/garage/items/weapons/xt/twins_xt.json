@@ -1,0 +1,211 @@
+{
+  "id": "twins_xt",
+  "index": 18,
+
+  "name": {
+    "en": "Twins XT",
+    "ru": "Твинс XT"
+  },
+  "description": {
+    "en": "Twins XT is covered in the dinosaur hide preserved in the excellent condition among the caves of South Africa. Also infused with lava from the Indonesian volcanos, this skin turns plasma shots into a truly melting firepower!",
+    "ru": "Твинс XT покрыт шкурой динозавра, чудесным образом сохранившейся невредимой в пещерах Южной Африки. Также при изготовлении скина использовалась лава из индонезийских вулканов, благодаря которой плазма приобретает по-настоящему огненную силу!"
+  },
+  
+  "baseItemId": 18000024,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 18000024,
+      "object3ds": 18000025,
+
+      "rank": 1,
+      "price": 125000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 187 },
+            { "property": "DAMAGE_TO", "value": 263 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 160 },
+        { "property": "TURRET_TURN_SPEED", "value": 134.7 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 80 }
+          ]
+        },
+        { "property": "WEAPON_MIN_DAMAGE_PERCENT", "value": 20 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 190.00, "to": 220.00 },
+        "weakening": { "from": 15, "to": 80, "minimum": 0.2 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.3500858378103646,
+        "turretTurnAcceleration": 3.850021796974292,
+        "impactForce": 1.6,
+        "kickback": 0.5
+      },
+
+      "visual": {
+        "$type": "twins_xt",
+
+        "explosionTexture": 236695,
+        "hitMarkTexture": 828576,
+        "muzzleFlashTexture": 179480,
+        "shotSound": 457612,
+        "shotTexture": 433995,
+        "lighting": [
+          {
+            "name": "shot",
+            "light": [
+              { "attenuationBegin": 300, "attenuationEnd": 500, "color": 7241215, "intensity": 0.3, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 7241215, "intensity": 0, "time": 300 }
+            ]
+          },
+          {
+            "name": "bullet",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 300, "color": 65280, "intensity": 0.5, "time": 0 }
+            ]
+          },
+          {
+            "name": "hit",
+            "light": [
+              { "attenuationBegin": 200, "attenuationEnd": 400, "color": 65280, "intensity": 0.3, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 65280, "intensity": 0, "time": 300 }
+            ]
+          }
+        ],
+        "bcsh": [
+          { "brightness": 10.155, "contrast": 1.77, "saturation": -17.699, "hue": 73.27, "key": "flash" },
+          { "brightness": 10.155, "contrast": 1.77, "saturation": -8.85, "hue": 297.88, "key": "shot" },
+          { "brightness": 10.155, "contrast": 1.77, "saturation": -8.85, "hue": 297.88, "key": "expl" }
+        ]
+      }
+    },
+    "1": {
+      "previewResourceId": 18000026,
+      "object3ds": 18000027,
+
+      "rank": 1,
+      "price": 250000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 187 },
+            { "property": "DAMAGE_TO", "value": 263 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 160 },
+        { "property": "TURRET_TURN_SPEED", "value": 134.7 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 80 }
+          ]
+        },
+        { "property": "WEAPON_MIN_DAMAGE_PERCENT", "value": 20 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 190.00, "to": 220.00 },
+        "weakening": { "from": 15, "to": 80, "minimum": 0.2 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.3500858378103646,
+        "turretTurnAcceleration": 3.850021796974292,
+        "impactForce": 1.6,
+        "kickback": 0.5
+      }
+    },
+    "2": {
+      "previewResourceId": 18000028,
+      "object3ds": 18000029,
+
+      "rank": 1,
+      "price": 375000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 187 },
+            { "property": "DAMAGE_TO", "value": 263 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 160 },
+        { "property": "TURRET_TURN_SPEED", "value": 134.7 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 80 }
+          ]
+        },
+        { "property": "WEAPON_MIN_DAMAGE_PERCENT", "value": 20 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 190.00, "to": 220.00 },
+        "weakening": { "from": 15, "to": 80, "minimum": 0.2 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.3500858378103646,
+        "turretTurnAcceleration": 3.850021796974292,
+        "impactForce": 1.6,
+        "kickback": 0.5
+      }
+    },
+    "3": {
+      "previewResourceId": 18000030,
+      "object3ds": 18000031,
+
+      "rank": 1,
+      "price": 500000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 187 },
+            { "property": "DAMAGE_TO", "value": 263 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 160 },
+        { "property": "TURRET_TURN_SPEED", "value": 134.7 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 80 }
+          ]
+        },
+        { "property": "WEAPON_MIN_DAMAGE_PERCENT", "value": 20 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 190.00, "to": 220.00 },
+        "weakening": { "from": 15, "to": 80, "minimum": 0.2 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.3500858378103646,
+        "turretTurnAcceleration": 3.850021796974292,
+        "impactForce": 1.6,
+        "kickback": 0.5
+      }
+    }
+  }
+}

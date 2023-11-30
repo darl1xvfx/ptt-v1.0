@@ -1,0 +1,209 @@
+{
+  "id": "railgun_terminator",
+  "index": 10,
+
+  "name": {
+    "en": "Terminator",
+    "ru": "Терминатор"
+  },
+  "description": {
+    "en": "Create an unobtainable cannon or otherwise obtain it permanently. These weapons, together with the Juggernaut hull in the Juggernaut tank, are designed exclusively for battles in the Juggernaut mode. An exception is the use of a tank by game developers for the purpose of implementing and organizing events.",
+    "ru": "Эту уникальную пушку невозможно приобрести или иным образом получить в постоянное владение. Это вооружение, вместе с корпусом «Джаггернаут» в составе танка «Джаггернаут» предназначено исключительно для битв в режиме «Джаггернаут». Исключение — уникальным танком могут пользоваться разработчики игры в целях тестирования и организации мероприятий."
+  },
+
+  "baseItemId": 19000000,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 19000000,
+      "object3ds": 19000001,
+
+      "rank": 1,
+      "price": 125000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 750 },
+            { "property": "DAMAGE_TO", "value": 864 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 700 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 2.50 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 97.4 },
+        { "property": "WEAPON_WEAKENING_COEFF", "value": 100.00 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 800.00, "to": 1600.00 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 7.0,
+        "kickback": 4.0
+      },
+
+      "visual": {
+        "$type": "railgun_terminator",
+
+        "chargingPart1": 114424,
+        "chargingPart2": 468379,
+        "chargingPart3": 932241,
+        "hitMarkTexture": 670581,
+        "powTexture": 963502,
+        "ringsTexture": 966691,
+        "shotSound": 900597,
+        "smokeImage": 882103,
+        "sphereTexture": 212409,
+        "trailImage": 550305,
+        "lighting": [
+          {
+            "name": "charge",
+            "light": [
+              { "attenuationBegin": 200, "attenuationEnd": 200, "color": 16777215, "intensity": 0.7, "time": 0 },
+              { "attenuationBegin": 200, "attenuationEnd": 800, "color": 16777215, "intensity": 0.3, "time": 600 }
+            ]
+          },
+          {
+            "name": "shot",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 600, "color": 16777215, "intensity": 0.7, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16777215, "intensity": 0, "time": 300 }
+            ]
+          },
+          {
+            "name": "hit",
+            "light": [
+              { "attenuationBegin": 200, "attenuationEnd": 600, "color": 16777215, "intensity": 0.7, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16777215, "intensity": 0, "time": 300 }
+            ]
+          },
+          {
+            "name": "rail",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 500, "color": 16777215, "intensity": 0.5, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16777215, "intensity": 0, "time": 1800 }
+            ]
+          }
+        ],
+        "bcsh": [
+          { "brightness": 100.0, "contrast": 10.0, "saturation": 0.0, "hue": 208.67, "key": "trail" },
+          { "brightness": 100.0, "contrast": 10.0, "saturation": 0.0, "hue": 208.67, "key": "charge" }
+        ]
+      }
+    },
+    "1": {
+      "previewResourceId": 19000002,
+      "object3ds": 19000003,
+
+      "rank": 1,
+      "price": 250000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 750 },
+            { "property": "DAMAGE_TO", "value": 864 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 700 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 2.50 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 97.4 },
+        { "property": "WEAPON_WEAKENING_COEFF", "value": 100.00 }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 800.00, "to": 1600.00 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 7.0,
+        "kickback": 4.0
+      }
+    },
+    "2": {
+      "previewResourceId": 19000004,
+      "object3ds": 19000005,
+
+      "rank": 2,
+      "price": 375000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 750 },
+            { "property": "DAMAGE_TO", "value": 864 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 700 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 2.50 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 124 },
+        { "property": "WEAPON_WEAKENING_COEFF", "value": 124 }
+      ],
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 7.0,
+        "kickback": 4.0
+      }
+    },
+    "3": {
+      "previewResourceId": 19000006,
+      "object3ds": 19000007,
+
+      "rank": 2,
+      "price": 500000,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 750 },
+            { "property": "DAMAGE_TO", "value": 864 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 700 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 2.50 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 124 },
+        { "property": "WEAPON_WEAKENING_COEFF", "value": 124 }
+      ],
+
+      "physics": {
+        "turretRotationSpeed": 2.594395,
+        "turretTurnAcceleration": 2.594395,
+        "impactForce": 7.0,
+        "kickback": 4.0
+      }
+    }
+  }
+}

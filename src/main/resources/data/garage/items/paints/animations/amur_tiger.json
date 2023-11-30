@@ -1,0 +1,27 @@
+{
+  "id": "amur_tiger",
+  "index": 999,
+
+  "name": {
+    "en": "Amur Tiger",
+    "ru": "Амурский Тигр"
+  },
+  "description": {
+    "en": "Luxurious coating that characterizes its owner as a ferocious predator. According to the «tiger census» in 2015, the population of the Amur tiger barely exceeds 500 individuals. Let's increase the number of a rare beast!",
+    "ru": "Роскошное покрытие, которое характеризует его обладателя как свирепого хищника. Согласно данным «тигриной переписи» 2015 года, поголовье амурского тигра едва превышает 500 особей. Повысим же численность редкого зверя!"
+  },
+
+  "baseItemId": 16000198,
+  "previewResourceId": 16000198,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000199,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

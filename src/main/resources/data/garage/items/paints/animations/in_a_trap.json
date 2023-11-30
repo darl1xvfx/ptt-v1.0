@@ -1,0 +1,27 @@
+{
+  "id": "in_a_trap",
+  "index": 999,
+
+  "name": {
+    "en": "In A Trap",
+    "ru": "В Ловушке"
+  },
+  "description": {
+    "en": "Do you have thoughts of revenge in your head? Do you suspect that your comrades have let you down? Do you feel that your own tank is a trap for you? Overcome suffering by using this paint as a symbol of strength and pride on the battlefield.",
+    "ru": "В голове то и дело возникают мысли о мести? Подозреваете, что товарищи подвели вас? Чувствуете, что собственный танк оказывается для вас ловушкой? Преодолейте страдания, используя эту краску как символ силы и гордости на поле боя."
+  },
+
+  "baseItemId": 16000232,
+  "previewResourceId": 16000232,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000233,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,27 @@
+{
+  "id": "runes",
+  "index": 999,
+
+  "name": {
+    "en": "Runes",
+    "ru": "Руны"
+  },
+  "description": {
+    "en": "It is extremely unlikely that anyone will be able to decipher the message encrypted in runes in this paint. Of course, you can try, but it's better not to - you risk missing the whole battle ...",
+    "ru": "Крайне маловероятно, что кому-нибудь удастся разгадать послание, зашифрованное рунами в этой краске. Вы, конечно, можете попробовать, но лучше не стоит — рискуете пропустить всю битву…"
+  },
+
+  "baseItemId": 16000192,
+  "previewResourceId": 16000192,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000193,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

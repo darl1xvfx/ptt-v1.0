@@ -1,0 +1,27 @@
+{
+  "id": "symbiote",
+  "index": 999,
+
+  "name": {
+    "en": "Symbiote",
+    "ru": "Симбиот"
+  },
+  "description": {
+    "en": "«We will blow up your gun, then the tracks, and then we will peel your paint right off the tank. You will turn into a gunless, trackless, colorless...» (c) Paint Owner",
+    "ru": "«Мы взорвём твою пушку, потом гусеницы, а потом сдерём твою краску прямо с танка. Ты превратишься в беспушечную, безгусеничную, бескрасочную ...» (c) Владелец краски"
+  },
+
+  "baseItemId": 16000216,
+  "previewResourceId": 16000216,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000217,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

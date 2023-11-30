@@ -1,0 +1,21 @@
+{
+  "id": "double_damage",
+  "index": 3,
+
+  "name": {
+    "en": "Double damage",
+    "ru": "Двойной урон"
+  },
+  "description": {
+    "en": "Doubles the damage of your cannon.\n",
+    "ru": "Удваивает урон вашей пушки."
+  },
+
+  "baseItemId": 6002,
+  "previewResourceId": 6002,
+
+  "rank": 1,
+  "price": 50,
+
+  "properties": [ ]
+}

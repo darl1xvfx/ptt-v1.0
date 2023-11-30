@@ -1,0 +1,158 @@
+{
+  "id": "dictator_xtx",
+  "index": 12,
+
+  "name": {
+    "en": "Dictator XT",
+    "ru": "Диктатор XT"
+  },
+  "description": {
+    "en": "Equip the elite Dictator XT and you can easily lead your team, cover your allies, and nothing escapes your gaze. The glowing golden wings on the sides of the hull can be seen from a mile away.\n\nM0 - Crisis (10) steps.\nM1 - Crisis (20) steps.\nM2 - Easing.\nM3 - Heavyweight.",
+    "ru": "Экипируйте элитный Диктатор XT, и вы легко сможете повести за собой команду, прикрыть союзников, и ничто не ускользнёт от вашего зоркого взгляда. Сияние золотых крыльев по бокам корпуса заметно за километр.\n\nM0 - Кризис (10) шагов.\nM1 - Кризис (20) шагов.\nM2 - Облегчение.\nM3 - Утяжеление."
+  },
+
+  "baseItemId": 18000096,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 18000096,
+      "object3ds": 18000097,
+
+      "rank": 5,
+      "price": 125000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 15 },
+        { "property": "HULL_TURN_SPEED", "value": 127 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 17 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 15.3,
+        "turnSpeed": 2.21657,
+        "acceleration": 17,
+        "reverseAcceleration": 17,
+        "sideAcceleration": 20,
+        "turnAcceleration": 2.0944,
+        "reverseTurnAcceleration": 6.28319,
+        "damping": 2500,
+        "mass": 1000,
+        "power": 17
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "1": {
+      "previewResourceId": 18000098,
+      "object3ds": 18000099,
+
+      "rank": 10,
+      "price": 250000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 17 },
+        { "property": "HULL_TURN_SPEED", "value": 136 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 18 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 17,
+        "turnSpeed": 2.37365,
+        "acceleration": 18,
+        "reverseAcceleration": 17,
+        "sideAcceleration": 20,
+        "turnAcceleration": 2.0944,
+        "reverseTurnAcceleration": 6.28319,
+        "damping": 2500,
+        "mass": 1000,
+        "power": 18
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "2": {
+      "previewResourceId": 18000100,
+      "object3ds": 18000101,
+
+      "rank": 15,
+      "price": 375000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 8.5 },
+        { "property": "HULL_TURN_SPEED", "value": 120 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 16 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 8.5,
+        "turnSpeed": 2.0944,
+        "acceleration": 16,
+        "reverseAcceleration": 17,
+        "sideAcceleration": 20,
+        "turnAcceleration": 2.0944,
+        "reverseTurnAcceleration": 6.28319,
+        "damping": 2500,
+        "mass": 1000,
+        "power": 16
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "3": {
+      "previewResourceId": 18000102,
+      "object3ds": 18000103,
+
+      "rank": 20,
+      "price": 500000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 2567 },
+        { "property": "HULL_SPEED", "value": 8.5 },
+        { "property": "HULL_TURN_SPEED", "value": 120 },
+        { "property": "HULL_MASS", "value": 3083 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 16 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 8.5,
+        "turnSpeed": 2.0944,
+        "acceleration": 16,
+        "reverseAcceleration": 17,
+        "sideAcceleration": 20,
+        "turnAcceleration": 2.0944,
+        "reverseTurnAcceleration": 6.28319,
+        "damping": 2500,
+        "mass": 3083,
+        "power": 16
+      },
+
+      "maxHealth": { "maxHealth": 2567.0 }
+    }
+  }
+}

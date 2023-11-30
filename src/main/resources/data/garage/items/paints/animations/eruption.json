@@ -1,0 +1,26 @@
+{
+  "id": "eruption",
+  "index": 999,
+
+  "name": {
+    "en": "Eruption",
+    "ru": "Извержение"
+  },
+  "description": {
+    "en": "A powerful explosion, black clouds of ash, hot lava flows that destroy everything in their path - your tank will become a real natural disaster for your opponents.",
+    "ru": "Мощный взрыв, чёрные клубы пепла, потоки раскалённой лавы, уничтожающие всё на своём пути — ваш танк станет настоящим стихийным бедствием для соперников."
+  },
+
+  "baseItemId": 16000072,
+  "previewResourceId": 16000072,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000073,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

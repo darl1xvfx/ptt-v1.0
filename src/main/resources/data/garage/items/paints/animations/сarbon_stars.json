@@ -1,0 +1,26 @@
+{
+  "id": "сarbon_stars",
+  "index": 999,
+
+  "name": {
+    "en": "Carbon Stars",
+    "ru": "Карбоновые Звёзды"
+  },
+  "description": {
+    "en": "This rare paint was created by converting three helium atoms into one carbon atom. Thanks to this, the paint has a unique lighting effect and emits stellar gamma radiation that attacks enemies from the inside and takes them under control.",
+    "ru": "Эта редкая краска была создана с помощью преобразования трёх атомов гелия в один атом углерода. Благодаря этому краска имеет уникальный световой эффект и испускает звёздное гамма-излучение, которое атакует врагов изнутри и берёт их под контроль."
+  },
+
+  "baseItemId": 16000032,
+  "previewResourceId": 16000032,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000033,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

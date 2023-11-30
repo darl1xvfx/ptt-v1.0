@@ -1,0 +1,25 @@
+{
+  "id": "heartbeat",
+  "index": 999,
+
+  "name": {
+    "en": "Heartbeat",
+    "ru": "Биение Сердец"
+  },
+  "description": {
+    "en": "Imagine that you are dragged into the maelstrom of events, the vise is tightening, and there is almost no time left to make a decision. What will you choose - kill or love?",
+    "ru": "Представьте, что вас затянуло в водоворот событий, тиски сжимаются, и времени на принятие решения почти не осталось. Что вы выберете — убить или любить?"
+  },
+
+  "baseItemId": 16000018,
+  "previewResourceId": 16000018,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000019,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

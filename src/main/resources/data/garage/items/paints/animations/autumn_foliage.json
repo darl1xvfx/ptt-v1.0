@@ -1,0 +1,26 @@
+{
+  "id": "autumn_foliage",
+  "index": 999,
+
+  "name": {
+    "en": "Autumn Foliage",
+    "ru": "Осенняя Листва"
+  },
+  "description": {
+    "en": "Maple leaves, which are part of this coating, will forever retain their beautiful shape and set you in a lyrical mood. At any time of the year, a tank in this paint will look like gold. And «Autumn Foliage» perfectly masks in the autumn forest.",
+    "ru": "Кленовые листья, входящие в состав этого покрытия, навсегда сохранят свою красивую форму и настроят вас на лирический лад. В любое время года танк в этой краске будет словно золотым. А ещё «Осенняя листва» прекрасно маскирует в осеннем лесу."
+  },
+
+  "baseItemId": 16000074,
+  "previewResourceId": 16000074,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000075,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

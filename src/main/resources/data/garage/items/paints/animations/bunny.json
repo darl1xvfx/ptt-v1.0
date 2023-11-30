@@ -1,0 +1,26 @@
+{
+  "id": "bunny",
+  "index": 999,
+
+  "name": {
+    "en": "Bunny",
+    "ru": "Банни"
+  },
+  "description": {
+    "en": "Paint «Bunny» gives its owner the ability to notice the smallest details. From these omnipresent eyes, even the smallest Waspo-Smok will not hide. Use it for its intended purpose, and you will not be equal in battle.",
+    "ru": "Краска «Банни» наделяет своего обладателя способностью замечать мельчайшие детали. От этих вездесущих глаз не спрячется даже самый маленький Васпо-Смок. Используйте её по назначению, и в бою вам не будет равных."
+  },
+
+  "baseItemId": 16000024,
+  "previewResourceId": 16000024,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000025,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

@@ -1,0 +1,29 @@
+{
+  "id": "toxin",
+  "index": 23,
+
+  "name": {
+    "en": "Toxin",
+    "ru": "Токсин"
+  },
+  "description": {
+    "en": "The paint was made by the player DanyaForever, a legendary person who was in the legendary SLIPPERS clan",
+    "ru": "Краска была сделана игроком DanyaForever, легендарный человек который был в легендарном клане ТАПОК"
+  },
+  "baseItemId": 52683,
+  "previewResourceId": 526383,
+
+  "rank": 20,
+  "price": 500000,
+
+  "coloring": 526384,
+
+  "properties": [
+    {
+      "property": "THUNDER_RESISTANCE",
+      "value": 25
+    }
+  ]
+}
+
+

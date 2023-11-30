@@ -1,0 +1,26 @@
+{
+  "id": "fire_golem",
+  "index": 999,
+
+  "name": {
+    "en": "Fire Golem",
+    "ru": "Огненный Голем"
+  },
+  "description": {
+    "en": "Apply this texture to anything - a teddy bear, a house or a tank - and it will instantly turn into a Fire Golem. Paint does not give superpowers, but you will look luxurious.",
+    "ru": "Примените эту текстуру на что угодно — плюшевого мишку, дом или танк — и это мгновенно превратится в Огненного голема. Краска не даёт сверхспособностей, но выглядеть будете роскошно."
+  },
+
+  "baseItemId": 16000082,
+  "previewResourceId": 16000082,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000083,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

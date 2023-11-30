@@ -1,0 +1,27 @@
+{
+  "id": "tentacles",
+  "index": 999,
+
+  "name": {
+    "en": "Tentacles",
+    "ru": "Щупальца"
+  },
+  "description": {
+    "en": "Octopuses are amazing creatures. They are able to change color to match the environment and throw out a cloud of ink, hiding behind it from enemies. It is believed that they can even be tamed. Would you like to have a tank octopus?",
+    "ru": "Осьминоги — удивительные создания. Они способны менять окраску, подстраиваясь под окружающую среду, и выбрасывать облако чернил, скрываясь за ним от врагов. Считается, что их даже можно приручить. А вы хотели бы завести себе танкового осьминожка?"
+  },
+
+  "baseItemId": 16000224,
+  "previewResourceId": 16000224,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000225,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

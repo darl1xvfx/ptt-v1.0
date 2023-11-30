@@ -1,0 +1,158 @@
+{
+  "id": "hunter",
+  "index": 3,
+
+  "name": {
+    "en": "Hunter",
+    "ru": "Хантер"
+  },
+  "description": {
+    "en": "Hunter is the most versatile hull in the game. Thanks to balance between reinforced steel armor plates and low energy consumption this armor is an all-purpose one. It is good for everybody, from sprinters to snipers. Being so versatile, you'll never stay without a job on a field of war.",
+    "ru": "Этот корпус, обшитый бронёй из армированной стали, является наиболее универсальным. Он хорошо подойдет как поклонникам активного, динамичного боя, так и игрокам, предпочитающим позиционный стиль игры. Вы никогда не останетесь без работы, будь то удержание высоты или жестокая битва за квартал разрушенного города."
+  },
+
+  "baseItemId": 826132,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 826132,
+      "object3ds": 227169,
+
+      "rank": 5,
+      "price": 0,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1000 },
+        { "property": "HULL_SPEED", "value": 8.07 },
+        { "property": "HULL_TURN_SPEED", "value": 116 },
+        { "property": "HULL_MASS", "value": 1500 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 11 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 8.07,
+        "turnSpeed": 2.02458193,
+        "acceleration": 11.98,
+        "reverseAcceleration": 13.06,
+        "sideAcceleration": 12.91,
+        "turnAcceleration": 1.8675023,
+        "reverseTurnAcceleration": 5.41052068,
+        "damping": 1500,
+        "mass": 1500,
+        "power": 11.98
+      },
+
+      "maxHealth": { "maxHealth": 1000.0 }
+    },
+    "1": {
+      "previewResourceId": 289133,
+      "object3ds": 377977,
+
+      "rank": 10,
+      "price": 3200,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1564 },
+        { "property": "HULL_SPEED", "value": 8.29 },
+        { "property": "HULL_TURN_SPEED", "value": 124 },
+        { "property": "HULL_MASS", "value": 1782 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 12 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 8.29,
+        "turnSpeed": 2.16420827,
+        "acceleration": 12.94,
+        "reverseAcceleration": 14.24,
+        "sideAcceleration": 13.65,
+        "turnAcceleration": 1.91986218,
+        "reverseTurnAcceleration": 5.61996019,
+        "damping": 1500,
+        "mass": 1782,
+        "power": 12.94
+      },
+
+      "maxHealth": { "maxHealth": 1564.0 }
+    },
+    "2": {
+      "previewResourceId": 271579,
+      "object3ds": 271004,
+
+      "rank": 15,
+      "price": 54400,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1973 },
+        { "property": "HULL_SPEED", "value": 8.65 },
+        { "property": "HULL_TURN_SPEED", "value": 137 },
+        { "property": "HULL_MASS", "value": 1901 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 14 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 8.65,
+        "turnSpeed": 2.39110108,
+        "acceleration": 11.47,
+        "reverseAcceleration": 16.12,
+        "sideAcceleration": 14.82,
+        "turnAcceleration": 2.00712864,
+        "reverseTurnAcceleration": 5.95157275,
+        "damping": 1500,
+        "mass": 1901,
+        "power": 14.47
+      },
+
+      "maxHealth": { "maxHealth": 1973.0 }
+    },
+    "3": {
+      "previewResourceId": 630759,
+      "object3ds": 257012,
+
+      "rank": 20,
+      "price": 190000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 2483 },
+        { "property": "HULL_SPEED", "value": 10 },
+        { "property": "HULL_TURN_SPEED", "value": 150 },
+        { "property": "HULL_MASS", "value": 2700 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 16 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 10.0,
+        "turnSpeed": 2.61799,
+        "acceleration": 16.0,
+        "reverseAcceleration": 23,
+        "sideAcceleration": 14,
+        "turnAcceleration": 2.61799,
+        "reverseTurnAcceleration": 6.28319,
+        "damping": 1500,
+        "mass": 2700,
+        "power": 16.0
+      },
+
+      "maxHealth": { "maxHealth": 2483.0 }
+    }
+  }
+}

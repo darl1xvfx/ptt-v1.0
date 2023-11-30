@@ -1,0 +1,26 @@
+{
+  "id": "golden_alloy",
+  "index": 999,
+
+  "name": {
+    "en": "Golden Alloy",
+    "ru": "Золотой Сплав"
+  },
+  "description": {
+    "en": "Animated paint is a coating for your tank. Paint performs a purely aesthetic function. Depending on the color scheme, she can disguise you on the battlefield. But it does not give any other advantages in the game.",
+    "ru": "Анимированная краска — это покрытие для вашего танка. Краска выполняет исключительно эстетическую функцию. В зависимости от цветовой гаммы, она может замаскировать вас на поле боя. Но никаких других преимуществ в игре она не даёт."
+  },
+
+  "baseItemId": 16000106,
+  "previewResourceId": 16000106,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000107,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

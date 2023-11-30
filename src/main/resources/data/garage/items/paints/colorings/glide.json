@@ -1,0 +1,27 @@
+{
+  "id": "glide",
+  "index": 1,
+
+  "name": {
+    "en": "Glide",
+    "ru": "Глайд"
+  },
+  "description": {
+    "en": "Unique paint for parkour specialists.",
+    "ru": "Уникальная краска для специалистов паркура."
+  },
+
+  "baseItemId": 526337,
+  "previewResourceId": 526337,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526338,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

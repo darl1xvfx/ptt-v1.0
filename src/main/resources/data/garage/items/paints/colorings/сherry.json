@@ -1,0 +1,27 @@
+{
+  "id": "сherry",
+  "index": 20,
+
+  "name": {
+    "en": "Cherry",
+    "ru": "Вишня"
+  },
+  "description": {
+    "en": "Highly specialized camouflage for junglers' tanks protecting groves of rare redwoods from poachers.",
+    "ru": "Узкоспециализированный камуфляж для танков лесников, защищающих рощи редких красных деревьев от браконьеров."
+  },
+
+  "baseItemId": 526377,
+  "previewResourceId": 526377,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526378,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,21 @@
+{
+  "id": "n2o",
+  "index": 4,
+
+  "name": {
+    "en": "Nitro",
+    "ru": "Ускорение"
+  },
+  "description": {
+    "en": "Increases your tank's top speed and top turret rotation speed by 40%.",
+    "ru": "Увеличивает максимальную скорость вашего танка и максимальную скорость вращения башни на 40%.\t\n"
+  },
+
+  "baseItemId": 6003,
+  "previewResourceId": 6003,
+
+  "rank": 1,
+  "price": 50,
+
+  "properties": [ ]
+}

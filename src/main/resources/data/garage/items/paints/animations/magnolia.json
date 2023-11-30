@@ -1,0 +1,27 @@
+{
+  "id": "magnolia",
+  "index": 999,
+
+  "name": {
+    "en": "Magnolia",
+    "ru": "Магнолия"
+  },
+  "description": {
+    "en": "With this paint, the bitterness from defeat in battle is reduced by 42%. Proven.",
+    "ru": "С этой краской горечь от поражения в битве снижается на 42%. Доказано."
+  },
+
+  "baseItemId": 16000150,
+  "previewResourceId": 16000150,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000151,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

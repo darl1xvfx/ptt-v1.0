@@ -1,0 +1,27 @@
+{
+  "id": "liana",
+  "index": 999,
+
+  "name": {
+    "en": "Liana",
+    "ru": "Лиана"
+  },
+  "description": {
+    "en": "This cover is a natural wonder. Unlike many other «live» paints, this one moves due to the rare type of vines that cover the tank. This rare plant is native to eastern Laos.",
+    "ru": "Это покрытие — природное чудо. В отличие от многих других «живых» красок, эта шевелится за счёт редкого вида лиан, которыми покрывается танк. Родина этого редкого растения — восточный Лаос."
+  },
+
+  "baseItemId": 16000140,
+  "previewResourceId": 16000140,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000141,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

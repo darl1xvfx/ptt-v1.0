@@ -1,0 +1,27 @@
+{
+  "id": "printed_circuit_board",
+  "index": 999,
+
+  "name": {
+    "en": "Printed Circuit Board",
+    "ru": "Печатная Плата"
+  },
+  "description": {
+    "en": "This paint came about as a result of attempts to develop invisible armor. The first tests with thin steel plates were successful, but in practice, the engineers saw something amazing: the paint simply made the armor transparent, but not the parts of the tank underneath! However, these discoveries were so impressive that the paint was put up for sale.",
+    "ru": "Эта краска появилась в результате попыток разработать невидимую броню. Первые испытания с тонкими стальными пластинами прошли успешно, но на практике инженеры увидели нечто удивительное: краска просто делала прозрачной броню, но не детали танка под ней! Однако эти открытия оказались настолько впечатляющими, что краска была выставлена на продажу."
+  },
+
+  "baseItemId": 16000178,
+  "previewResourceId": 16000178,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000179,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

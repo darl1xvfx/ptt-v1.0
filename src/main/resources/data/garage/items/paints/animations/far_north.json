@@ -1,0 +1,26 @@
+{
+  "id": "far_north",
+  "index": 999,
+
+  "name": {
+    "en": "Far North",
+    "ru": "Крайний Север"
+  },
+  "description": {
+    "en": "",
+    "ru": ""
+  },
+
+  "baseItemId": 16000078,
+  "previewResourceId": 16000078,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000079,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

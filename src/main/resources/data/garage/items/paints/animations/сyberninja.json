@@ -1,0 +1,26 @@
+{
+  "id": "сyberninja",
+  "index": 999,
+
+  "name": {
+    "en": "Cyberninja",
+    "ru": "Киберниндзя"
+  },
+  "description": {
+    "en": "Animated paint is a coating for your tank. Paint performs a purely aesthetic function. Depending on the color scheme, she can disguise you on the battlefield. But it does not give any other advantages in the game.",
+    "ru": "Анимированная краска — это покрытие для вашего танка. Краска выполняет исключительно эстетическую функцию. В зависимости от цветовой гаммы, она может замаскировать вас на поле боя. Но никаких других преимуществ в игре она не даёт."
+  },
+
+  "baseItemId": 16000046,
+  "previewResourceId": 16000046,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000047,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

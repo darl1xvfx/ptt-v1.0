@@ -1,0 +1,27 @@
+{
+  "id": "sparks",
+  "index": 999,
+
+  "name": {
+    "en": "Sparks",
+    "ru": "Искры"
+  },
+  "description": {
+    "en": "This paint was released in celebration of the coming of 2020. May its bright and shiny patterns bring you endless joy and good luck.",
+    "ru": "Эта краска была выпущена в честь наступления 2020 года. Пусть её яркие и блестящие узоры принесут вам бесконечную радость и удачу."
+  },
+
+  "baseItemId": 16000206,
+  "previewResourceId": 16000206,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000207,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

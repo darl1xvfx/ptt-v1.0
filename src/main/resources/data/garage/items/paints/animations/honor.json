@@ -1,0 +1,27 @@
+{
+  "id": "honor",
+  "index": 999,
+
+  "name": {
+    "en": "Honor",
+    "ru": "Честь"
+  },
+  "description": {
+    "en": "Before creating this paint, we interviewed 2,000 men of different nationalities and ages. «Honor» is the result of a collective opinion, a concentrate of masculinity.",
+    "ru": "Перед созданием этой краски мы опросили 2 тысячи мужчин разных национальностей и возрастов. «Честь» — результат совокупного мнения, концентрат мужественности."
+  },
+
+  "baseItemId": 16000124,
+  "previewResourceId": 16000124,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000125,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

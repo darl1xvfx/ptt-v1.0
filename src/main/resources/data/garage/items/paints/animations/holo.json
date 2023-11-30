@@ -1,0 +1,27 @@
+{
+  "id": "holo",
+  "index": 999,
+
+  "name": {
+    "en": "Holo",
+    "ru": "Холо"
+  },
+  "description": {
+    "en": "Any image could be here, because it is a hologram. But a flash drive with just one texture got stuck in the holo projector.",
+    "ru": "Здесь могло бы быть любое изображение, ведь это голограмма. Но в холо-проекторе застряла флешка всего с одной текстурой."
+  },
+
+  "baseItemId": 16000122,
+  "previewResourceId": 16000122,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000123,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

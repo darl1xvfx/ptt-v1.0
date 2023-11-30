@@ -1,0 +1,27 @@
+{
+  "id": "radar",
+  "index": 999,
+
+  "name": {
+    "en": "Radar",
+    "ru": "Радар"
+  },
+  "description": {
+    "en": "This high-tech coating was created with the goal of having a radar that can be seen from anywhere. Except something went wrong, and now the paint has a hypnotic effect on anyone who looks at it. «You are a toaster... Listen to me: YOU are a toaster.»",
+    "ru": "Это высокотехнологичное покрытие было создано с целью иметь радар, который видно отовсюду. Вот только что-то пошло не так, как предполагалось, и теперь краска оказывает гипнотическое воздействие на любого, кто на неё смотрит. «Ты тостер... Слушай меня: ТЫ — тостер.»"
+  },
+
+  "baseItemId": 16000186,
+  "previewResourceId": 16000186,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000187,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

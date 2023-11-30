@@ -1,0 +1,27 @@
+{
+  "id": "executioner",
+  "index": 999,
+
+  "name": {
+    "en": "Executioner",
+    "ru": "Палач"
+  },
+  "description": {
+    "en": "",
+    "ru": ""
+  },
+
+  "baseItemId": 16000116,
+  "previewResourceId": 16000116,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000117,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

@@ -1,0 +1,27 @@
+{
+  "id": "nanosuit",
+  "index": 999,
+
+  "name": {
+    "en": "Nanosuit",
+    "ru": "Нанокостюм"
+  },
+  "description": {
+    "en": "During the development phase, this finish was referred to as «That black-and-gray texture that's slippery to the touch and looks super cool.» But due to the limitation on the number of characters in the title, the developers had to settle for something simpler. What a pity, because that would be the perfect title.",
+    "ru": "На этапе разработки это покрытие проходило под именем «Та краска со скользкой на ощупь чёрно-серой текстурой, которая выглядит супер-круто». Но из-за ограничения на количество символов в названии разработчикам пришлось согласиться на что-то более простое. Как жаль, ведь это было бы идеальное название."
+  },
+
+  "baseItemId": 16000164,
+  "previewResourceId": 16000164,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000165,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

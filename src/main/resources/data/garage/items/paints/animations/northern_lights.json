@@ -1,0 +1,25 @@
+{
+  "id": "northern_lights",
+  "index": 999,
+
+  "name": {
+    "en": "Northern Lights",
+    "ru": "Северное Сияние"
+  },
+  "description": {
+    "en": "This unusual paint is obtained by bombarding particles of the earth's atmosphere with charged particles of the solar wind. The result is reminiscent of the northern lights.",
+    "ru": "Эта необычная краска получается при бомбардировке частиц земной атмосферы заряженными частицами солнечного ветра. Результат напоминает северное сияние."
+  },
+
+  "baseItemId": 16000174,
+  "previewResourceId": 16000174,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000175,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

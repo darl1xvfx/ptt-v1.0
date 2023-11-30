@@ -1,0 +1,26 @@
+{
+  "id": "first_kiss",
+  "index": 999,
+
+  "name": {
+    "en": "First Kiss",
+    "ru": "Первый Поцелуй"
+  },
+  "description": {
+    "en": "Kiss, smack, smack, smack, smack, smack, smack, smack, smack, smack. This is her first love.",
+    "ru": "Чмок, чмок, чмок, чмок, чмок, чмок, чмок, чмок, чмок, чмок. Вот такая она — первая любовь."
+  },
+
+  "baseItemId": 16000084,
+  "previewResourceId": 16000084,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000085,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

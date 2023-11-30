@@ -1,0 +1,158 @@
+{
+  "id": "titan_xt",
+  "index": 13,
+
+  "name": {
+    "en": "Titan XT",
+    "ru": "Титан XT"
+  },
+  "description": {
+    "en": "The mythical XT skin for Titan epitomizes the endurance and indestructibility of this hull. The skin gives its wearer a truly titanic strength. Enemies, beware!\n\nM0 - Crisis (10) steps.\nM1 - Crisis (20) steps.\nM2 - Easing.\nM3 - Heavyweight.",
+    "ru": "Мифический XT-скин для Титана олицетворяет выносливость и несокрушимость этого корпуса. Скин придаёт своему обладателю по-настоящему титаническую силу. Враги, трепещите!\n\nM0 - Кризис (10) шагов.\nM1 - Кризис (20) шагов.\nM2 - Облегчение.\nM3 - Утяжеление."
+  },
+
+  "baseItemId": 18000112,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 18000112,
+      "object3ds": 18000113,
+
+      "rank": 5,
+      "price": 125000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 14 },
+        { "property": "HULL_TURN_SPEED", "value": 100 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 16 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 14.3,
+        "turnSpeed": 1.74533,
+        "acceleration": 16,
+        "reverseAcceleration": 17,
+        "sideAcceleration": 20,
+        "turnAcceleration": 1.9198622,
+        "reverseTurnAcceleration": 4.1887903,
+        "damping": 2100,
+        "mass": 1000,
+        "power": 16
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "1": {
+      "previewResourceId": 18000114,
+      "object3ds": 18000115,
+
+      "rank": 10,
+      "price": 250000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 16 },
+        { "property": "HULL_TURN_SPEED", "value": 110 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 16 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 16,
+        "turnSpeed": 1.91986,
+        "acceleration": 16,
+        "reverseAcceleration": 17,
+        "sideAcceleration": 20,
+        "turnAcceleration": 1.9198622,
+        "reverseTurnAcceleration": 4.1887903,
+        "damping": 2100,
+        "mass": 1000,
+        "power": 16
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "2": {
+      "previewResourceId": 18000116,
+      "object3ds": 18000117,
+
+      "rank": 15,
+      "price": 375000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 1500 },
+        { "property": "HULL_SPEED", "value": 6.00 },
+        { "property": "HULL_TURN_SPEED", "value": 90 },
+        { "property": "HULL_MASS", "value": 1000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 15 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 6,
+        "turnSpeed": 1.5707964,
+        "acceleration": 15,
+        "reverseAcceleration": 17,
+        "sideAcceleration": 20,
+        "turnAcceleration": 1.9198622,
+        "reverseTurnAcceleration": 4.1887903,
+        "damping": 2100,
+        "mass": 1000,
+        "power": 15
+      },
+
+      "maxHealth": { "maxHealth": 1500.0 }
+    },
+    "3": {
+      "previewResourceId": 18000118,
+      "object3ds": 18000119,
+
+      "rank": 20,
+      "price": 500000,
+
+      "properties": [
+        { "property": "HULL_ARMOR", "value": 4000 },
+        { "property": "HULL_SPEED", "value": 6.00 },
+        { "property": "HULL_TURN_SPEED", "value": 90 },
+        { "property": "HULL_MASS", "value": 5000 },
+        {
+          "property": "HULL_POWER",
+          "properties": [
+            { "property": "HULL_ACCELERATION", "value": 15 }
+          ]
+        }
+      ],
+
+      "physics": {
+        "speed": 6,
+        "turnSpeed": 1.5707964,
+        "acceleration": 15,
+        "reverseAcceleration": 17,
+        "sideAcceleration": 20,
+        "turnAcceleration": 1.9198622,
+        "reverseTurnAcceleration": 4.1887903,
+        "damping": 2100,
+        "mass": 5000,
+        "power": 15
+      },
+
+      "maxHealth": { "maxHealth": 4000.0 }
+    }
+  }
+}

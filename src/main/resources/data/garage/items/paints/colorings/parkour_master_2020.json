@@ -1,0 +1,27 @@
+{
+  "id": "parkour_master_2020",
+  "index": 13,
+
+  "name": {
+    "en": "Parkour Master 2020",
+    "ru": "Мастер паркура 2020"
+  },
+  "description": {
+    "en": "This is a unique paint that is awarded to the winners of the «Masters of Parkour 2020» competition.",
+    "ru": "Это уникальная краска, которой награждаются победители конкурса «Мастера паркура 2020»«."
+  },
+
+  "baseItemId": 526361,
+  "previewResourceId": 526361,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526362,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

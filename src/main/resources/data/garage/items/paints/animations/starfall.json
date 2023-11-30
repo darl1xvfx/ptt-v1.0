@@ -1,0 +1,27 @@
+{
+  "id": "starfall",
+  "index": 999,
+
+  "name": {
+    "en": "Starfall",
+    "ru": "Звездопад"
+  },
+  "description": {
+    "en": "Do you like to watch the «star rain»? Especially for you - a tank cover with endless shooting stars. Looks especially impressive on night maps. When other tanks crowd near you, don't be surprised - they make wishes.",
+    "ru": "Любите наблюдать за «звёздным дождём»? Специально для вас — танковое покрытие с бесконечно падающими звёздами. Выглядит особенно впечатляюще на ночных картах. Когда возле вас будут толпиться другие танки, не удивляйтесь — они загадывают желания."
+  },
+
+  "baseItemId": 16000154,
+  "previewResourceId": 16000154,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000155,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

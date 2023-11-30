@@ -1,0 +1,27 @@
+{
+  "id": "pixel_plasma",
+  "index": 999,
+
+  "name": {
+    "en": "Pixel Plasma",
+    "ru": "Пиксельная Плазма"
+  },
+  "description": {
+    "en": "This paint was made from tiny pixels. Look closely and you will see that it takes on a certain color that is barely visible to the naked eye. Usually no one notices how this paint changes its properties.",
+    "ru": "Эта краска была сделана из мельчайших пикселей. Присмотритесь, и вы увидите, что она приобретает определённый цвет, который едва можно разглядеть невооружённым глазом. Обычно никто не замечает, как эта краска меняет свои свойства."
+  },
+
+  "baseItemId": 16000182,
+  "previewResourceId": 16000182,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000183,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

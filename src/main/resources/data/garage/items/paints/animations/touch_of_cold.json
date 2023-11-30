@@ -1,0 +1,27 @@
+{
+  "id": "touch_of_cold",
+  "index": 999,
+
+  "name": {
+    "en": "Touch of Cold",
+    "ru": "Прикосновение Холода"
+  },
+  "description": {
+    "en": "The owner of this paint is a vivid example of restraint and composure. Such a tanker remains imperturbable even in the hottest battle, and no one can predict his further actions. Harmless snowflake or the strongest blizzard? The answer to this question often comes too late.",
+    "ru": "Владелец этой краски — яркий пример сдержанности и хладнокровия. Такой танкист остаётся невозмутим даже в самом жарком сражении, и никому не под силу предугадать его дальнейшие действия. Безобидная снежинка или сильнейшая вьюга? Ответ на этот вопрос зачастую приходит слишком поздно."
+  },
+
+  "baseItemId": 16000230,
+  "previewResourceId": 16000230,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000231,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

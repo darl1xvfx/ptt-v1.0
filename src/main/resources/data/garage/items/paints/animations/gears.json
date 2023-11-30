@@ -1,0 +1,26 @@
+{
+  "id": "gears",
+  "index": 999,
+
+  "name": {
+    "en": "Gears",
+    "ru": "Шестерёнки"
+  },
+  "description": {
+    "en": "The gears on your tank run the perpetual motion machine. And this means that you can achieve the maximum efficiency of the game with a minimum consumption of energy and resources. But this has not been proven.",
+    "ru": "Шестерёнки на вашем танке запускают вечный двигатель. А это значит, что вы сможете при минимальном расходе энергии и ресурсов достичь максимального КПД игры. Но это не доказано."
+  },
+
+  "baseItemId": 16000098,
+  "previewResourceId": 16000098,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000099,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

@@ -1,0 +1,27 @@
+{
+  "id": "spring",
+  "index": 999,
+
+  "name": {
+    "en": "Spring",
+    "ru": "Весна"
+  },
+  "description": {
+    "en": "The tank in this paint looks incredibly attractive. Enemies are unlikely to want to shoot at such beauty.",
+    "ru": "Танк в этой краске смотрится невероятно притягательно. Врагам вряд ли захочется стрелять в такую красоту."
+  },
+
+  "baseItemId": 16000212,
+  "previewResourceId": 16000212,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000213,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

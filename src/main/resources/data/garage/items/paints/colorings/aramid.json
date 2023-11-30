@@ -1,0 +1,27 @@
+{
+  "id": "aramid",
+  "index": 9,
+
+  "name": {
+    "en": "Aramid",
+    "ru": "Арамид"
+  },
+  "description": {
+    "en": "This coverage was created specifically for those responsible for organizing and broadcasting esports tournaments. Therefore, the engineers were given the task of creating not a mechanical protection, but a reliable shield against various temptations and temptations, guaranteeing objectivity and impartiality. Aramid has just such properties. The owner of such a paint is a guaranteed example of justice and the bearer of higher wisdom.",
+    "ru": "Это покрытие создано специально для тех, кто отвечает за организацию киберспортивных турниров и проведение их трансляций. Поэтому перед инженерами была поставлена задача — создать не механическую защиту, но надёжный щит от различных искушений и соблазнов, гарантирующий объективность и беспристрастность. Арамид обладает именно такими свойствами. Обладатель такой краски — гарантированно образец справедливости и носитель высшей мудрости."
+  },
+
+  "baseItemId": 526353,
+  "previewResourceId": 526353,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526354,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

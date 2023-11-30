@@ -1,0 +1,25 @@
+{
+  "id": "barbed_wire",
+  "index": 999,
+
+  "name": {
+    "en": "Barbed Wire",
+    "ru": "Колючая Проволока"
+  },
+  "description": {
+    "en": "This spiked paint will protect your vehicles from intruders while you recover from exhausting battles.",
+    "ru": "Эта шипастая краска защитит вашу технику от незваных гостей, пока вы восстанавливаете силы после утомительных сражений."
+  },
+
+  "baseItemId": 16000014,
+  "previewResourceId": 16000014,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000015,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

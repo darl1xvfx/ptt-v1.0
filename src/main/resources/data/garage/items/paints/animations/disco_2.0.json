@@ -1,0 +1,26 @@
+{
+  "id": "disco_2.0",
+  "index": 999,
+
+  "name": {
+    "en": "Disco 2.0",
+    "ru": "Диско 2.0"
+  },
+  "description": {
+    "en": "Everyone knows disco, everyone loves disco, but some people have always missed ... disco at «Disco». Meet the new, improved «Disco». Especially for connoisseurs.",
+    "ru": "Все знают диско, все любят диско, но некоторым всегда не хватало... диско в «Диско». Встречайте новое, улучшенное «Диско». Специально для ценителей."
+  },
+
+  "baseItemId": 16000060,
+  "previewResourceId": 16000060,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000061,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+

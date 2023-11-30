@@ -1,0 +1,27 @@
+{
+  "id": "lol",
+  "index": 999,
+
+  "name": {
+    "en": "Lol",
+    "ru": "Лол"
+  },
+  "description": {
+    "en": "The perfect paint for a fun-loving tanker. He himself is a lover of jokes, but shoots at other people's jokes: «I CAN'T LAUGH!».",
+    "ru": "Идеальная краска для танкиста-весельчака. Он сам — любитель сострить, а на чужие шутки выстреливает: «РЖУ НЕ МОГУ!»."
+  },
+
+  "baseItemId": 16000240,
+  "previewResourceId": 16000240,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000241,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

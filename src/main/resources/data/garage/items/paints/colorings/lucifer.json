@@ -1,0 +1,27 @@
+{
+  "id": "lucifer",
+  "index": 21,
+
+  "name": {
+    "en": "Lucifer",
+    "ru": "Люцифер"
+  },
+  "description": {
+    "en": "The only paint of its kind. No one knows where it came from. But among experienced tankers there is a legend. It says that one tanker was exiled to hell for using cheats, but after going through 9 circles of hell, he returned. He returned to take revenge.",
+    "ru": "Единственная краска в своём роде. Откуда она взялась, никто не знает. Но среди бывалых танкистов бытует легенда. Она гласит, что один танкист был сослан в ад за использование читов, но, пройдя 9 кругов преисподнии, он вернулся. Вернулся, чтобы мстить."
+  },
+
+  "baseItemId": 526379,
+  "previewResourceId": 526379,
+
+  "rank": 3,
+  "price": 500000,
+
+  "coloring": 526380,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

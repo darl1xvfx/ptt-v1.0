@@ -1,0 +1,25 @@
+{
+  "id": "badger",
+  "index": 999,
+
+  "name": {
+    "en": "Badger",
+    "ru": "Барсук"
+  },
+  "description": {
+    "en": "This paint has nothing to do with badgers. Unless you remember a flash video with a catchy and very annoying song about badgers and mushrooms. Look if you haven't seen it.",
+    "ru": "Эта краска не имеет ничего общего с барсуками. Разве что вы помните флеш-видео с запоминающейся и очень раздражающей песней о барсуках и грибах. Посмотрите, если не видели."
+  },
+
+  "baseItemId": 16000012,
+  "previewResourceId": 16000012,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000013,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}

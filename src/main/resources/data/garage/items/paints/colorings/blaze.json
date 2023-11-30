@@ -1,0 +1,27 @@
+{
+  "id": "blaze",
+  "index": 4,
+
+  "name": {
+    "en": "Blaze",
+    "ru": "Блейз"
+  },
+  "description": {
+    "en": "This paint belongs to the most skilled parkourists who managed to cope with all the challenges of the «Parkour Survival 2020» tournament and proved to be a close-knit team.",
+    "ru": "Эта краска принадлежит искуснейшим паркуристам, которые сумели справиться со всеми вызовами турнира «Parkour Survival 2020» и проявили себя как сплочённая команда."
+  },
+
+  "baseItemId": 526343,
+  "previewResourceId": 526343,
+
+  "rank": 1,
+  "price": 500000,
+
+  "coloring": 526344,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
+

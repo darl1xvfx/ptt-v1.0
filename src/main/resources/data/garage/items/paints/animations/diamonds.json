@@ -1,0 +1,26 @@
+{
+  "id": "diamonds",
+  "index": 999,
+
+  "name": {
+    "en": "Diamonds",
+    "ru": "Бриллианты"
+  },
+  "description": {
+    "en": "This paint is the best friend of girls... and respectable men. Dazzling brilliance and luxury as it is.",
+    "ru": "Эта краска — лучший друг девушек... и респектабельных мужчин. Ослепительный блеск и роскошь, как она есть."
+  },
+
+  "baseItemId": 16000056,
+  "previewResourceId": 16000056,
+
+  "rank": 1,
+  "price": 500000,
+
+  "animatedColoring": 16000057,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 25 }
+  ]
+}
+
