@@ -148,7 +148,7 @@ class UserSocket(
         try {
           socket.close()
         } catch(exception: IOException) {
-          logger.error(exception) { "Не удалось закрыть сокет" }
+          logger.error(exception) { "Failed to close socket" }
         }
       }
     }
@@ -161,7 +161,7 @@ class UserSocket(
       try {
         output.writeFully(command.serialize().toByteArray())
       } catch(exception: IOException) {
-        logger.warn(exception) { "$this выдает исключение" }
+        logger.warn(exception) { "$this throws an exception" }
         deactivate()
         return
       }
@@ -181,9 +181,9 @@ class UserSocket(
           command.name == CommandName.InitGarageItems ||
           command.name == CommandName.InitGarageMarket
         ) { // Too long
-          logger.trace { "Отправлена команда ${command.name} ${command.args.drop(2)} в $this" }
+          logger.trace { "Sent command ${command.name} ${command.args.drop(2)} to $this" }
         } else {
-          logger.trace { "Отправил команду ${command.name} ${command.args} в $this" }
+          logger.trace { "Sent command ${command.name} ${command.args} to $this" }
         }
       }
     }
@@ -222,7 +222,7 @@ class UserSocket(
       try {
         decrypted = encryption.decrypt(packet)
       } catch(exception: Exception) {
-        logger.warn { "Не удалось расшифровать пакет: $packet" }
+        logger.warn { "Failed to decrypt packet: $packet" }
         return
       }
 
@@ -232,9 +232,9 @@ class UserSocket(
       try {
         command.readFrom(decrypted.toByteArray())
       } catch(exception: Exception) {
-        logger.warn { "Не удалось декодировать команду" }
-        logger.warn { "- Сырой пакет: $packet" }
-        logger.warn { "- Расшифрованный пакет: $decrypted" }
+        logger.warn { "Failed to decode command" }
+        logger.warn { "- Raw package: $packet" }
+        logger.warn { "- Decrypted packet: $decrypted" }
         return
       }
 
@@ -384,7 +384,7 @@ class UserSocket(
     Command(
       CommandName.InitPanel,
       InitPanelData(
-        name = user.username,
+        name = "[Penis] ${user.username}",
         crystall = user.crystals,
         rang = user.rank.value,
         score = user.score,
@@ -398,8 +398,7 @@ class UserSocket(
     Command(
       CommandName.InitFriendsList,
       InitFriendsListData(
-        friends = listOf(
-        )
+        friends = listOf()
       ).toJson()
     ).send(this)
 
@@ -411,11 +410,6 @@ class UserSocket(
     Command(CommandName.ShowNews, newsList.toJson()).send(this)
 
     Command(CommandName.EndLayoutSwitch, "BATTLE_SELECT", "BATTLE_SELECT").send(this)
-
-    /*Command(
-      CommandName.ShowAchievements,
-      ShowAchievementsData(ids = listOf(1, 3)).toJson()
-    ).send(this)*/
 
     initChatMessages()
     initBattleList()

@@ -148,14 +148,14 @@ class Battle(
   suspend fun manageBattleDeletion(battle: Battle) {
     deleteJob?.cancel()
 
-    logger.debug("Стартовый боевой наблюдатель для боя ${battle.id}")
+    logger.debug("Starting battle observer for battle ${battle.id}")
 
     deleteJob = battle.coroutineScope.launchDelayed(90.seconds) {
       if (battle.players.isNotEmpty()) {
-        logger.debug("В бою присутствуют активные игроки. Прерывание удаления-наблюдателя для битвы ${battle.id}")
+        logger.debug("There are active players in the battle. Aborting remove-observer for battle ${battle.id}")
         cancel()
       } else {
-        logger.debug("В бою нет активных игроков. Удалить сражение ${battle.id}")
+        logger.debug("There are no active players in the battle. Delete battle ${battle.id}")
 
         battle.players.clear()
         battle.bonusProcessor.bonuses.clear()
@@ -163,12 +163,11 @@ class Battle(
 
         restartJob?.cancel()
 
-        battleProcessor.removeBattle(battle.id)
+          battleProcessor.removeBattle(battle.id)
       }
     }
 
-    logger.debug("Боевой наблюдатель настроен на бой ${battle.id}")
-  }
+    logger.debug("Battle observer configured for battle ${battle.id}")  }
 
   suspend fun manageBattleBonuses(battle: Battle){
     if(!battle.properties[BattleProperty.WithoutBonuses]){
@@ -191,7 +190,7 @@ class Battle(
     }
 
     restartJob?.invokeOnCompletion { _ ->
-      logger.debug("Задание на перезапуск выполнено для боя $id")
+      logger.debug("Restart task completed for battle $id")
     }
   }
 
@@ -222,7 +221,7 @@ class Battle(
       BonusType.Nitro -> BattleNitroBonus(battle, battle.bonusProcessor.nextId, position, rotation)
       BonusType.Gold -> BattleGoldBonus(battle, battle.bonusProcessor.nextId, position, rotation)
       BonusType.GoldKilled -> BattleGoldKilledBonus(battle, battle.bonusProcessor.nextId, position, rotation)
-      else -> throw Exception("Неподдерживаемый тип бонуса: $bonusType")
+      else -> throw Exception("Unsupported bonus type: $bonusType")
     }
 
     battle.bonusProcessor.incrementId()
@@ -242,7 +241,7 @@ class Battle(
         map = map.name,
         name = title,
         proBattle = properties[BattleProperty.ProBattle],
-        // privateBattle = properties[BattleProperty.privateBattle],
+        privateBattle = properties[BattleProperty.privateBattle],
         maxPeople = properties[BattleProperty.MaxPeople],
         minRank = properties[BattleProperty.MinRank],
         maxRank = properties[BattleProperty.MaxRank],
@@ -256,7 +255,7 @@ class Battle(
         map = map.name,
         name = title,
         proBattle = properties[BattleProperty.ProBattle],
-        // privateBattle = properties[BattleProperty.privateBattle],
+        privateBattle = properties[BattleProperty.privateBattle],
         maxPeople = properties[BattleProperty.MaxPeople],
         minRank = properties[BattleProperty.MinRank],
         maxRank = properties[BattleProperty.MaxRank],
@@ -295,7 +294,6 @@ class Battle(
         maxPeopleCount = properties[BattleProperty.MaxPeople],
         name = title,
         proBattle = properties[BattleProperty.ProBattle],
-        // privateBattle = properties[BattleProperty.privateBattle],
         minRank = properties[BattleProperty.MinRank],
         maxRank = properties[BattleProperty.MaxRank],
         spectator = isSpectator,
@@ -316,7 +314,6 @@ class Battle(
         maxPeopleCount = properties[BattleProperty.MaxPeople],
         name = title,
         proBattle = properties[BattleProperty.ProBattle],
-        // privateBattle = properties[BattleProperty.privateBattle],
         minRank = properties[BattleProperty.MinRank],
         maxRank = properties[BattleProperty.MaxRank],
         spectator = isSpectator,
@@ -370,7 +367,7 @@ class Battle(
         kills = player.kills,
         deaths = player.deaths,
         prize = prizeAmount,
-        bonus_prize = 0 // Specify the bonus prize if applicable
+        bonus_prize = prizeAmount*2
       )
     }
 
@@ -382,7 +379,7 @@ class Battle(
       ).toJson()
     ).sendTo(this)
 
-    logger.debug { "Битва завершена $id" }
+    logger.debug { "Battle ended $id" }
 
     coroutineScope.launchDelayed(restartTime) {
       if (modeHandler is TeamModeHandler) {
@@ -419,7 +416,7 @@ class Battle(
 
     autoRestartHandler(this)
 
-    logger.debug { "Перезапуск битвы $id" }
+    logger.debug { "Restart battle $id" }
   }
 
   suspend fun sendTo(
@@ -494,9 +491,9 @@ class BattleProcessor : IBattleProcessor, KoinComponent {
             .filter { player -> player.active }
             .forEach { player -> command.send(player) }
         }
-      logger.info("Битва $id успешно была удалена.")
+      logger.info("Battle $id was successfully deleted.")
     } else {
-      logger.warn("Битва $id не найдено.")
+      logger.warn("Battle $id not found.")
     }
   }
 }

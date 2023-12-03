@@ -39,14 +39,14 @@ class WebSocketNetworking(val url: String) : IProcessNetworking, KoinComponent {
         try {
           val message = json.adapter(ProcessMessage::class.java).fromJson(content)
           if(message == null) {
-              logger.warn { "[IPC] Недопустимое сообщение: $content" }
+            logger.warn { "[IPC] Invalid message: $content" }
             continue
           }
 
           // logger.debug { "[IPC] Received: $message" }
           _events.emit(message)
         } catch(exception: Exception) {
-          logger.error(exception) { "[IPC] Ошибка при передаче сообщения: $content" }
+          logger.error(exception) { "[IPC] Error while sending message: $content" }
         }
       }
     }
@@ -56,13 +56,13 @@ class WebSocketNetworking(val url: String) : IProcessNetworking, KoinComponent {
     val socket = socket ?: throw IllegalStateException("Сокет не инициализирован")
 
     socket.send(message.toJson())
-    logger.debug { "[IPC] Отправлено: $message" }
+    logger.debug { "[IPC] Posted by: $message" }
   }
 
   override suspend fun close() {
     socket?.close()
     client.close()
 
-    logger.info { "Остановлен IPC-клиент" }
+    logger.info { "IPC client stopped" }
   }
 }

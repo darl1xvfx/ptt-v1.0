@@ -94,7 +94,7 @@ class SocketServer : ISocketServer {
       .tcp()
       .bind(InetSocketAddress("0.0.0.0", 25646))
 
-    logger.info { "Запустил TCP-сервер на ${server.localAddress}" }
+    logger.info { "Started the TCP server on ${server.localAddress}..." }
 
     acceptJob = scope.launch {
       try {
@@ -105,14 +105,14 @@ class SocketServer : ISocketServer {
           val socket = UserSocket(coroutineContext, tcpSocket)
           players.add(socket)
 
-          println("Разъем принят: ${socket.remoteAddress}")
+          println("Socket accepted: ${socket.remoteAddress}")
 
           coroutineScope.launch { socket.handle() }
         }
       } catch(exception: CancellationException) {
-        logger.debug { "Клиент принял задание отменено" }
+        logger.debug { "Client accepted task canceled" }
       } catch(exception: Exception) {
-        logger.error(exception) { "Исключение в цикле приема клиента" }
+        logger.error(exception) { "Exception in client receive loop" }
       }
     }
   }
@@ -123,7 +123,7 @@ class SocketServer : ISocketServer {
     acceptJob?.cancel()
     withContext(Dispatchers.IO) { server.close() }
 
-    logger.info { "Остановился игровой сервер" }
+    logger.info { "Game server stopped..." }
   }
 }
 

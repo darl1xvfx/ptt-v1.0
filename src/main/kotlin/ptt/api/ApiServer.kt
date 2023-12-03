@@ -62,7 +62,7 @@ class WebApiServer : IApiServer, KoinComponent {
             val enabled = data.enabled
 
             inviteService.enabled = enabled
-            logger.debug { "[API] Сервис инвайт-кодов был ${if(enabled) "включен" else "отключен"}" }
+            logger.debug { "[API] The invite code service was ${if(enabled) "enabled" else "disabled"}" }
 
             call.respond(EmptyResponse())
           }
@@ -88,7 +88,7 @@ class WebApiServer : IApiServer, KoinComponent {
               return@post
             }
 
-            logger.debug { "[API] Добавлен инвайт-код : ${invite.code} (ID: ${invite.id})" }
+            logger.debug { "[API] Added invite code: ${invite.code} (ID: ${invite.id})" }
             call.respond(invite.toResponse())
           }
 
@@ -102,20 +102,20 @@ class WebApiServer : IApiServer, KoinComponent {
               return@delete
             }
 
-            logger.debug { "[API] Удален инвайт-код: $code" }
+            logger.debug { "[API] Removed invite code: $code" }
             call.respond(EmptyResponse())
           }
         }
       }
     }.start()
 
-    logger.info { "Запущен сервер веб-интерфейса" }
+    logger.info { "Web interface server has started" }
   }
 
   override suspend fun stop() {
-    logger.debug { "Остановка двигателя Ktor..." }
+    logger.debug { "Ktor engine stop..." }
     engine.stop(2000, 3000)
 
-    logger.info { "Остановлен сервер веб-интерфейса" }
+    logger.info { "The web interface server has stopped" }
   }
 }

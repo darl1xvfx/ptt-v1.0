@@ -29,6 +29,12 @@ class MineProcessor(
     mine.spawn()
   }
 
+  suspend fun spawnAllMines(mineProcessor: IMineProcessor, minesToSpawn: List<BattleMine>) {
+    for (mine in minesToSpawn) {
+      mineProcessor.spawn(mine)
+    }
+  }
+
   override suspend fun deactivateAll(player: BattlePlayer, native: Boolean) {
     if(native) {
       if(mines.values.none { mine -> mine.owner == player }) return

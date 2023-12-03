@@ -209,7 +209,7 @@ class BattleTank(
 	
     killSelf()
 
-    logger.debug("Танк (ID: $id) был уничтожен килл зоной")
+    logger.debug("Tank (ID: $id) was destroyed by a kill zone")
 
     Command(
       CommandName.KillTank,
@@ -277,7 +277,7 @@ class BattleTank(
     position.z += 200
     orientation.fromEulerAngles(point.position.toVector())
 
-    logger.debug { "Точка спавна: $position, $orientation" }
+    logger.debug { "Spawn point: $position, $orientation" }
   }
 
   suspend fun prepareToSpawn() {

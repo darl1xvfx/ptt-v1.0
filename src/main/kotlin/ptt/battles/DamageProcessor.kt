@@ -9,6 +9,7 @@ import ptt.battles.weapons.*
 import ptt.client.send
 import ptt.commands.Command
 import ptt.commands.CommandName
+import ptt.commands.handlers.LobbyHandler
 import ptt.extensions.singleOrNullOf
 
 enum class DamageType(val id: Int, val key: String) {
@@ -102,10 +103,7 @@ class DamageProcessor(
       target.killBy(source)
     }
 
-    val isDeathmatch = battle.modeHandler is DeathmatchModeHandler
-    if (isDeathmatch && source != target) {
-      Command(CommandName.DamageTank, target.id, totalDamage.toString(), damageType.key).send(source)
-    } else if (source != target && source.player.team != target.player.team) {
+    if (source != target && (battle.modeHandler is DeathmatchModeHandler || source.player.team != target.player.team)) {
       Command(CommandName.DamageTank, target.id, totalDamage.toString(), damageType.key).send(source)
     }
   }

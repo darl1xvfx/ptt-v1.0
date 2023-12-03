@@ -10,12 +10,12 @@ class ClientDependency(
   private val logger = KotlinLogging.logger { }
 
   suspend fun await() {
-    logger.debug { "Ожидание загрузки зависимости $id..." }
+    logger.debug { "Waiting to load dependency $id..." }
     deferred.await()
   }
 
   fun loaded() {
     deferred.complete(Unit)
-    logger.debug { "Пометить зависимость $id как загруженную" }
+    logger.debug { "Mark dependency $id as loaded" }
   }
 }

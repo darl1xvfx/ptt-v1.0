@@ -33,19 +33,19 @@ class LobbyChatManager : ILobbyChatManager, KoinComponent {
   override suspend fun send(socket: UserSocket, message: ChatMessage) {
     val content = message.message
     if(content.startsWith("/")) {
-      logger.debug { "Разбор сообщения как команды: $content" }
+      logger.debug { "Parse message as command: $content" }
 
       val args = chatCommandRegistry.parseArguments(content.drop(1))
-      logger.debug { "Разбор аргументов: $args" }
+      logger.debug { "Parsing arguments: $args" }
 
       when(val result = chatCommandRegistry.parseCommand(args)) {
-        is CommandParseResult.Success          -> {
-          logger.debug { "Разбор команды: ${result.parsedCommand.command.name}" }
+        is CommandParseResult.Success -> {
+          logger.debug { "Parsing command: ${result.parsedCommand.command.name}" }
 
           try {
             chatCommandRegistry.callCommand(socket, result.parsedCommand, CommandInvocationSource.LobbyChat)
           } catch(exception: Exception) {
-            logger.error(exception) { "При вызове команды произошел сбой ${result.parsedCommand.command.name}" }
+            logger.error(exception) { "Command invocation failed ${result.parsedCommand.command.name}" }
 
             val builder = StringBuilder()
             builder.append(exception::class.qualifiedName ?: exception::class.simpleName ?: exception::class.jvmName)
@@ -60,26 +60,26 @@ class LobbyChatManager : ILobbyChatManager, KoinComponent {
           }
         }
 
-        is CommandParseResult.UnknownCommand   -> {
-          logger.debug { "Неизвестная команда: ${result.commandName}" }
-          socket.sendChat("Неизвестная команда: ${result.commandName}")
+        is CommandParseResult.UnknownCommand -> {
+          logger.debug { "Unknown command: ${result.commandName}" }
+          socket.sendChat("Unknown command: ${result.commandName}")
         }
 
-        is CommandParseResult.CommandQuoted    -> {
-          logger.debug { "Имя команды не может быть взято в кавычки" }
-          socket.sendChat("Имя команды не может быть взято в кавычки")
+        is CommandParseResult.CommandQuoted -> {
+          logger.debug { "The command name cannot be quoted" }
+          socket.sendChat("The command name cannot be quoted")
         }
 
         is CommandParseResult.TooFewArguments -> {
           val missingArguments = result.missingArguments.map { argument -> argument.name }.joinToString(", ")
 
-          logger.debug { "Слишком мало аргументов для команды '${result.command.name}'. Недостающие значения: $missingArguments" }
-          socket.sendChat("Слишком мало аргументов для команды '${result.command.name}'. Недостающие значения: $missingArguments")
+          logger.debug { "Too few arguments for command '${result.command.name}'. Missing values: $missingArguments" }
+          socket.sendChat("Too few arguments for command '${result.command.name}'. Missing values: $missingArguments")
         }
 
         is CommandParseResult.TooManyArguments -> {
-          logger.debug { "Слишком много аргументов для команды '${result.command.name}'. Ожидаемая ${result.expected.size}, получил: ${result.got.size}" }
-          socket.sendChat("Слишком много аргументов для команды '${result.command.name}'. Ожидаемая ${result.expected.size}, получил: ${result.got.size}")
+          logger.debug { "Too many arguments for command '${result.command.name}'. Expected ${result.expected.size}, received: ${result.got.size}" }
+          socket.sendChat("Too many arguments for command '${result.command.name}'. Expected ${result.expected.size}, received: ${result.got.size}")
         }
       }
       return
