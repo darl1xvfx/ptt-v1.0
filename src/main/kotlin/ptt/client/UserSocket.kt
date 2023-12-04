@@ -384,7 +384,8 @@ class UserSocket(
     Command(
       CommandName.InitPanel,
       InitPanelData(
-        name = "[Penis] ${user.username}",
+        //name = "[Penis] ${user.username}",
+        name = user.username,
         crystall = user.crystals,
         rang = user.rank.value,
         score = user.score,

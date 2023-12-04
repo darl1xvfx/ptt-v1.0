@@ -28,7 +28,7 @@ class BattleProperty<T : Any> private constructor(val key: String, val type: KCl
 
     // ptt-(Drlxzar): Use UserRank?
     val MinRank = BattleProperty("min_rank", Int::class, 1)
-    val MaxRank = BattleProperty("min_rank", Int::class, 31)
+    val MaxRank = BattleProperty("min_rank", Int::class, 30)
 
     val WithoutBonuses = BattleProperty("withoutBonuses", Boolean::class, false)
     val WithoutCrystals = BattleProperty("withoutCrystals", Boolean::class, false)

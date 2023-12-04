@@ -54,7 +54,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
   private val userRepository by inject<IUserRepository>()
   private val userSubscriptionManager by inject<IUserSubscriptionManager>()
 
-  private val createBattleLimit = 3
+  private val createBattleLimit = 5
 
   private val createBattleLimitDuration = 60000L
   private val createBattleTimeoutDuration = 300000L
@@ -74,7 +74,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
 
   @CommandHandler(CommandName.ShowDamageEnabled)
   suspend fun showDamageEnabled(socket: UserSocket, id: String) {
-    // ptt-(Drlxzar)
+
   }
 
   @OptIn(ExperimentalTime::class)
@@ -128,7 +128,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
             battleId = battle.id,
             mapName = battle.title,
             mode = battle.modeHandler.mode,
-            privateBattle = false,
+            privateBattle = battle.properties[BattleProperty.privateBattle],
             proBattle = battle.properties[BattleProperty.ProBattle],
             minRank = battle.properties[BattleProperty.MinRank],
             maxRank = battle.properties[BattleProperty.MaxRank]
@@ -419,6 +419,8 @@ class LobbyHandler : ICommandHandler, KoinComponent {
     if(data.proBattle) { // PRO-battle options have undefined value if proBattle is false
       battle.properties[BattleProperty.RearmingEnabled] = data.rearmingEnabled
     }
+
+    battle.properties[BattleProperty.privateBattle] = data.privateBattle
 
     battle.properties[BattleProperty.WithoutBonuses] = data.withoutBonuses
     battle.properties[BattleProperty.WithoutCrystals] = data.withoutCrystals
