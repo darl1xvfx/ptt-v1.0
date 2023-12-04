@@ -50,6 +50,8 @@ class BattleTank(
   private val server: ISocketServer by inject()
   private val userRepository by inject<IUserRepository>()
 
+  private val killSoundHandler = JuggernautKillSoundHandler(player)
+
   val socket: UserSocket
     get() = player.socket
 
@@ -109,7 +111,6 @@ class BattleTank(
       }
     }
 
-    val killSoundHandler = JuggernautKillSoundHandler(player)
     killSoundHandler.resetKills()
 
     Command(CommandName.KillLocalTank).send(socket)
@@ -140,6 +141,10 @@ class BattleTank(
         else -> 6
       }
 
+      if (weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
+        JuggernautKillSoundHandler(player).onPlayerKill()
+      }
+
       battle.fundProcessor.fund += fund
       battle.fundProcessor.updateFund()
 
@@ -166,17 +171,15 @@ class BattleTank(
         handler.updateScores(killer.player, player)
       }
     }
+
     if (weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
       val railgunTank = battle.players.mapNotNull { it.tank }
-      val destroyedSoundId = 61
-      val playerName = player.user.username
-      val oneMessage = "Джаггернаут"
-      val twoMessage = "уничтожен"
-
-      if (destroyedSoundId > 0 && railgunTank != null) {
-        val message = "$oneMessage $playerName $twoMessage"
-        Command(CommandName.JuggernautDestroyed, message, destroyedSoundId.toString()).send(railgunTank)
+      val message = when (socket.locale) {
+        SocketLocale.Russian   -> "Джаггернаут уничтожен"
+        SocketLocale.English   -> "Juggernaut destroyed."
+        else                   -> "Juggernaut destroyed."
       }
+      Command(CommandName.JuggernautDestroyed, message, 61.toString()).send(railgunTank)
     }
 
     Command(
@@ -220,15 +223,12 @@ class BattleTank(
 
     if (weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
       val railgunTank = battle.players.mapNotNull { it.tank }
-      val destroyedSoundId = 61
-      val playerName = player.user.username
-      val oneMessage = "Джаггернаут"
-      val twoMessage = "уничтожен"
-
-      if (destroyedSoundId > 0 && railgunTank != null) {
-        val message = "$oneMessage $playerName $twoMessage"
-        Command(CommandName.JuggernautSpawn, message, destroyedSoundId.toString()).send(railgunTank)
+      val message = when (socket.locale) {
+        SocketLocale.Russian   -> "Джаггернаут уничтожен"
+        SocketLocale.English   -> "Juggernaut destroyed."
+        else                   -> "Juggernaut destroyed."
       }
+      Command(CommandName.JuggernautDestroyed, message, 61.toString()).send(railgunTank)
     }
   }
 
@@ -255,15 +255,12 @@ class BattleTank(
     }
     if (weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
       val railgunTank = battle.players.mapNotNull { it.tank }
-      val destroyedSoundId = 61
-      val playerName = player.user.username
-      val oneMessage = "Джаггернаут"
-      val twoMessage = "уничтожен"
-
-      if (destroyedSoundId > 0 && railgunTank != null) {
-        val message = "$oneMessage $playerName $twoMessage"
-        Command(CommandName.JuggernautDestroyed, message, destroyedSoundId.toString()).send(railgunTank)
+      val message = when (socket.locale) {
+        SocketLocale.Russian   -> "Джаггернаут уничтожен"
+        SocketLocale.English   -> "Juggernaut destroyed."
+        else                   -> "Juggernaut destroyed."
       }
+      Command(CommandName.JuggernautDestroyed, message, 61.toString()).send(railgunTank)
     }
   }
 
@@ -312,15 +309,14 @@ class BattleTank(
     ).send(battle.players.ready())
 
     if (weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
-      val railgunTank = battle.players.mapNotNull { it.tank }
-      val spawnSoundId = 60
+      val battleplayers = battle.players.mapNotNull { it.tank }
       val playerName = player.user.username
-      val additionalText = " — новый Джаггернаут!"
-
-      if (spawnSoundId > 0 && railgunTank != null) {
-        val message = "$playerName$additionalText"
-        Command(CommandName.JuggernautSpawn, message, spawnSoundId.toString()).send(railgunTank)
+      val message = when (socket.locale) {
+        SocketLocale.Russian   -> "$playerName — новый Джаггернаут!"
+        SocketLocale.English   -> "$playerName — new Juggernaut!"
+        else                   -> "$playerName — new Juggernaut!"
       }
+      Command(CommandName.JuggernautSpawn, message, 60.toString()).send(battleplayers)
     }
   }
 

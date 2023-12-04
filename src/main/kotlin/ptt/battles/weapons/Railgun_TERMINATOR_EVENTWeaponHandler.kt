@@ -14,7 +14,6 @@ class Railgun_TERMINATOR_EVENTWeaponHandler(
   weapon: ServerGarageUserItemWeapon
 ) : WeaponHandler(player, weapon) {
   private val random = Random.Default
-  private val JuggernautkillSoundHandler = JuggernautKillSoundHandler(player)
 
   suspend fun fireStart() {
     val tank = player.tank ?: throw Exception("No Tank")
@@ -43,7 +42,6 @@ class Railgun_TERMINATOR_EVENTWeaponHandler(
 
     Command(CommandName.ShotTarget, sourceTank.id, target.toJson()).send(battle.players.exclude(player).ready())
 
-    JuggernautkillSoundHandler.onPlayerKill()
   }
 }
 
