@@ -33,6 +33,7 @@ object BattlePlayerConstants {
 
 class BattlePlayer(
   coroutineContext: CoroutineContext,
+  var pauseJob: Job? = null,
   val socket: UserSocket,
   var isInsideTank: Boolean = false,
   val battle: Battle,

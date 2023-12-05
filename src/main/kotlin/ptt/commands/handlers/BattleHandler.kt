@@ -13,10 +13,10 @@ import ptt.commands.CommandHandler
 import ptt.commands.CommandName
 import ptt.commands.ICommandHandler
 import ptt.extensions.launchDelayed
+import kotlin.time.Duration.Companion.minutes
 
 class BattleHandler : ICommandHandler, KoinComponent {
   private val logger = KotlinLogging.logger { }
-
   private val json by inject<Moshi>()
 
   @CommandHandler(CommandName.Ping)
@@ -158,6 +158,28 @@ class BattleHandler : ICommandHandler, KoinComponent {
       }
     }
   }
+  @CommandHandler(CommandName.EnabledPause)
+  suspend fun enabledPause(socket: UserSocket) {
+    val player = socket.battlePlayer ?: throw Exception("No BattlePlayer")
+    val lang = when (socket.locale) { SocketLocale.Russian -> "Вы были удалены с битвы по неактивности!" else -> "You have been removed from the battle due to inactivity!" }
+
+    logger.debug { "Player ${player.user.username} paused will be kicked in 5 minutes..." }
+
+    player.pauseJob = player.socket.coroutineScope.launchDelayed(5.minutes) {
+      exitFromBattle(player.socket, "BATTLE_SELECT")
+      Command(CommandName.ShowAlert, lang).send(player.socket)
+    }
+  }
+
+  @CommandHandler(CommandName.DisablePause)
+  fun disablePause(socket: UserSocket) {
+    val player = socket.battlePlayer ?: throw Exception("No BattlePlayer")
+
+    logger.debug { "Player ${player.user.username} paused kick cancel..." }
+
+    player.pauseJob?.cancel()
+  }
+
 
   @CommandHandler(CommandName.ReadyToRespawn)
   suspend fun readyToRespawn(socket: UserSocket) {
