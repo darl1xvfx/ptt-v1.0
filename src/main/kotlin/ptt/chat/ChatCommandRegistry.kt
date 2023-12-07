@@ -1,12 +1,12 @@
 package ptt.chat
 
+import io.ktor.network.sockets.*
 import ptt.client.*
 import kotlin.reflect.KClass
 import org.koin.core.component.KoinComponent
 
 interface IChatCommandRegistry {
   val commands: MutableList<Command>
-
   fun parseArguments(input: String): ParsedArguments
   fun parseCommand(parsedArguments: ParsedArguments): CommandParseResult
   suspend fun callCommand(socket: UserSocket, parsed: ParsedCommand, source: CommandInvocationSource)
@@ -154,7 +154,7 @@ class ChatCommandRegistry : IChatCommandRegistry, KoinComponent {
   override suspend fun callCommand(socket: UserSocket, parsed: ParsedCommand, source: CommandInvocationSource) {
     val handler = parsed.command.handler ?: throw IllegalArgumentException("Команда ${parsed.command.name} не имеет обработчика")
     val context = CommandContext(socket, parsed.command, parsed.arguments, source)
-    if(!socket.user?.permissions?.has(parsed.command.permissions)!!) {
+    if(!socket.user?.permissions?.any(parsed.command.permissions)!!) {
       return context.reply("У вас нет прав на выполнение этой команды")
     }
     context.apply { handler() }
@@ -227,13 +227,16 @@ class Command(val name: String) {
 
   var handler: (suspend CommandContext.() -> Unit)? = null
 }
+  fun Command.description(description: String) {
+    this.description = description
+  }
+  fun Command.permissions(vararg permissions: Permissions) {
+  val combinedPermissions = Bitfield<Permissions>()
 
-fun Command.description(description: String) {
-  this.description = description
-}
-
-fun Command.permissions(permissions: Bitfield<Permissions>) {
-  this.permissions = permissions
+  permissions.forEach {
+    combinedPermissions += it.toBitfield()
+  }
+  this.permissions = combinedPermissions
 }
 
 fun Command.alias(name: String) {
