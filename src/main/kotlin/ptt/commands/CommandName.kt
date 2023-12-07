@@ -279,6 +279,9 @@ enum class CommandName(val category: CommandCategory, val key: String, val side:
   StartFire(CommandCategory.Battle, "start_fire", CommandSide.Server),
   StopFire(CommandCategory.Battle, "stop_fire", CommandSide.Server),
 
+  DisablePause(CommandCategory.Battle, "disablePause", CommandSide.Server),
+  EnabledPause(CommandCategory.Battle, "enabledPause", CommandSide.Server),
+
   ClientStartFire(CommandCategory.Battle, "start_fire", CommandSide.Client),
   ClientStopFire(CommandCategory.Battle, "stop_fire", CommandSide.Client),
 

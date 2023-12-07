@@ -3,6 +3,7 @@ package ptt.commands.handlers
 import kotlin.time.Duration.Companion.seconds
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import mu.KotlinLogging
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -13,6 +14,8 @@ import ptt.commands.CommandHandler
 import ptt.commands.CommandName
 import ptt.commands.ICommandHandler
 import ptt.extensions.launchDelayed
+import ptt.math.Vector3
+import ptt.toVector
 import kotlin.time.Duration.Companion.minutes
 
 class BattleHandler : ICommandHandler, KoinComponent {
@@ -146,18 +149,19 @@ class BattleHandler : ICommandHandler, KoinComponent {
     val player = socket.battlePlayer ?: throw Exception("No BattlePlayer")
     val tank = player.tank ?: throw Exception("No Tank")
 
-    logger.debug { "Запуск самоуничтожения для ${socket.user!!.username}" }
+    logger.debug { "Запуск самоуничтожения для ${player.user.username}" }
 
     if(player.battle.properties[BattleProperty.InstantSelfDestruct]) {
       tank.selfDestruct()
     } else {
       tank.selfDestructing = true
-      tank.coroutineScope.launchDelayed(0.seconds) {
+      tank.coroutineScope.launchDelayed(3.seconds) {
         tank.selfDestructing = false
         tank.selfDestruct()
       }
     }
   }
+
   @CommandHandler(CommandName.EnabledPause)
   suspend fun enabledPause(socket: UserSocket) {
     val player = socket.battlePlayer ?: throw Exception("No BattlePlayer")
@@ -166,15 +170,14 @@ class BattleHandler : ICommandHandler, KoinComponent {
     logger.debug { "Player ${player.user.username} paused will be kicked in 5 minutes..." }
 
     player.pauseJob = player.socket.coroutineScope.launchDelayed(5.minutes) {
-      exitFromBattle(player.socket, "BATTLE_SELECT")
-      Command(CommandName.ShowAlert, lang).send(player.socket)
+      launch { exitFromBattle(player.socket, "BATTLE_SELECT") }
+      launch { Command(CommandName.ShowAlert, lang).send(player.socket) }
     }
   }
 
   @CommandHandler(CommandName.DisablePause)
   fun disablePause(socket: UserSocket) {
     val player = socket.battlePlayer ?: throw Exception("No BattlePlayer")
-
     logger.debug { "Player ${player.user.username} paused kick cancel..." }
 
     player.pauseJob?.cancel()
@@ -207,38 +210,45 @@ class BattleHandler : ICommandHandler, KoinComponent {
   suspend fun exitFromBattle(socket: UserSocket, destinationScreen: String) {
     val player = socket.battlePlayer ?: throw Exception("No BattlePlayer")
     val battle = player.battle
+    val lang = when (socket.locale) { SocketLocale.Russian -> "Вы были удалены с битвы по неактивности!" else -> "You have been removed from the battle due to inactivity!" }
 
     player.deactivate(terminate = true)
     battle.players.remove(player)
-
     battle.manageBattleDeletion(battle)
-
     Command(CommandName.UnloadBattle).send(socket)
-
     socket.initChatMessages()
 
-    when(destinationScreen) {
+    when (destinationScreen) {
       "BATTLE_SELECT" -> {
         Command(CommandName.StartLayoutSwitch, "BATTLE_SELECT").send(socket)
         socket.loadLobbyResources()
         Command(CommandName.EndLayoutSwitch, "BATTLE_SELECT", "BATTLE_SELECT").send(socket)
-
         socket.screen = Screen.BattleSelect
         socket.initBattleList()
-
         logger.debug { "Выбрать бой ${battle.id} -> ${battle.title}" }
-
         battle.selectFor(socket)
         battle.showInfoFor(socket)
       }
-
-      "GARAGE"        -> {
+      "GARAGE" -> {
         Command(CommandName.StartLayoutSwitch, "GARAGE").send(socket)
         socket.screen = Screen.Garage
         socket.loadGarageResources()
         socket.initGarage()
         Command(CommandName.EndLayoutSwitch, "GARAGE", "GARAGE").send(socket)
+
+        player.pauseJob = player.socket.coroutineScope.launchDelayed(5.minutes) {
+          if (socket.battlePlayer != null) {
+            launch { exitFromBattle(player.socket, "BATTLE_SELECT") }
+            launch { Command(CommandName.ShowAlert, lang).send(player.socket) }
+          } else {
+            logger.debug { "Player ${player.user.username} is not in battle." }
+          }
+        }
       }
+    }
+
+    if (destinationScreen != "GARAGE") {
+      player.pauseJob?.cancel()
     }
   }
 
