@@ -64,6 +64,8 @@ dependencies {
 
   implementation("com.github.ajalt.clikt:clikt:3.5.0")
 
+  implementation(files("libs/JDA-4.3.0_277.jar"))
+
   testImplementation(kotlin("test"))
 }
 
