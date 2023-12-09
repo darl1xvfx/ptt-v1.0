@@ -336,7 +336,7 @@ class LobbyHandler : ICommandHandler, KoinComponent {
       val tank = player.tank
       if(tank != null && (tank.state == TankState.Active || tank.state == TankState.SemiActive)) {
         if(player.equipmentChanged && !tank.selfDestructing) {
-          val delay = 0.seconds
+          val delay = 3.seconds
 
           Command(CommandName.EquipmentChangedCountdown, delay.inWholeMilliseconds.toString()).send(socket)
 
