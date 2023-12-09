@@ -53,7 +53,6 @@ class StoreHandler : ICommandHandler, KoinComponent {
       when(socket.locale) {
         SocketLocale.Russian -> 124221
         SocketLocale.English -> 123444
-        SocketLocale.Portuguese -> 143111
         else -> throw IllegalArgumentException("Unsupported locale: ${socket.locale}")
       }.toString()
     ).send(socket)

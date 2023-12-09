@@ -4,8 +4,6 @@ package ptt.client
 import com.squareup.moshi.*
 import java.io.IOException
 import java.lang.reflect.InvocationTargetException
-import java.time.format.DateTimeFormatter
-import java.util.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.io.path.readText
 import kotlin.reflect.KParameter
@@ -16,9 +14,6 @@ import io.ktor.utils.io.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
-import kotlinx.datetime.Clock
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.toLocalDateTime
 import mu.KotlinLogging
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -29,7 +24,6 @@ import ptt.battles.*
 import ptt.battles.bonus.BattleBonus
 import ptt.battles.map.IMapRegistry
 import ptt.commands.*
-import ptt.commands.handlers.BattleHandler
 import ptt.exceptions.UnknownCommandCategoryException
 import ptt.exceptions.UnknownCommandException
 import ptt.garage.*
@@ -37,7 +31,7 @@ import ptt.invite.IInviteService
 import ptt.invite.Invite
 import ptt.lobby.chat.ILobbyChatManager
 import ptt.news.NewsLoader
-import ptt.news.ServerNewsData
+
 
 suspend fun Command.send(socket: UserSocket) = socket.send(this)
 suspend fun Command.send(player: BattlePlayer) = player.socket.send(this)
@@ -245,10 +239,10 @@ class UserSocket(
         command.name != CommandName.RotateTurret &&
         command.name != CommandName.MovementControl
       ) { // Too verbose
-        logger.trace { "Получена команда ${command.name} ${command.args}" }
+        logger.trace { "Received command ${command.name} ${command.args}" }
       }
 
-      if(command.side != CommandSide.Server) throw Exception("Неподдерживаемая команда: ${command.category}::${command.name}")
+      if(command.side != CommandSide.Server) throw Exception("Unsupported command: ${command.category}::${command.name}")
 
       val handler = commandRegistry.getHandler(command.name)
       if(handler == null) return
@@ -263,7 +257,7 @@ class UserSocket(
 
         when(handler.argsBehaviour) {
           ArgsBehaviourType.Arguments -> {
-            if(command.args.size < handler.args.size) throw IllegalArgumentException("Команда имеет слишком мало аргументов. Пакет: ${command.args.size}, обработчик: ${handler.args.size}")
+            if(command.args.size < handler.args.size) throw IllegalArgumentException("Command has too few arguments. Package: ${command.args.size}, handler: ${handler.args.size}")
             args.putAll(handler.args.mapIndexed { index, parameter ->
               val value = command.args[index]
 
@@ -279,7 +273,7 @@ class UserSocket(
 
         // logger.debug { "Handler ${handler.name} call arguments: ${args.map { argument -> "${argument.key.type}" }}" }
       } catch(exception: Throwable) {
-        logger.error(exception) { "Не удалось обработать аргументы ${command.name}" }
+        logger.error(exception) { "Could not process arguments ${command.name}" }
         return
       }
 
@@ -287,21 +281,21 @@ class UserSocket(
         handler.function.callSuspendBy(args)
       } catch(exception: Throwable) {
         val targetException = if(exception is InvocationTargetException) exception.cause else exception
-        logger.error(targetException) { "Не удалось достичь обработчика ${command.name}" }
+        logger.error(targetException) { "Could not reach handler ${command.name}" }
       }
     } catch(exception: UnknownCommandCategoryException) {
       logger.warn { "Unknown command category: ${exception.category}" }
 
       if(!Command.CategoryRegex.matches(exception.category)) {
-        logger.warn { "Похоже, что категория команды не соответствует действительности, скорее всего, это ошибка расшифровки." }
-        logger.warn { "Пожалуйста, сообщите об этой проблеме в репозиторий GitHub вместе со следующей информацией:" }
-        logger.warn { "- Сырой пакет: $packet" }
-        logger.warn { "- Расшифрованный пакет: $decrypted" }
+        logger.warn { "The command category appears to be incorrect, most likely a decryption error." }
+        logger.warn { "Please report this issue to the GitHub repository along with the following information:" }
+        logger.warn { "- Raw package: $packet" }
+        logger.warn { "- Decrypted packet: $decrypted" }
       }
     } catch(exception: UnknownCommandException) {
-      logger.warn { "Неизвестная команда: ${exception.category}::${exception.command}" }
+      logger.warn { "Unknown command: ${exception.category}::${exception.command}" }
     } catch(exception: Exception) {
-      logger.error(exception) { "Произошло исключение" }
+      logger.error(exception) { "An exception occurred" }
     }
   }
 
@@ -322,7 +316,7 @@ class UserSocket(
           buffer = input.readAvailable()
           packetProcessor.write(buffer)
         } catch(exception: IOException) {
-          logger.warn(exception) { "$this выброшенное исключение" }
+          logger.warn(exception) { "$this is the exception thrown" }
           deactivate()
 
           break
@@ -343,13 +337,13 @@ class UserSocket(
         }
       }
 
-      logger.debug { "$this конец данных" }
+      logger.debug { "$this is the end of the data" }
 
       deactivate()
     } catch(exception: CancellationException) {
-      logger.debug(exception) { "$this отмена корутина" }
+      logger.debug(exception) { "$this coroutine cancellation" }
     } catch(exception: Exception) {
-      logger.error(exception) { "Произошло исключение" }
+      logger.error(exception) { "An exception occurred" }
 
       // withContext(Dispatchers.IO) {
       //   socket.close()
@@ -405,10 +399,7 @@ class UserSocket(
 
     loadLobbyResources()
 
-    val newsLoader = NewsLoader()
-    val newsList = newsLoader.loadNews(locale)
-
-    Command(CommandName.ShowNews, newsList.toJson()).send(this)
+    Command(CommandName.ShowNews, NewsLoader().loadNews(locale).toJson()).send(this)
 
     Command(CommandName.EndLayoutSwitch, "BATTLE_SELECT", "BATTLE_SELECT").send(this)
 
@@ -503,7 +494,7 @@ class UserSocket(
         is ServerGarageItemKit          -> listOf(garageItemConverter.toClientKit(marketItem, locale))
         is ServerGarageItemPresent      -> listOf(garageItemConverter.toClientPresent(marketItem, locale))
 
-          else                            -> throw NotImplementedError("Не реализовано: ${marketItem::class.simpleName}")
+        else -> throw NotImplementedError("Not implemented: ${marketItem::class.simpleName}")
       }
 
       // if(marketItem is ServerGarageItemSupply) return@forEach
@@ -553,7 +544,7 @@ class UserSocket(
         if(ownsAll && !suppliesOnly) {
           marketParsed.remove(item)
 
-          logger.debug { "Удаление комплекта ${item.name} с рынка: пользователь владеет всеми предметами" }
+          logger.debug { "Removing set ${item.name} from the market: user owns all items" }
         }
       }
 
@@ -652,19 +643,12 @@ class UserSocket(
   suspend fun initChatMessages() {
     val user = user ?: throw Exception("User data is not loaded")
 
-    val time = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
-    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS", Locale.ROOT)
-
-    val registeredPlayers = userRepository.getUserCount()
+    val chatMessage = mutableListOf(ChatMessage(name = "", system = true, rang = -1, message = "<a href=\"https://discord.gg/5cftE6KThW\"><font color='#ffffff'><b>> PTT v1.0</b></font></a>"))
+    chatMessage.addAll(lobbyChatManager.messages)
 
     Command(
       CommandName.InitMessages,
-      InitChatMessagesData(
-        messages = lobbyChatManager.messages + listOf(
-          ChatMessage(name = "", system = true, yellow = true, rang = 0, message = "> PTT v1.0"),
-          ChatMessage(name = "", system = true, yellow = true, rang = 0, message = "")
-        )
-      ).toJson(),
+      InitChatMessagesData(messages = chatMessage).toJson(),
       InitChatSettings(
         selfName = user.username,
         chatModeratorLevel = user.chatModeratorLevel,
@@ -1064,7 +1048,7 @@ data class InitChatSettings(
   @Json val minChar: Int = 60,
   @Json val minWord: Int = 5,
   @Json val showLinks: Boolean = true,
-  @Json val admin: Boolean = false,
+  @Json val admin: Boolean = true,
   @Json val selfName: String,
   @Json val chatModeratorLevel: Int = 0,
   @Json val symbolCost: Int = 176,

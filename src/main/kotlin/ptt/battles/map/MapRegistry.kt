@@ -29,7 +29,7 @@ class MapRegistry : IMapRegistry, KoinComponent {
   override val maps: MutableList<ServerMapInfo> = mutableListOf()
 
   override suspend fun load() {
-    logger.debug { "Загрузка скайбоксов..." }
+    logger.debug { "Loading skyboxes..." }
     resourceManager.get("skyboxes.json").let { entry ->
       val skyboxes = json
         .adapter<Map<String, Map<SkyboxSide, ServerIdResource>>>(
@@ -48,11 +48,11 @@ class MapRegistry : IMapRegistry, KoinComponent {
 
       skyboxes.forEach { (name, skybox) ->
         this.skyboxes[name] = skybox
-        logger.debug { "  > Загруженный скайбокс $name -> $skybox" }
+        logger.debug { "Loading skyboxes..." }
       }
     }
 
-    logger.debug { "Загрузка проплибов..." }
+    logger.debug { "Loading proplibs..." }
     resourceManager.get("proplibs.json").let { entry ->
       val proplibs = json
         .adapter<List<ServerProplib>>(Types.newParameterizedType(List::class.java, ServerProplib::class.java))
@@ -61,14 +61,14 @@ class MapRegistry : IMapRegistry, KoinComponent {
 
       proplibs.forEach { proplib ->
         this.proplibs.add(proplib)
-        logger.debug { "  > Загруженная proplib $proplib" }
+        logger.debug { " > Loaded proplib $proplib " }
       }
     }
 
     resourceManager.get("maps/").absolute().forEachDirectoryEntry { group ->
       if(!group.isDirectory()) return
 
-      logger.debug { "Загрузка группы карт ${group.name}..." }
+      logger.debug { "Loading map group ${group.name}..." }
 
       group.forEachDirectoryEntry { entry ->
         if(!entry.isRegularFile()) return

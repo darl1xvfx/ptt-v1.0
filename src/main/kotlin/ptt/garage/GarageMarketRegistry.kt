@@ -48,26 +48,26 @@ class GarageMarketRegistry : IGarageMarketRegistry, KoinComponent {
 
   override suspend fun load() {
     for (group in groups) {
-      logger.debug { "Загрузка группы предметов гаража ${group.itemType.name}..." }
+      logger.debug { "Loading garage item group ${group.itemType.name}..." }
       resourceManager.get("garage/items/${group.directory}").absolute().forEachDirectoryEntry { entry ->
         if (entry.extension != "json") return@forEachDirectoryEntry
 
-            val item = json
-              .adapter(group.type.java)
-              .failOnUnknown()
-              .fromJson(entry.readText())!!
+        val item = json
+          .adapter(group.type.java)
+          .failOnUnknown()
+          .fromJson(entry.readText())!!
 
-            items[item.id] = item
+        items[item.id] = item
 
-            logger.debug { "  > Загруженный предмет гаража ${item.id} -> ${item.name.localized}" }
-          }
-        }
+        logger.debug { " > Loaded garage item ${item.id} -> ${item.name.localized}" }
+      }
+    }
 
         validate()
       }
 
   private fun validate() {
-    logger.debug { "Проверка предметов гаража..." }
+    logger.debug { "Checking garage items..." }
 
     var invalid = false
 
@@ -85,7 +85,7 @@ class GarageMarketRegistry : IGarageMarketRegistry, KoinComponent {
             "${item.name} (${item.id})"
           }
 
-          logger.error { "  > Дублированный baseItemId ($id) в: $itemNames" }
+          logger.error { " > Duplicate baseItemId ($id) in: $itemNames" }
         }
       }
 
@@ -115,11 +115,11 @@ class GarageMarketRegistry : IGarageMarketRegistry, KoinComponent {
             "${item.name} M${modificationIndex} (${item.id}_m${modificationIndex})"
           }
 
-          logger.error { "  > Дублированный previewResourceId ($id) в: $itemNames" }
+          logger.error { " > Duplicate previewResourceId ($id) in: $itemNames" }
         }
       }
 
-    if(invalid) throw IllegalStateException("Предметы гаража недействительны")
+    if(invalid) throw IllegalStateException("Garage items are invalid")
   }
 }
 
@@ -129,5 +129,5 @@ fun IGarageMarketRegistry.get(id: String): ServerGarageItem {
 
 inline fun <reified T : ServerGarageItem> ServerGarageItem.cast(): T {
   if(this is T) return this
-  throw Exception("Несовместимый тип: ожидается ${T::class.simpleName}, получил ${this::class.simpleName}")
+  throw Exception("Incompatible type: expected ${T::class.simpleName}, received ${this::class.simpleName}")
 }

@@ -33,7 +33,7 @@ class CommandRegistry : ICommandRegistry {
 
       commands.add(description)
 
-      logger.debug { "Обнаруженный обработчик команд: ${commandHandler.name} -> ${type.qualifiedName}::${function.name}" }
+      logger.debug { "Command handler detected: ${commandHandler.name} -> ${type.qualifiedName}::${function.name}" }
     }
   }
 }
