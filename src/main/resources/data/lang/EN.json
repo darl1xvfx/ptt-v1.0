@@ -571,7 +571,7 @@
     { "key": "ALERT_ANSWER_PROCEED", "value": "Proceed" },
     { "key": "BUG_REPORT_SEND_SCREEN_SHOT_CHECKBOX_LABEL_TEXT", "value": "Send screenshot" },
     { "key": "TIME_LABEL_SECOND", "value": "s" },
-    { "key": "REARM_SELFDISTRUCTION", "value": "You will self-destruct in 0:01" },
+    { "key": "REARM_SELFDISTRUCTION", "value": "Triggered self-destruct" },
     { "key": "COUNTRIES_KAZAKHSTAN_NAME", "value": "Kazakhstan" },
     { "key": "BATTLE_TEAM_RED", "value": "red" },
     { "key": "STRING_FRIENDS_DECLINE_ALL_REQUESTS_ALERT", "value": "Decline all incoming requests?" },

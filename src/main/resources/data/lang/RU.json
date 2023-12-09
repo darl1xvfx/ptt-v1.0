@@ -589,7 +589,7 @@
     { "key": "ALERT_ANSWER_PROCEED", "value": "Перейти" },
     { "key": "BUG_REPORT_SEND_SCREEN_SHOT_CHECKBOX_LABEL_TEXT", "value": "Отправить скриншот" },
     { "key": "TIME_LABEL_SECOND", "value": "с" },
-    { "key": "REARM_SELFDISTRUCTION", "value": "Самоуничтожение через 0:01" },
+    { "key": "REARM_SELFDISTRUCTION", "value": "Запущенно самоуничтожение" },
     { "key": "COUNTRIES_KAZAKHSTAN_NAME", "value": "Казахстан" },
     { "key": "BATTLE_TEAM_RED", "value": "красную" },
     { "key": "STRING_FRIENDS_DECLINE_ALL_REQUESTS_ALERT", "value": "Отклонить все входящие заявки?" },
