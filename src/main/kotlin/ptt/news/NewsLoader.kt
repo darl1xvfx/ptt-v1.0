@@ -4,12 +4,14 @@ import kotlin.io.path.*
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
+import mu.KotlinLogging
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import ptt.IResourceManager
 import ptt.client.SocketLocale
 
 class NewsLoader : KoinComponent {
+    private val logger = KotlinLogging.logger { }
     private val json by inject<Moshi>()
     private val resourceManager by inject<IResourceManager>()
 
