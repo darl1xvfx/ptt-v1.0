@@ -50,7 +50,6 @@ class BattleTank(
   private val server: ISocketServer by inject()
   private val userRepository by inject<IUserRepository>()
 
-  private val killSoundHandler = JuggernautKillSoundHandler(player)
 
   val socket: UserSocket
     get() = player.socket
@@ -111,12 +110,15 @@ class BattleTank(
       }
     }
 
-    killSoundHandler.resetKills()
+    //JuggernautSoundRu(player).resetKills()
+    //JuggernautSoundEn(player).resetKills()
 
     Command(CommandName.KillLocalTank).send(socket)
   }
 
   suspend fun killBy(killer: BattleTank) {
+    val previousKills = killer.player.kills
+
     killSelf()
 
     Command(
@@ -128,9 +130,20 @@ class BattleTank(
 
     killer.player.kills = when {
       id == killer.id && killer.player.kills > 0 -> killer.player.kills - 1
-      id != killer.id -> killer.player.kills + 1
+      id != killer.id -> {
+        val newKills = killer.player.kills + 1
+        newKills
+      }
       else -> killer.player.kills
     }
+
+    val newKills = killer.player.kills
+
+    if (newKills > previousKills && weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
+      //JuggernautSoundEn(player).onPlayerKill()
+    }
+
+
 
     if (killer.id != id && battle.players.count { it.team == player.team.opposite } != 0 && !battle.properties[BattleProperty.ParkourMode]) {
       val fund = when (player.user.rank.value) {
@@ -139,10 +152,6 @@ class BattleTank(
         in UserRank.WarrantOfficer2.value..UserRank.SecondLieutenant.value -> 7
         in UserRank.Captain.value..UserRank.Generalissimo.value -> 9
         else -> 6
-      }
-
-      if (weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
-        JuggernautKillSoundHandler(player).onPlayerKill()
       }
 
       battle.fundProcessor.fund += fund
@@ -170,16 +179,6 @@ class BattleTank(
       if (handler is TeamDeathmatchModeHandler) {
         handler.updateScores(killer.player, player)
       }
-    }
-
-    if (weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
-      val railgunTank = battle.players.mapNotNull { it.tank }
-      val message = when (socket.locale) {
-        SocketLocale.Russian   -> "Джаггернаут уничтожен"
-        SocketLocale.English   -> "Juggernaut destroyed."
-        else                   -> "Juggernaut destroyed."
-      }
-      Command(CommandName.JuggernautDestroyed, message, 61.toString()).send(railgunTank)
     }
 
     Command(
@@ -225,8 +224,8 @@ class BattleTank(
       val railgunTank = battle.players.mapNotNull { it.tank }
       val message = when (socket.locale) {
         SocketLocale.Russian   -> "Джаггернаут уничтожен"
-        SocketLocale.English   -> "Juggernaut destroyed."
-        else                   -> "Juggernaut destroyed."
+        SocketLocale.English   -> "Juggernaut destroyed"
+        else                   -> "Juggernaut destroyed"
       }
       Command(CommandName.JuggernautDestroyed, message, 61.toString()).send(railgunTank)
     }
@@ -257,8 +256,8 @@ class BattleTank(
       val railgunTank = battle.players.mapNotNull { it.tank }
       val message = when (socket.locale) {
         SocketLocale.Russian   -> "Джаггернаут уничтожен"
-        SocketLocale.English   -> "Juggernaut destroyed."
-        else                   -> "Juggernaut destroyed."
+        SocketLocale.English   -> "Juggernaut destroyed"
+        else                   -> "Juggernaut destroyed"
       }
       Command(CommandName.JuggernautDestroyed, message, 61.toString()).send(railgunTank)
     }
