@@ -2,8 +2,7 @@ package ptt.client
 
 enum class SocketLocale(val key: String, val localizationKey: String) {
   Russian("RU", "ru"),
-  English("EN", "en"),
-  Portuguese("pt_BR", "pt");
+  English("EN", "en");
 
   companion object {
     private val map = values().associateBy(SocketLocale::key)
