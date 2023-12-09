@@ -94,7 +94,12 @@ class SocketServer : ISocketServer {
       .tcp()
       .bind(InetSocketAddress("0.0.0.0", 25646))
 
-    logger.info { "Started the TCP server on ${server.localAddress}..." }
+    val localAddress = server.localAddress
+    val address = (localAddress as InetSocketAddress).hostname
+    val port = (localAddress).port
+
+    logger.info {"\u001B[32mServer started on IP: ${address} and Port: ${port}...\u001B[0m"}
+
 
     acceptJob = scope.launch {
       try {

@@ -2,8 +2,7 @@
 <configuration>
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
-      <pattern>[%date{HH:mm:ss.SSS}] [%logger/%level]: %message%n</pattern>
-      <!-- <pattern>[%date{HH:mm:ss.SSS}] [%logger/%level]: %message%n</pattern> -->
+      <pattern>%cyan(-&gt; %logger/%level &lt;-) %red(—) %white(%message%n)</pattern>
     </encoder>
   </appender>
 
@@ -22,4 +21,8 @@
 
   <logger name="ptt.commands.handlers.BattleHandler" level="DEBUG" />
   <logger name="ptt.resources.ResourceServer" level="DEBUG" />
+
+  <logger name="net.dv8tion" level="INFO" />
+  <logger name="net.dv8tion.jda.api" level="OFF" />
+  <logger name="net.dv8tion.jda.internal.requests" level="OFF" />
 </configuration>
