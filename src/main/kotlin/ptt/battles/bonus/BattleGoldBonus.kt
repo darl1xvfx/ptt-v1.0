@@ -16,13 +16,12 @@ class BattleGoldBonus(battle: Battle, id: Int, position: Vector3, rotation: Quat
   BattleBonus(battle, id, position, rotation, 10.minutes) {
   override val type: BonusType = BonusType.Gold
 
-  private val SpawnMessage = "Скоро будет сброшен золотой ящик"
-
   override suspend fun spawn() {
-    Command(CommandName.SpawnGold, SpawnMessage, 9.toString()).sendTo(battle)
+    Command(CommandName.SpawnGold, "Скоро будет сброшен золотой ящик", 9.toString()).sendTo(battle)
     delay(20.seconds.inWholeMilliseconds)
     super.spawn()
   }
+
 
   override suspend fun activate(tank: BattleTank) {
     tank.player.user.crystals += 1000
