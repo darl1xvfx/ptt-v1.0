@@ -15,12 +15,14 @@ import ptt.battles.bonus.BattleGoldKilledBonus
 import ptt.battles.map.IMapRegistry
 import ptt.bot.discord.CommandHandler
 import ptt.bot.discord.DiscordBot
+import ptt.bot.discord.autoResponsesHandlers
 import ptt.chat.*
 import ptt.client.*
 import ptt.commands.Command
 import ptt.commands.CommandName
 import ptt.commands.ICommandHandler
 import ptt.commands.ICommandRegistry
+import ptt.commands.handlers.BanHandler
 import ptt.extensions.cast
 import ptt.garage.*
 import ptt.invite.IInviteRepository
@@ -34,10 +36,10 @@ import ptt.commands.handlers.BattleHandler
 import ptt.extensions.launchDelayed
 import kotlin.random.Random
 import kotlin.reflect.KClass
-import ptt.invite.InviteCodeLoader
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.system.exitProcess
+import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
 
@@ -471,7 +473,13 @@ class Server : KoinComponent {
         handler {
           reply("Остановка сервера через 50 секунд...")
 
-          Command(CommandName.ShowServerStop).let { command -> socketServer.players.forEach { player -> player.send( command ) } }
+          Command(CommandName.ShowServerStop).let { command ->
+            socketServer.players.forEach { player ->
+              player.send(
+                command
+              )
+            }
+          }
 
           delay(40000)
           logger.info("Restart all battles...")
@@ -634,39 +642,191 @@ class Server : KoinComponent {
           reply("Придметы успешно добавленны игроку ${user.username}")
         }
       }
+
+      command("ban") {
+        permissions(Permissions.Owner)
+        description("Ban a user and subcommand [list]")
+
+        argument("user", String::class) {
+          permissions(Permissions.Owner)
+          description("Username of the user to be banned")
+        }
+
+        handler {
+          val username: String = arguments["user"]
+          val banHandler = BanHandler()
+
+          if (banHandler.isUserBanned(username)) {
+            reply("User '$username' is already banned")
+            return@handler
+          }
+
+          banHandler.banUser(username)
+
+          val player = socketServer.players.singleOrNull { socket -> socket.user?.username == username }
+          if (player == null) {
+            reply("User '$username' not found")
+            return@handler
+          }
+
+          player.deactivate()
+          if (player != socket) {
+            reply("User '$username' has been banned and kicked")
+          }
+        }
+        subcommand("list") {
+          permissions(Permissions.Owner)
+          description("List all banned users")
+
+          handler {
+            val banHandler = BanHandler()
+            val bannedUsers = banHandler.getBannedUsers()
+
+            if (bannedUsers.isEmpty()) {
+              reply("There are no banned users.")
+            } else {
+              reply("Banned users:\n${bannedUsers.joinToString("\n")}")
+            }
+          }
+        }
+      }
+
+      command("unban") {
+        permissions(Permissions.Owner)
+        description("Unban a user")
+
+        argument("user", String::class) {
+          permissions(Permissions.Owner)
+          description("Username of the user to be unbanned")
+        }
+
+        handler {
+          val username: String = arguments["user"]
+          val banHandler = BanHandler()
+
+          if (!banHandler.isUserBanned(username)) {
+            reply("User '$username' is not currently banned")
+            return@handler
+          }
+
+          banHandler.unbanUser(username)
+          reply("User '$username' has been unbanned")
+        }
+      }
+
+      command("invite") {
+        permissions(Permissions.Owner)
+        description("Управление инвайт-кодами")
+
+        subcommand("toggle") {
+          permissions(Permissions.Owner)
+          description("Переключить режим только по инвайт-коду")
+
+          handler {
+            val isEnabled = !inviteService.enabled
+            inviteService.enabled = isEnabled
+
+            reply("Инвайт-коды теперь ${if (isEnabled) "нужны" else "не нужны"} для входа в игру")
+          }
+        }
+
+        subcommand("add") {
+          permissions(Permissions.Owner)
+          description("Добавить новый инвайт-код")
+
+          argument("code", String::class) {
+            permissions(Permissions.Owner)
+            description("Инвайт-код для добавления")
+          }
+
+          handler {
+            val code = arguments.get<String>("code")
+
+            val invite = inviteRepository.createInvite(code)
+            if (invite == null) {
+              reply("Инвайт '$code' уже существует")
+              return@handler
+            }
+
+            reply("Добавлен успешно инвайт-код '${invite.code}' (ID: ${invite.id})")
+          }
+        }
+
+        subcommand("delete") {
+          permissions(Permissions.Owner)
+          description("Удалить инвайт-код")
+
+          argument("code", String::class) {
+            permissions(Permissions.Owner)
+            description("Инвайт-код для удаления")
+          }
+
+          handler {
+            val code = arguments.get<String>("code")
+
+            if (!inviteRepository.deleteInvite(code)) {
+              reply("Инвайт '$code' не существует")
+            }
+
+            reply("Успешно удален инвайт-код '$code'")
+          }
+        }
+
+        subcommand("list") {
+          permissions(Permissions.Owner)
+          description("Список всёх инвайт-кодов")
+
+          handler {
+            val invites = inviteRepository.getInvites()
+            if (invites.isEmpty()) {
+              reply("Нет доступных инвайт-кодов")
+              return@handler
+            }
+
+            val inviteList = invites.joinToString("\n") { invite -> "  - ${invite.code} (ID: ${invite.id})" }
+            reply("Инвайт-коды:\n$inviteList")
+          }
+        }
+      }
     }
 
     HibernateUtils.createEntityManager().close()
 
-    runBlocking {
-      InviteCodeLoader().loadInviteCodes().forEach { inviteCode ->
-        inviteRepository.createInvite(inviteCode.code)
-      }
-    }
-
     coroutineScope {
       socketServer.run(this)
-      GlobalScope.launchDelayed(5.seconds) { DiscordBot.run(token = "MTE4MjYwODE5NDYwNjk5MzQyOQ.GEXujh.AMjMrJ9tImP2mGqubZXYIR9pBCSnHfxJ4y-rUY", discordCommandHandler = CommandHandler()) }
+      GlobalScope.launchDelayed(1.seconds) {
+        DiscordBot.run(
+          token = "MTE4MjYwODE5NDYwNjk5MzQyOQ.GEXujh.AMjMrJ9tImP2mGqubZXYIR9pBCSnHfxJ4y-rUY",
+          discordCommandHandler = CommandHandler(),
+          autoResponsesHandlers = autoResponsesHandlers()
+        )
+      }
 
       ServerStartedMessage().send()
       logger.info("\u001B[32mServer started...\u001B[0m")
 
       logger.info("\u001B[33mThe server will be restarted in 3 hours...\u001B[0m")
-      delay(10800000)
-      logger.info("Server stops after 50 seconds...")
-      Command(CommandName.ShowServerStop).let { command -> socketServer.players.forEach { player -> player.send(command) } }
+      GlobalScope.launchDelayed(3.hours) {
+        logger.info("Server stops after 50 seconds...")
+        Command(CommandName.ShowServerStop).let { command ->
+          socketServer.players.forEach { player ->
+            player.send(
+              command
+            )
+          }
+        }
 
-      delay(40000)
-      logger.info("Restart all battles...")
-      battleProcessor.battles.forEach { launch { it.restart() } }
+        delay(40000)
+        logger.info("Restart all battles...")
+        battleProcessor.battles.forEach { launch { it.restart() } }
 
-      delay(10000)
-      logger.info("\u001B[31mServer stopped...\u001B[0m")
-      launch { stop() }
-      launch { exitProcess(0) }
+        delay(10000)
+        logger.info("\u001B[31mServer stopped...\u001B[0m")
+        launch { stop() }
+        launch { exitProcess(0) }
+      }
     }
   }
-
   suspend fun stop() {
     coroutineScope {
       launch { socketServer.stop() }

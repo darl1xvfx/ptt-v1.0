@@ -1,20 +1,38 @@
 package ptt.commands.handlers
 
+import io.ktor.network.sockets.*
 import mu.KotlinLogging
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import ptt.bot.discord.DiscordBot
+import ptt.bot.discord.autoResponsesHandlers
 import ptt.client.*
 import ptt.commands.Command
 import ptt.commands.CommandHandler
 import ptt.commands.CommandName
 import ptt.commands.ICommandHandler
 import ptt.invite.IInviteService
+import ptt.invite.InviteCodeGet
 import ptt.utils.Captcha
 
 object AuthHandlerConstants {
-  const val InviteRequired = "Invite code is required to log in"
+  var socket: UserSocket? = null
 
-  fun getInviteInvalidUsername(username: String) = "This invite can only be used with the username \"$username\""
+  val InviteRequireds = when (socket?.locale) {
+    SocketLocale.Russian -> "Для входа необходим инвайт код"
+    SocketLocale.English -> "Invite code is required to log in"
+    else -> "Invite code is required to log in"
+  }
+
+  val InviteRequired = InviteRequireds
+
+  val getInviteInvalidUsernames = when (socket?.locale) {
+    SocketLocale.Russian -> "Это приглашение можно использовать только с именем пользователя"
+    SocketLocale.English -> "This invite can only be used with the username"
+    else -> "This invite can only be used with the username"
+  }
+
+  fun getInviteInvalidUsername(username: String) = "$getInviteInvalidUsernames \"$username\""
 }
 
 class AuthHandler : ICommandHandler, KoinComponent {
@@ -26,6 +44,11 @@ class AuthHandler : ICommandHandler, KoinComponent {
 
   @CommandHandler(CommandName.Login)
   suspend fun login(socket: UserSocket, captcha: String, remember: Boolean = true, username: String, password: String) {
+    val Blocked = when (socket.locale) {
+      SocketLocale.Russian -> "Ваш аккаунт был заблокирован за нарушение правил игры.\nЗа подробной информацией обращайтесь в <a href='https://discord.gg/5dsW3JT39t'><font color='#59ff32'><u>Discord</u></font></a>."
+      SocketLocale.English -> "Your account has been blocked for violating the rules of the game.\nFor detailed information please contact <a href='https://discord.gg/5dsW3JT39t'><font color='#59ff32'><u>Discord</u></font></a>."
+      else -> "Your account has been blocked for violating the rules of the game.\nFor detailed information please contact <a href='https://discord.gg/5dsW3JT39t'><font color='#59ff32'><u>Discord</u></font></a>."
+    }
     val invite = socket.invite
     if(inviteService.enabled) {
       // ptt-(Drlxzar): AuthDenied shows unnecessary "Password incorrect" modal
@@ -54,20 +77,29 @@ class AuthHandler : ICommandHandler, KoinComponent {
       invite.updateUsername()
     }
 
-    if (user.password == password) {
-      logger.debug { "User login allowed" }
 
-      userSubscriptionManager.add(user)
-      socket.user = user
-      Command(CommandName.AuthAccept).send(socket)
-      socket.loadLobby()
-    } else {
-      logger.debug { "User login rejected: incorrect password" }
-      Command(CommandName.AuthDenied).send(socket)
+  if (user.password == password) {
+    logger.debug { "User login allowed" }
+
+    if (BanHandler().isUserBanned(username)) {
+      Command(CommandName.ShowAlert, Blocked).send(socket)
+      return
     }
-  }
 
-  @CommandHandler(CommandName.LoginByHash)
+    userSubscriptionManager.add(user)
+    socket.user = user
+    Command(CommandName.AuthAccept).send(socket)
+    socket.loadLobby()
+
+    val address = (socket.remoteAddress as InetSocketAddress).hostname
+
+  } else {
+    logger.debug { "User login rejected: incorrect password" }
+    Command(CommandName.AuthDenied).send(socket)
+  }
+}
+
+@CommandHandler(CommandName.LoginByHash)
   suspend fun loginByHash(socket: UserSocket, hash: String) {
     if(inviteService.enabled && socket.invite == null) {
       Command(CommandName.ShowAlert, AuthHandlerConstants.InviteRequired).send(socket)
