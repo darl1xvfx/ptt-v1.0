@@ -360,11 +360,13 @@ class UserSocket(
   }
 
   suspend fun loadLobby() {
+    val address = (this.remoteAddress as? InetSocketAddress)?.hostname
     Command(CommandName.StartLayoutSwitch, "BATTLE_SELECT").send(this)
 
     screen = Screen.BattleSelect
 
-    if(inviteService.enabled && !sentAuthResources) {
+    if (address == "127.0.0.1") {
+    } else if (inviteService.enabled && !sentAuthResources) {
       sentAuthResources = true
       loadDependency(resourceManager.get("resources/auth.json").readText()).await()
       loadDependency(resourceManager.get("resources/auth-animation.json").readText()).await()
@@ -409,11 +411,11 @@ class UserSocket(
 
   suspend fun initClient() {
     val locale = locale ?: throw IllegalStateException("Socket locale is null")
+    val address = (this.remoteAddress as? InetSocketAddress)?.hostname
 
     Command(CommandName.InitExternalModel, "http://localhost/").send(this)
     Command(
       CommandName.InitRegistrationModel,
-      // "{\"bgResource\": 122842, \"enableRequiredEmail\": false, \"maxPasswordLength\": 100, \"minPasswordLength\": 1}"
       InitRegistrationModelData(
         enableRequiredEmail = false
       ).toJson()
@@ -422,15 +424,22 @@ class UserSocket(
     Command(CommandName.InitLocale, resourceManager.get("lang/${locale.key}.json").readText()).send(this)
 
     loadDependency(resourceManager.get("resources/auth-untrusted.json").readText()).await()
-    if(!inviteService.enabled && !sentAuthResources) {
+
+    if (address == "127.0.0.1") {
+      Command(CommandName.InitInviteModel, "false").send(this)
+
+      loadDependency(resourceManager.get("resources/auth.json").readText()).await()
+      loadDependency(resourceManager.get("resources/auth-animation.json").readText()).await()
+    } else if (!inviteService.enabled && !sentAuthResources) {
+      Command(CommandName.InitInviteModel, inviteService.enabled.toString()).send(this)
       sentAuthResources = true
       loadDependency(resourceManager.get("resources/auth.json").readText()).await()
       loadDependency(resourceManager.get("resources/auth-animation.json").readText()).await()
     }
 
-    Command(CommandName.InitInviteModel, inviteService.enabled.toString()).send(this)
     Command(CommandName.MainResourcesLoaded).send(this)
   }
+
 
   suspend fun initBattleList() {
     val mapsFileName = when (locale) {
