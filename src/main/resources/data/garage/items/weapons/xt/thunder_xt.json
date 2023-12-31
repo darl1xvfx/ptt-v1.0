@@ -1,6 +1,6 @@
 {
   "id": "thunder_xt",
-  "index": 21,
+  "index": 16,
 
   "name": {
     "en": "Thunder XT",
@@ -59,7 +59,7 @@
             "name": "hit",
             "light": [
               { "attenuationBegin": 200, "attenuationEnd": 800, "color": 16741656, "intensity": 0.8, "time": 0 },
-              { "attenuationBegin": 400, "attenuationEnd": 800, "color": 16741656, "intensity": 0.1, "time": 10000 }
+              { "attenuationBegin": 400, "attenuationEnd": 800, "color": 16741656, "intensity": 0.1, "time": 700 }
             ]
           },
           {

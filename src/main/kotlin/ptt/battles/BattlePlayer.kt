@@ -168,6 +168,7 @@ class BattlePlayer(
     val soundId = when (theme) {
       ServerMapTheme.Halloween -> 584397
       ServerMapTheme.Space -> 584399
+      ServerMapTheme.Winter -> 584401
       else -> 584396
     }
 
@@ -438,6 +439,7 @@ class BattlePlayer(
         "railgun_terminator_event"   -> Railgun_TERMINATOR_EVENTWeaponHandler(this, user.equipment.weapon)
         "thunder"      -> ThunderWeaponHandler(this, user.equipment.weapon)
         "thunder_xt"   -> Thunder_XTWeaponHandler(this, user.equipment.weapon)
+        "thunder_magnum"   -> Thunder_MAGNUMWeaponHandler(this, user.equipment.weapon)
         "thunder_magnum_xt"   -> Thunder_MAGNUM_XTWeaponHandler(this, user.equipment.weapon)
         "isida"        -> IsidaWeaponHandler(this, user.equipment.weapon)
         "isida_xt"        -> Isida_XTWeaponHandler(this, user.equipment.weapon)

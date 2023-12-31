@@ -1,22 +1,22 @@
 {
-  "id": "ricochet_xt",
-  "index": 12,
+  "id": "ricochet_hammer",
+  "index": 7,
 
   "name": {
-    "en": "Ricochet XT",
-    "ru": "Рикошет XT"
+    "en": "Hammer",
+    "ru": "Молот"
   },
   "description": {
-    "en": "Ricochet XT is made to look like a crocodile maw, with sharp and long teeth that will make your enemies double guess their decision to approach you in future battles.",
-    "ru": "Рикошет XT стилизован под крокодилью пасть. Крепкие острые зубы заставят ваших врагов сто раз подумать, прежде чем нападать."
+    "en": "The development engineers have taken an unconventional approach to the implementation of this anti-tank gun. Instead of a conventional armor-piercing projectile, a shrapnel projectile with tungsten arrows is used, and the reloading system is replaced by a robotic drum loading system. The result is the most reliable tool for driving enemy tanks into the ground. Like nails with a hammer. The tanker only has to get closer to the enemy, because the shells have a low heap accuracy when firing at long distances. The high density of tungsten arrows allows them to ricochet off hard surfaces. Because of their low mass, the arrow may not ricochet more than once. This is usually enough to reach an enemy around a corner or to knock out his aim with a ricochet from the side. Or ricochet into yourself, it's just a matter of luck.\"",
+    "ru": "Инженеры-разработчики нестандартно подошли к реализации этой противотанковой пушки. Вместо обычного бронебойного снаряда применяется шрапнельный снаряд с вольфрамовыми стрелами, а система перезарядки заменена на роботизированную барабанную систему заряжания. В результате получился самый надёжный инструмент для забивания танков противника в землю. Как гвозди молотком. Танкисту остаётся только поближе подобраться к противнику, ведь снаряды имеют невысокую кучность при стрельбе на большие дистанции. Высокая плотность вольфрамовых стрел позволяет им рикошетить от твёрдых поверхностей. Из-за низкой массы стрела может отрикошетить не более одного раза. Как правило, этого достаточно, чтобы достать противника за углом или сбить ему прицел, засадив рикошетом сбоку. Или засадить рикошетом в себя, тут уже как повезёт."
   },
 
-  "baseItemId": 18000032,
+  "baseItemId": 19000032,
 
   "modifications": {
     "0": {
-      "previewResourceId": 18000032,
-      "object3ds": 18000033,
+      "previewResourceId": 19000032,
+      "object3ds": 19000033,
 
       "rank": 1,
       "price": 125000,
@@ -36,7 +36,7 @@
             { "property": "WEAPON_RELOAD_TIME", "value": 0.47 }
           ]
         },
-        { "property": "TURRET_TURN_SPEED", "value": 139.8 },
+        { "property": "TURRET_TURN_SPEED", "value": 139 },
         {
           "property": "SHOT_RANGE",
           "properties": [
@@ -54,60 +54,60 @@
       "physics": {
         "turretRotationSpeed": 2.4399702942880728,
         "turretTurnAcceleration": 2.3701571242083,
-        "impactForce": 2.0,
-        "kickback": 2.0
+        "impactForce": 8.30,
+        "kickback": 3.40
       },
 
       "visual": {
-        "$type": "ricochet_xt",
+        "$type": "ricochet_hammer",
 
-        "bumpFlashTexture": 110005,
-        "explosionTexture": 110005,
-        "explosionSound": 898926,
-        "ricochetSound": 700620,
-        "shotFlashTexture": 142378,
-        "shotSound": 292255,
+        "bumpFlashTexture": 110007,
+        "explosionTexture": 110007,
+        "explosionSound": 898927,
+        "ricochetSound": 700621,
+        "shotFlashTexture": 142379,
+        "shotSound": 292256,
         "shotTexture": 110006,
         "tailTrailTexutre": 228333,
         "lighting": [
           {
             "name": "shot",
             "light": [
-              { "attenuationBegin": 200, "attenuationEnd": 500, "color": 16741656, "intensity": 0.5, "time": 0 },
-              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16741656, "intensity": 0, "time": 600 }
+              { "attenuationBegin": 200, "attenuationEnd": 500, "color": 16777215, "intensity": 0.5, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16777215, "intensity": 0, "time": 600 }
             ]
           },
           {
             "name": "ricochet",
             "light": [
-              { "attenuationBegin": 100, "attenuationEnd": 400, "color": 16741656, "intensity": 0.5, "time": 0 },
-              { "attenuationBegin": 50, "attenuationEnd": 200, "color": 16741656, "intensity": 0, "time": 600 }
+              { "attenuationBegin": 100, "attenuationEnd": 400, "color": 16777215, "intensity": 0.5, "time": 0 },
+              { "attenuationBegin": 50, "attenuationEnd": 200, "color": 16777215, "intensity": 0, "time": 600 }
             ]
           },
           {
             "name": "hit",
             "light": [
-              { "attenuationBegin": 300, "attenuationEnd": 600, "color": 16741656, "intensity": 0.5, "time": 0 },
-              { "attenuationBegin": 300, "attenuationEnd": 600, "color": 16741656, "intensity": 0, "time": 600 }
+              { "attenuationBegin": 300, "attenuationEnd": 600, "color": 16777215, "intensity": 0.5, "time": 0 },
+              { "attenuationBegin": 300, "attenuationEnd": 600, "color": 16777215, "intensity": 0, "time": 600 }
             ]
           },
           {
             "name": "bullet",
             "light": [
-              { "attenuationBegin": 100, "attenuationEnd": 350, "color": 16741656, "intensity": 0.5, "time": 0 }
+              { "attenuationBegin": 100, "attenuationEnd": 350, "color": 16777215, "intensity": 0.5, "time": 0 }
             ]
           }
         ],
         "bcsh": [
-          { "brightness": 1.128, "contrast": 0, "saturation": 0, "hue": 353.63, "key": "shot" },
-          { "brightness": 1.128, "contrast": 0, "saturation": 0, "hue": 353.63, "key": "expl" },
-          { "brightness": 1.128, "contrast": 0, "saturation": 0, "hue": 353.63, "key": "trail" }
+          { "brightness": 110, "contrast": 0, "saturation": 0, "hue": 0, "key": "shot" },
+          { "brightness": 110, "contrast": 0, "saturation": 0, "hue": 0, "key": "expl" },
+          { "brightness": 110, "contrast": 0, "saturation": 0, "hue": 0, "key": "trail" }
         ]
       }
     },
     "1": {
-      "previewResourceId": 18000034,
-      "object3ds": 18000035,
+      "previewResourceId": 19000034,
+      "object3ds": 19000035,
 
       "rank": 1,
       "price": 250000,
@@ -127,7 +127,7 @@
             { "property": "WEAPON_RELOAD_TIME", "value": 0.47 }
           ]
         },
-        { "property": "TURRET_TURN_SPEED", "value": 139.8 },
+        { "property": "TURRET_TURN_SPEED", "value": 139 },
         {
           "property": "SHOT_RANGE",
           "properties": [
@@ -145,13 +145,13 @@
       "physics": {
         "turretRotationSpeed": 2.4399702942880728,
         "turretTurnAcceleration": 2.3701571242083,
-        "impactForce": 2.0,
-        "kickback": 2.0
+        "impactForce": 8.30,
+        "kickback": 3.40
       }
     },
     "2": {
-      "previewResourceId": 18000036,
-      "object3ds": 18000037,
+      "previewResourceId": 19000036,
+      "object3ds": 19000037,
 
       "rank": 1,
       "price": 375000,
@@ -171,7 +171,7 @@
             { "property": "WEAPON_RELOAD_TIME", "value": 0.47 }
           ]
         },
-        { "property": "TURRET_TURN_SPEED", "value": 139.8 },
+        { "property": "TURRET_TURN_SPEED", "value": 139 },
         {
           "property": "SHOT_RANGE",
           "properties": [
@@ -189,13 +189,13 @@
       "physics": {
         "turretRotationSpeed": 2.4399702942880728,
         "turretTurnAcceleration": 2.3701571242083,
-        "impactForce": 2.0,
-        "kickback": 2.0
+        "impactForce": 8.30,
+        "kickback": 3.40
       }
     },
     "3": {
-      "previewResourceId": 18000038,
-      "object3ds": 18000039,
+      "previewResourceId": 19000038,
+      "object3ds": 19000039,
 
       "rank": 1,
       "price": 500000,
@@ -215,7 +215,7 @@
             { "property": "WEAPON_RELOAD_TIME", "value": 0.47 }
           ]
         },
-        { "property": "TURRET_TURN_SPEED", "value": 139.8 },
+        { "property": "TURRET_TURN_SPEED", "value": 139 },
         {
           "property": "SHOT_RANGE",
           "properties": [
@@ -233,8 +233,8 @@
       "physics": {
         "turretRotationSpeed": 2.4399702942880728,
         "turretTurnAcceleration": 2.3701571242083,
-        "impactForce": 2.0,
-        "kickback": 2.0
+        "impactForce": 8.30,
+        "kickback": 3.40
       }
     }
   }

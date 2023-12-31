@@ -124,6 +124,7 @@ class ClientFullMoveData(
   )
 }
 
+
 class ClientMovementControlData(
   @Json val tankId: String,
 

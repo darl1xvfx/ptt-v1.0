@@ -9,6 +9,7 @@ import ptt.client.TankEffectData
 import ptt.commands.Command
 import ptt.commands.CommandName
 import ptt.extensions.launchDelayed
+import ptt.garage.ServerGarageUserItemHull
 
 abstract class TankEffect(
   val tank: BattleTank,

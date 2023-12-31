@@ -1,0 +1,232 @@
+{
+  "id": "thunder_magnum",
+  "index": 17,
+
+  "name": {
+    "en": "Magnum",
+    "ru": "Магнум"
+  },
+  "description": {
+    "en": "A true magnum opus of tank-building art. The largest caliber that could fit on a tank hull. The most powerful high-explosive shell that could be found. The longest barrel with the largest muzzle brake. The biggest recoil that could easily roll over a light tank. There's nothing about this howitzer that screams \"most.\" Even the guidance system is, uh. the most sophisticated. The huge caliber required the gun to be literally welded to the hull of the tank, eliminating the ability to rotate the turret on the horizon. Heavy shells fly to the target in an arc, making aiming much more difficult. With skillful use it is possible to reach the enemy behind any cover and at any distance. For this purpose it is desirable to have at least initial knowledge of copromat, matanalysis, thermodynamics, theory of functions of complex variable and, of course, ballistics. In extreme case, you can shoot strictly upwards and run until the shell returned from the stratosphere and did not kill everything that was near your tank at the time of the shot.",
+    "ru": "Настоящий magnum opus танкостроительного искусства. Самый большой калибр, который смог поместиться на танковый корпус. Самый мощный фугасный снаряд, который удалось найти. Самый длинный ствол с самым большим дульным тормозом. Самая большая отдача, которая легко перевернёт лёгкий танк. Нет ничего в этой гаубице, что бы ни кричало «Самая». Даже система наведения и та... самая сложная. Огромный калибр потребовал буквально приварить пушку к корпусу танка, исключив возможность поворачивать башню по горизонту. Тяжёлые снаряды летят к цели по дуге, значительно усложняя прицеливание. При умелом применении можно доставать противника за любым укрытием и на любом расстоянии. Для этого желательны хотя бы начальные знания сопромата, матанализа, термодинамики, теории функций комплексного переменного и, разумеется, баллистики. В крайнем случае можно стрелять строго вверх и бежать, пока снаряд не вернулся из стратосферы и не угробил всё, что было рядом с вашим танком в момент выстрела."
+  },
+
+  "baseItemId": 900,
+
+  "modifications": {
+    "0": {
+      "previewResourceId": 900,
+      "object3ds": 901,
+
+      "rank": 1,
+      "price": 650,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 284 },
+            { "property": "DAMAGE_TO", "value": 473 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 420 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 6.4 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 71.47 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 26 }
+          ]
+        }
+      ],
+
+      "visual": {
+        "$type": "thunder_magnum",
+
+        "explosionMarkTexture": 262233,
+        "explosionSize": 1500,
+        "explosionSound": 337971,
+        "explosionTexture": 435330,
+        "shotSound": 337972,
+        "shotTexture": 215691,
+        "lighting": [
+          {
+            "name": "hit",
+            "light": [
+              { "attenuationBegin": 200, "attenuationEnd": 800, "color": 16741656, "intensity": 0.8, "time": 0 },
+              { "attenuationBegin": 200, "attenuationEnd": 800, "color": 16741656, "intensity": 0, "time": 700 }
+            ]
+          },
+          {
+            "name": "shot",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 500, "color": 16741656, "intensity": 0.9, "time": 0 },
+              { "attenuationBegin": 1, "attenuationEnd": 2, "color": 16741656, "intensity": 0, "time": 250 }
+            ]
+          },
+          {
+            "name": "shellLightAnimation",
+            "light": [
+              { "attenuationBegin": 100, "attenuationEnd": 350, "color": 16741656, "intensity": 0.5, "time": 0 }
+            ]
+          }
+        ],
+        "bcsh": [ ]
+      },
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 25, "to": 45 },
+        "weakening": { "from": 50, "to": 75, "minimum": 0.5 },
+        "splash": { "from": 0, "to": 15, "radius": 15 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 1.2391838,
+        "turretTurnAcceleration": 1.2391838,
+        "impactForce": 4.2,
+        "kickback": 2.6
+      }
+    },
+    "1": {
+      "previewResourceId": 902,
+      "object3ds": 903,
+
+      "rank": 1,
+      "price": 28300,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 284 },
+            { "property": "DAMAGE_TO", "value": 473 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 530 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 5.8 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 75.88 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 43 }
+          ]
+        }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 25, "to": 45 },
+        "weakening": { "from": 50, "to": 75, "minimum": 0.5 },
+        "splash": { "from": 0, "to": 15, "radius": 15 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 1.3089969,
+        "turretTurnAcceleration": 1.3089969,
+        "impactForce": 4.9,
+        "kickback": 2.9
+      }
+    },
+    "2": {
+      "previewResourceId": 904,
+      "object3ds": 905,
+
+      "rank": 1,
+      "price": 122400,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 284 },
+            { "property": "DAMAGE_TO", "value": 473 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 600 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 5.4 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 82.94 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 58 }
+          ]
+        }
+      ],
+
+      "damage": {
+        "discrete": { },
+        "range": { "from": 25, "to": 45 },
+        "weakening": { "from": 50, "to": 75, "minimum": 0.5 },
+        "splash": { "from": 0, "to": 15, "radius": 15 }
+      },
+
+      "physics": {
+        "turretRotationSpeed": 1.43117,
+        "turretTurnAcceleration": 1.43117,
+        "impactForce": 6.0,
+        "kickback": 3.6
+      }
+    },
+  "3": {
+      "previewResourceId": 906,
+      "object3ds": 907,
+
+      "rank": 1,
+      "price": 216300,
+
+      "properties": [
+        {
+          "property": "DAMAGE",
+          "properties": [
+            { "property": "DAMAGE_FROM", "value": 284 },
+            { "property": "DAMAGE_TO", "value": 473 }
+          ]
+        },
+        { "property": "IMPACT_FORCE", "value": 700 },
+        {
+          "property": "WEAPON_CHARGE_RATE",
+          "properties": [
+            { "property": "WEAPON_RELOAD_TIME", "value": 5.0 }
+          ]
+        },
+        { "property": "TURRET_TURN_SPEED", "value": 90 },
+        {
+          "property": "SHOT_RANGE",
+          "properties": [
+            { "property": "WEAPON_MIN_DAMAGE_RADIUS", "value": 70 }
+          ]
+        }
+      ],
+
+    "damage": {
+      "discrete": { },
+      "range": { "from": 25, "to": 45 },
+      "weakening": { "from": 50, "to": 75, "minimum": 0.5 },
+      "splash": { "from": 0, "to": 15, "radius": 15 }
+    },
+
+    "physics": {
+      "turretRotationSpeed": 1.5708,
+      "turretTurnAcceleration": 1.5708,
+      "impactForce": 7.0,
+      "kickback": 4.0
+      }
+    }
+  }
+}

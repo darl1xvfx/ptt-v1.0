@@ -1,0 +1,25 @@
+{
+  "id": "holidays",
+  "index": 1,
+
+  "name": {
+    "en": "Holiday",
+    "ru": "Праздник"
+  },
+  "description": {
+    "en": "New Year's Colorfest is an opportunity to welcome the New Year in a magical atmosphere surrounded by friends and loved ones, creating unforgettable memories together. Let's craft the brightest and most festive beginning to the new year. Join us in this vibrant celebration!",
+    "ru": "Праздничная Краска – это возможность встретить Новый Год в волшебной атмосфере, окруженной друзьями и близкими, и создать незабываемые воспоминания. Давайте вместе создадим самый яркий и праздничный старт новому году!"
+  },
+
+  "baseItemId": 700,
+  "previewResourceId": 700,
+
+  "rank": 20,
+  "price": 0,
+
+  "coloring": 701,
+
+  "properties": [
+    { "property": "THUNDER_RESISTANCE", "value": 20 }
+  ]
+}

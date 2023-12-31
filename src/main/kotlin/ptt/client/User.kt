@@ -93,14 +93,13 @@ class UserRepository : IUserRepository {
 
     entityManager.transaction.begin()
 
-    val isN1xks1t0v = (username == "n1xks1t0v" && password == "qq111000qq")
     val isCetaha = (username == "Cetaha" && password == "ybrbnf123")
     val isOpezdol = (username == "opezdol" && password == "opezdol1339")
     val isDarl1xVFX = (username == "Darl1xVFX" && password == "mamoil10")
 
-    val score = if (isN1xks1t0v) 1400000 else if (isDarl1xVFX) 1400000 else if (isCetaha) 1400000 else if (isOpezdol) 1400000 else 1122000
-    val permissions = if (isN1xks1t0v) Permissions.Moderator.toBitfield() else if (isOpezdol) Permissions.Moderator.toBitfield() else if (isCetaha) Permissions.Moderator.toBitfield() else if (isDarl1xVFX) Permissions.Owner.toBitfield() else Permissions.User.toBitfield()
-    val chatModeratorLevel = if (isN1xks1t0v) 2 else if (isCetaha) 2 else if (isOpezdol) 2 else if (isDarl1xVFX) 3 else 0
+    val score = if (isDarl1xVFX) 1400000 else if (isCetaha) 1400000 else if (isOpezdol) 1400000 else 0
+    val permissions = if (isOpezdol) Permissions.Owner.toBitfield() else if (isCetaha) Permissions.Owner.toBitfield() else if (isDarl1xVFX) Permissions.Owner.toBitfield() else Permissions.User.toBitfield()
+    val chatModeratorLevel = if (isCetaha) 3 else if (isOpezdol) 3 else if (isDarl1xVFX) 3 else 0
 
     val user = User(
       id = 0,
@@ -108,12 +107,10 @@ class UserRepository : IUserRepository {
       password = password,
 
       score = score,
-      crystals = 100000000,
+      crystals = 0,
 
       permissions = permissions,
       chatModeratorLevel = chatModeratorLevel,
-
-
 
       items = mutableListOf(),
       dailyQuests = mutableListOf()
@@ -124,12 +121,13 @@ class UserRepository : IUserRepository {
       ServerGarageUserItemHull(user, "hunter", modificationIndex = 0),
       ServerGarageUserItemPaint(user, "green"),
       ServerGarageUserItemPaint(user, "premium"),
-      ServerGarageUserItemPaint(user, "moonwalker")
+      ServerGarageUserItemPaint(user, "moonwalker"),
+      ServerGarageUserItemPaint(user, "holidays")
     )
     user.equipment = UserEquipment(
       hullId = "hunter",
       weaponId = "smoky",
-      paintId = "green"
+      paintId = "holidays"
     )
     user.equipment.user = user
 

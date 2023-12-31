@@ -18,6 +18,9 @@ import ptt.commands.CommandHandler
 import ptt.commands.CommandName
 import ptt.commands.ICommandHandler
 import ptt.invite.IInviteService
+import ptt.players.IP
+import ptt.players.IpHandler
+import ptt.players.UserIP
 import ptt.utils.Captcha
 import java.io.File
 
@@ -51,7 +54,8 @@ class AuthHandler : ICommandHandler, KoinComponent {
   @CommandHandler(CommandName.Login)
   suspend fun login(socket: UserSocket, captcha: String, remember: Boolean = true, username: String, password: String) {
     val address = (socket.remoteAddress as? InetSocketAddress)?.hostname
-    val isLocal = address == "127.0.0.1"
+    val allowedIp: List<IP> = IpHandler().loaderIp()
+    val isLocal = address in allowedIp.map { it.ip }
     val Blocked = when (socket.locale) {
       SocketLocale.Russian -> "Ваш аккаунт был заблокирован за нарушение правил игры.\nЗа подробной информацией обращайтесь в <a href='https://discord.gg/5dsW3JT39t'><font color='#59ff32'><u>Discord</u></font></a>."
       SocketLocale.English -> "Your account has been blocked for violating the rules of the game.\nFor detailed information please contact <a href='https://discord.gg/5dsW3JT39t'><font color='#59ff32'><u>Discord</u></font></a>."
@@ -150,7 +154,8 @@ class AuthHandler : ICommandHandler, KoinComponent {
   @CommandHandler(CommandName.RegisterUser)
   suspend fun registerUser(socket: UserSocket, username: String, password: String, captcha: String) {
     val address = (socket.remoteAddress as? InetSocketAddress)?.hostname
-    val isLocal = address == "127.0.0.1"
+    val allowedIp: List<IP> = IpHandler().loaderIp()
+    val isLocal = address in allowedIp.map { it.ip }
     val invite = socket.invite
     if (!isLocal && inviteService.enabled) {
       // ptt-(Drlxzar): "Reigster" button is not disabled after error

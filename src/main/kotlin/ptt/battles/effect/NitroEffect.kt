@@ -7,44 +7,36 @@ import ptt.client.send
 import ptt.client.toJson
 import ptt.commands.Command
 import ptt.commands.CommandName
+import ptt.garage.ServerGarageUserItemHull
 
 class NitroEffect(
   tank: BattleTank,
-  activeSoundId: Int = 26,
-  deactiveSoundId: Int = 27,
-  val multiplier: Double = 1.4
+  private val defaultSpeed: Double = 1.4,
+  private val crisisSpeed: Double = 2.3
 ) : TankEffect(
   tank,
   duration = 59.seconds,
   cooldown = 0.seconds
 ) {
-  private val activeSoundId: Int = activeSoundId
-  private val deactiveSoundId: Int = deactiveSoundId
-
   override val info: EffectInfo
     get() = EffectInfo(
       id = 4,
       name = "n2o"
     )
 
-  var specification = ChangeTankSpecificationData.fromPhysics(tank.hull.modification.physics, tank.weapon.item.modification.physics)
-    private set
+  private var specification = ChangeTankSpecificationData.fromPhysics(tank.hull.modification.physics, tank.weapon.item.modification.physics)
 
   override suspend fun activate() {
-    if (activeSoundId > 0) {
-      Command(CommandName.SoundsOfSupplies, "", activeSoundId.toString()).send(tank)
-    }
+    Command(CommandName.SoundsOfSupplies, "", 26.toString()).send(tank)
 
-    specification.speed *= multiplier
+    specification.speed *= defaultSpeed
     sendSpecificationChange()
   }
 
   override suspend fun deactivate() {
-    if (deactiveSoundId > 0) {
-      Command(CommandName.SoundsOfSupplies, "", deactiveSoundId.toString()).send(tank)
-    }
+    Command(CommandName.SoundsOfSupplies, "", 27.toString()).send(tank)
 
-    specification.speed /= multiplier
+    specification.speed /= defaultSpeed
     sendSpecificationChange()
   }
 

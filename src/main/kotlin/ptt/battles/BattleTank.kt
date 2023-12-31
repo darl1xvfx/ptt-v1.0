@@ -50,7 +50,6 @@ class BattleTank(
   private val server: ISocketServer by inject()
   private val userRepository by inject<IUserRepository>()
 
-
   val socket: UserSocket
     get() = player.socket
 

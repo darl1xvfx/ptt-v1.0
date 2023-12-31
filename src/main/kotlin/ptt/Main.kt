@@ -92,13 +92,13 @@ class SocketServer : ISocketServer {
   override suspend fun run(scope: CoroutineScope) {
     server = aSocket(ActorSelectorManager(Dispatchers.IO))
       .tcp()
-      .bind(InetSocketAddress("0.0.0.0", 25646))
+      .bind(InetSocketAddress("0.0.0.0", 25612))
 
     val localAddress = server.localAddress
     val address = (localAddress as InetSocketAddress).hostname
     val port = (localAddress).port
 
-    logger.info {"\u001B[32mServer started on IP: ${address} and Port: ${port}...\u001B[0m"}
+    logger.info {"\u001B[32mServer started on Port: ${port}...\u001B[0m"}
 
 
     acceptJob = scope.launch {
@@ -139,7 +139,7 @@ fun main(args: Array<String>) = object : CliktCommand() {
     val logger = KotlinLogging.logger { }
 
     logger.info { "Hello, 世界!" }
-    logger.info { "Version: ${ptt.BuildConfig.gitVersion}" }
+    logger.info { "Version: ${BuildConfig.gitVersion}" }
     logger.info { "Root path: ${Paths.get("").absolute()}" }
 
     val module = module {
@@ -197,6 +197,7 @@ fun main(args: Array<String>) = object : CliktCommand() {
               .withSubtype(Railgun_TERMINATOR_EVENTVisual::class.java, "railgun_terminator_event")
               .withSubtype(ThunderVisual::class.java, "thunder")
               .withSubtype(Thunder_XTVisual::class.java, "thunder_xt")
+              .withSubtype(Thunder_MAGNUMVisual::class.java, "thunder_magnum")
               .withSubtype(Thunder_MAGNUM_XTVisual::class.java, "thunder_magnum_xt")
               .withSubtype(FlamethrowerVisual::class.java, "flamethrower")
               .withSubtype(Flamethrower_XTVisual::class.java, "flamethrower_xt")

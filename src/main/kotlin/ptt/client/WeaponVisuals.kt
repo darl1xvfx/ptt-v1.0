@@ -168,6 +168,19 @@ class Thunder_XTVisual(
   bcsh: List<WeaponVisualColor>
 ) : WeaponVisual(lighting, bcsh)
 
+class Thunder_MAGNUMVisual(
+  @Json val explosionMarkTexture: Int,
+  @Json val explosionSize: Int,
+  @Json val explosionSound: Int,
+  @Json val explosionTexture: Int,
+
+  @Json val shotSound: Int,
+  @Json val shotTexture: Int,
+
+  lighting: List<WeaponLightningGroup>,
+  bcsh: List<WeaponVisualColor>
+) : WeaponVisual(lighting, bcsh)
+
 class Thunder_MAGNUM_XTVisual(
   @Json val explosionMarkTexture: Int,
   @Json val explosionSize: Int,

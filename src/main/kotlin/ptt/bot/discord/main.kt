@@ -17,17 +17,16 @@ import ptt.ISocketServer
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
-class DiscordBot(private val discordCommandHandler: CommandHandler) : ListenerAdapter(), KoinComponent {
+class DiscordBot(private val discordCommandHandler: CommandHandler, private val autoResponsesHandlers: autoResponsesHandlers) : ListenerAdapter(), KoinComponent {
     private val socketServer by inject<ISocketServer>()
 
     companion object {
         private val logger = KotlinLogging.logger {}
 
-        fun run(token: String, discordCommandHandler: CommandHandler) {
-
+        fun run(token: String, discordCommandHandler: CommandHandler, autoResponsesHandlers: autoResponsesHandlers) {
             try {
                 val jda = JDABuilder.createDefault(token)
-                    .addEventListeners(DiscordBot(discordCommandHandler))
+                    .addEventListeners(DiscordBot(discordCommandHandler, autoResponsesHandlers))
                     .setMemberCachePolicy(MemberCachePolicy.ALL)
                     .disableCache(CacheFlag.VOICE_STATE, CacheFlag.ACTIVITY)
                     .enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_MESSAGE_TYPING)
@@ -36,13 +35,13 @@ class DiscordBot(private val discordCommandHandler: CommandHandler) : ListenerAd
 
                 val updateActivity = {
                     jda.presence.activity = Activity.streaming(
-                        "❗PTT Online: ${DiscordBot(CommandHandler()).socketServer.players.size}",
+                        "❗PTT Online: ${DiscordBot(discordCommandHandler, autoResponsesHandlers).socketServer.players.size}",
                         "https://www.youtube.com/watch?v=7roIZpasQz0"
                     )
                 }
 
                 val scheduler = Executors.newScheduledThreadPool(1)
-                scheduler.scheduleAtFixedRate(updateActivity, 0, 1000, TimeUnit.SECONDS)
+                scheduler.scheduleAtFixedRate(updateActivity, 1, 1, TimeUnit.SECONDS)
 
                 logger.info { "\u001B[93mBot is running!\u001B[0m" }
                 logger.info { "\u001B[93mCommandHandler is running!\u001B[0m" }
@@ -56,6 +55,7 @@ class DiscordBot(private val discordCommandHandler: CommandHandler) : ListenerAd
     override fun onGuildMessageReceived(event: GuildMessageReceivedEvent) {
         GlobalScope.launch {
             discordCommandHandler.handleCommand(event)
+            autoResponsesHandlers.handleCommand(event)
         }
     }
 }

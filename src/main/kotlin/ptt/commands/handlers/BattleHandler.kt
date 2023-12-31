@@ -144,6 +144,7 @@ class BattleHandler : ICommandHandler, KoinComponent {
     logger.trace { "Синхронизация управления движением с игроками $count" }
   }
 
+
   @CommandHandler(CommandName.SelfDestruct)
   suspend fun selfDestruct(socket: UserSocket) {
     val player = socket.battlePlayer ?: throw Exception("No BattlePlayer")

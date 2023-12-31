@@ -34,6 +34,9 @@ import ptt.resources.IResourceServer
 import ptt.store.IStoreRegistry
 import ptt.commands.handlers.BattleHandler
 import ptt.extensions.launchDelayed
+import ptt.players.IP
+import ptt.players.IpHandler
+import ptt.players.UserIP
 import kotlin.random.Random
 import kotlin.reflect.KClass
 import java.util.*
@@ -354,8 +357,8 @@ class Server : KoinComponent {
         }
       }
 
-      command("spawngold") {
-        permissions(Permissions.Owner, Permissions.Moderator)
+      command("spawngold-amount") {
+        permissions(Permissions.Owner, Permissions.Moderator, Permissions.User)
         description("Создать бонус Gold в случайной точке битвы")
 
         argument("amount", Int::class) {
@@ -365,8 +368,8 @@ class Server : KoinComponent {
         handler {
           val amount: Int = arguments.get<String>("amount").toInt()
 
-          if (amount > 20) {
-            reply("Превышено максимальное количество бонусов (максимум 20)")
+          if (amount > 5) {
+            reply("Превышено максимальное количество бонусов (максимум 5)")
             return@handler
           }
 
@@ -521,6 +524,9 @@ class Server : KoinComponent {
               ServerGarageUserItemWeapon(user, "smoky", modificationIndex = 0),
               ServerGarageUserItemHull(user, "hunter", modificationIndex = 0),
               ServerGarageUserItemPaint(user, "green"),
+              ServerGarageUserItemPaint(user, "premium"),
+              ServerGarageUserItemPaint(user, "moonwalker"),
+              ServerGarageUserItemPaint(user, "holidays"),
               ServerGarageUserItemSupply(user, "health", count = 9999),
               ServerGarageUserItemSupply(user, "armor", count = 9999),
               ServerGarageUserItemSupply(user, "double_damage", count = 9999),
@@ -529,7 +535,7 @@ class Server : KoinComponent {
             )
             user.equipment.hullId = "hunter"
             user.equipment.weaponId = "smoky"
-            user.equipment.paintId = "green"
+            user.equipment.paintId = "holidays"
 
             withContext(Dispatchers.IO) {
               entityManager
@@ -563,7 +569,7 @@ class Server : KoinComponent {
             }
           }
 
-          reply("Все предметы успешно сброшены модератору ${user.username}")
+          reply("Все предметы успешно сброшены игроку ${user.username}")
         }
       }
 
@@ -711,6 +717,61 @@ class Server : KoinComponent {
 
           banHandler.unbanUser(username)
           reply("User '$username' has been unbanned")
+        }
+      }
+
+      command("allowedIp") {
+        permissions(Permissions.Owner)
+        description("Manage allowed IP addresses")
+
+        subcommand("add") {
+          permissions(Permissions.Owner)
+          description("Add an IP address to the allowed list")
+
+          permissions(Permissions.Owner)
+          argument("ip", String::class) {
+            description("IP address to allow")
+          }
+          handler {
+            val ip = arguments.get<String>("ip")
+            val ipHandler = IpHandler()
+            val ips = ipHandler.loaderIp().toMutableList()
+            ips.add(IP(ip))
+            ipHandler.saveIp(ips)
+            reply("IP '$ip' has been added to the allowed list.")
+          }
+        }
+
+        subcommand("remove") {
+          permissions(Permissions.Owner)
+          description("Remove an IP address from the allowed list")
+
+          argument("ip", String::class) {
+            description("IP address to remove")
+          }
+          permissions(Permissions.Owner)
+          handler {
+            val ip = arguments.get<String>("ip")
+            val ipHandler = IpHandler()
+            val ips = ipHandler.loaderIp().toMutableList()
+            ips.removeIf { it.ip == ip }
+            ipHandler.saveIp(ips)
+            reply("IP '$ip' has been removed from the allowed list.")
+          }
+        }
+
+        subcommand("list") {
+          permissions(Permissions.Owner)
+          description("List all allowed IP addresses")
+          handler {
+            val ipHandler = IpHandler()
+            val allowedIPs = ipHandler.loaderIp().joinToString("\n") { it.ip }
+            if (allowedIPs.isEmpty()) {
+              reply("There are no allowed IP addresses.")
+            } else {
+              reply("Allowed IP addresses:\n$allowedIPs")
+            }
+          }
         }
       }
 

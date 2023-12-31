@@ -64,6 +64,7 @@ class ShotHandler : ICommandHandler, KoinComponent {
     when(tank.weapon) {
       is ThunderWeaponHandler  -> tank.weapon.fire(args.getAs(0))
       is Thunder_XTWeaponHandler  -> tank.weapon.fire(args.getAs(0))
+      is Thunder_MAGNUMWeaponHandler  -> tank.weapon.fire(args.getAs(0))
       is Thunder_MAGNUM_XTWeaponHandler  -> tank.weapon.fire(args.getAs(0))
       is SmokyWeaponHandler    -> tank.weapon.fire(args.getAs(0))
       is Smoky_XTWeaponHandler    -> tank.weapon.fire(args.getAs(0))
@@ -86,6 +87,7 @@ class ShotHandler : ICommandHandler, KoinComponent {
     when(tank.weapon) {
       is ThunderWeaponHandler -> tank.weapon.fireStatic(args.getAs(0))
       is Thunder_XTWeaponHandler -> tank.weapon.fireStatic(args.getAs(0))
+      is Thunder_MAGNUMWeaponHandler -> tank.weapon.fireStatic(args.getAs(0))
       is Thunder_MAGNUM_XTWeaponHandler -> tank.weapon.fireStatic(args.getAs(0))
       is SmokyWeaponHandler   -> tank.weapon.fireStatic(args.getAs(0))
       is Smoky_XTWeaponHandler   -> tank.weapon.fireStatic(args.getAs(0))
@@ -109,6 +111,7 @@ class ShotHandler : ICommandHandler, KoinComponent {
       is Railgun_TERMINATOR_EVENTWeaponHandler   -> tank.weapon.fireTarget(args.getAs(0))
       is ThunderWeaponHandler      -> tank.weapon.fireTarget(args.getAs(0))
       is Thunder_XTWeaponHandler      -> tank.weapon.fireTarget(args.getAs(0))
+      is Thunder_MAGNUMWeaponHandler      -> tank.weapon.fireTarget(args.getAs(0))
       is Thunder_MAGNUM_XTWeaponHandler      -> tank.weapon.fireTarget(args.getAs(0))
       is SmokyWeaponHandler        -> tank.weapon.fireTarget(args.getAs(0))
       is Smoky_XTWeaponHandler        -> tank.weapon.fireTarget(args.getAs(0))

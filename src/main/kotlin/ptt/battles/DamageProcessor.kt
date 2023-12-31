@@ -52,6 +52,7 @@ class DamageProcessor(
       is Twins_XTWeaponHandler -> "TWINS_RESISTANCE"
       is ThunderWeaponHandler -> "THUNDER_RESISTANCE"
       is Thunder_XTWeaponHandler -> "THUNDER_RESISTANCE"
+      is Thunder_MAGNUMWeaponHandler -> "THUNDER_RESISTANCE"
       is Thunder_MAGNUM_XTWeaponHandler -> "THUNDER_RESISTANCE"
       is RailgunWeaponHandler -> "RAILGUN_RESISTANCE"
       is Railgun_XTWeaponHandler -> "RAILGUN_RESISTANCE"

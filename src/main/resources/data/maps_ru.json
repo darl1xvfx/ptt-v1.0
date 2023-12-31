@@ -341,5 +341,6 @@
 { "enabled":  true,  "mapId":  "map_year_2042_mm",  "mapName":  "Год 2042 ММ",  "maxPeople":  15,  "preview":  17000110,  "maxRank":  31,  "minRank":  1,  "supportedModes":  ["DM"],  "theme":  "SPACE" }, 
 { "enabled":  true,  "mapId":  "map_yorkshire_mm",  "mapName":  "Йоркшир ММ",  "maxPeople":  15,  "preview":  17000111,  "maxRank":  31,  "minRank":  1,  "supportedModes":  ["DM"],  "theme":  "SPACE" }, 
 { "enabled":  true,  "mapId":  "map_zone",  "mapName":  "Зона",  "maxPeople":  15,  "preview":  17000112,  "maxRank":  31,  "minRank":  1,  "supportedModes":  ["DM",  "CTF"],  "theme":  "SPACE" }, 
-{ "enabled":  true,  "mapId":  "map_luxembourg_mm",  "mapName":  "Люксембург ММ",  "maxPeople":  15,  "preview":  17000113,  "maxRank":  31,  "minRank":  1,  "supportedModes":  ["DM"],  "theme":  "SPACE" }
+{ "enabled":  true,  "mapId":  "map_luxembourg_mm",  "mapName":  "Люксембург ММ",  "maxPeople":  15,  "preview":  17000113,  "maxRank":  31,  "minRank":  1,  "supportedModes":  ["DM"],  "theme":  "SPACE" },
+{ "enabled":  true,  "mapId":  "map_gigabarda_mm",  "mapName":  "Гигабарда ММ",  "maxPeople":  15,  "preview":  702,  "maxRank":  31,  "minRank":  1,  "supportedModes":  ["DM"],  "theme":  "WINTER" }
 ]

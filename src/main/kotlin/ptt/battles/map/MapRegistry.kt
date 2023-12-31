@@ -88,7 +88,7 @@ class MapRegistry : IMapRegistry, KoinComponent {
 
         maps.add(map)
 
-        logger.debug { "  > Загруженная карта ${entry.name} -> ${map.name}@${map.theme.name} (ID: ${map.id}, предварительный просмотр: ${map.preview})" }
+        logger.debug { " > Loaded map ${entry.name} -> ${map.name}@${map.theme.name} (ID: ${map.id}, preview: ${map.preview} )" }
       }
     }
   }
@@ -103,5 +103,5 @@ fun IMapRegistry.getProplib(name: String): ServerProplib {
 }
 
 fun IMapRegistry.getSkybox(name: String): Map<SkyboxSide, ServerIdResource> {
-  return skyboxes[name] ?: throw IllegalArgumentException("Нет такого скайбокса: $name")
+  return skyboxes[name] ?: throw IllegalArgumentException("No such skybox: $name")
 }

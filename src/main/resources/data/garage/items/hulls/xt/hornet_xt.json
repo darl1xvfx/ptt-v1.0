@@ -1,6 +1,6 @@
 {
   "id": "hornet_xt",
-  "index": 9,
+  "index": 4,
 
   "name": {
     "en": "Hornet XT",
@@ -130,7 +130,7 @@
         { "property": "HULL_ARMOR", "value": 1500 },
         { "property": "HULL_SPEED", "value": 12.00 },
         { "property": "HULL_TURN_SPEED", "value": 130 },
-        { "property": "HULL_MASS", "value": 1523 },
+        { "property": "HULL_MASS", "value": 1941 },
         {
           "property": "HULL_POWER",
           "properties": [
@@ -148,7 +148,7 @@
         "turnAcceleration": 2.61799,
         "reverseTurnAcceleration": 6.28319,
         "damping": 1250,
-        "mass": 1523,
+        "mass": 1941,
         "power": 14.0
       },
 

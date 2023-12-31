@@ -31,6 +31,8 @@ import ptt.invite.IInviteService
 import ptt.invite.Invite
 import ptt.lobby.chat.ILobbyChatManager
 import ptt.news.NewsLoader
+import ptt.players.IP
+import ptt.players.IpHandler
 
 
 suspend fun Command.send(socket: UserSocket) = socket.send(this)
@@ -411,7 +413,9 @@ class UserSocket(
 
   suspend fun initClient() {
     val locale = locale ?: throw IllegalStateException("Socket locale is null")
-    val address = (this.remoteAddress as? InetSocketAddress)?.hostname
+    val address = (socket.remoteAddress as? InetSocketAddress)?.hostname
+    val allowedIp: List<IP> = IpHandler().loaderIp()
+    val isLocal = address in allowedIp.map { it.ip }
 
     Command(CommandName.InitExternalModel, "http://localhost/").send(this)
     Command(
@@ -425,9 +429,8 @@ class UserSocket(
 
     loadDependency(resourceManager.get("resources/auth-untrusted.json").readText()).await()
 
-    if (address == "127.0.0.1") {
+    if (isLocal) {
       Command(CommandName.InitInviteModel, "false").send(this)
-
       loadDependency(resourceManager.get("resources/auth.json").readText()).await()
       loadDependency(resourceManager.get("resources/auth-animation.json").readText()).await()
     } else if (!inviteService.enabled && !sentAuthResources) {

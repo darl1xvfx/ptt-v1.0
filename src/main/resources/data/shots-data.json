@@ -145,6 +145,22 @@
       "reload": 1650, "id": "thunder_m3", "max_damage_radius": 70, "min_damage_radius": 140, "min_damage_percent": 50, "has_wwd": true,
       "special_entity": { "impactForce": 6.0, "radiusOfMaxSplashDamage": 0, "minSplashDamagePercent": 25, "splashDamageRadius": 14 }
     }, {
+      "auto_aiming_down": 0.20943951023931956, "auto_aiming_up": 0.15707963267948966, "num_rays_down": 96, "num_rays_up": 72,
+      "reload": 6400, "id": "thunder_magnum_m0", "max_damage_radius": 70, "min_damage_radius": 140, "min_damage_percent": 50, "has_wwd": true,
+      "special_entity": { "impactForce": 4.2, "radiusOfMaxSplashDamage": 0, "minSplashDamagePercent": 20, "splashDamageRadius": 12 }
+    }, {
+      "auto_aiming_down": 0.20943951023931956, "auto_aiming_up": 0.15707963267948966, "num_rays_down": 96, "num_rays_up": 72,
+      "reload": 5800, "id": "thunder_magnum_m1", "max_damage_radius": 70, "min_damage_radius": 140, "min_damage_percent": 50, "has_wwd": true,
+      "special_entity": { "impactForce": 5.3, "radiusOfMaxSplashDamage": 0, "minSplashDamagePercent": 20, "splashDamageRadius": 12 }
+    }, {
+      "auto_aiming_down": 0.20943951023931956, "auto_aiming_up": 0.15707963267948966, "num_rays_down": 96, "num_rays_up": 72,
+      "reload": 5400, "id": "thunder_magnum_m2", "max_damage_radius": 70, "min_damage_radius": 140, "min_damage_percent": 50, "has_wwd": true,
+      "special_entity": { "impactForce": 6.0, "radiusOfMaxSplashDamage": 0, "minSplashDamagePercent": 20, "splashDamageRadius": 12 }
+    }, {
+      "auto_aiming_down": 0.20943951023931956, "auto_aiming_up": 0.15707963267948966, "num_rays_down": 96, "num_rays_up": 72,
+      "reload": 5000, "id": "thunder_magnum_m3", "max_damage_radius": 70, "min_damage_radius": 140, "min_damage_percent": 50, "has_wwd": true,
+      "special_entity": { "impactForce": 7.0, "radiusOfMaxSplashDamage": 0, "minSplashDamagePercent": 20, "splashDamageRadius": 12 }
+    }, {
       "auto_aiming_down": 0.15707963267948966, "auto_aiming_up": 0.10471975511965978, "num_rays_down": 72, "num_rays_up": 48,
       "reload": 5846, "id": "railgun_m0", "has_wwd": false, "special_entity": { "chargingTimeMsec": 1160, "weakeningCoeff": 0.3536 }
     }, {
@@ -166,7 +182,7 @@
         "shrubs_hiding_radius_min": 20, "shrubs_hiding_radius_max": 80, "afterShotPause": 500, "aimingImpact": 5.0396,
         "fastShotEnergy": 443.28, "minAimedShotEnergy": 1000, "rotationCoeffKmin": 1, "rotationCoeffT1": 0, "rotationCoeffT2": 0.95,
         "targetingAcceleration": 0.47123889803846897, "targetingTransitionTime": 500, "reticleImageId": 339826, "fadeInTimeMs": 3000,
-        "laserPointerBlueColor": 48127, "laserPointerRedColor": 16711680, "locallyVisible": false
+        "laserPointerBlueColor": 48127, "laserPointerRedColor": 16711680, "locallyVisible": true
       }
     }, {
       "auto_aiming_down": 0.2617993877991494, "auto_aiming_up": 0.20943951023931956, "num_rays_down": 120, "num_rays_up": 96,
@@ -178,7 +194,7 @@
         "shrubs_hiding_radius_min": 20, "shrubs_hiding_radius_max": 80, "afterShotPause": 500, "aimingImpact": 6.2586,
         "fastShotEnergy": 421.34, "minAimedShotEnergy": 1000, "rotationCoeffKmin": 1, "rotationCoeffT1": 0, "rotationCoeffT2": 0.95,
         "targetingAcceleration": 0.47123889803846897, "targetingTransitionTime": 500, "reticleImageId": 213432, "fadeInTimeMs": 3000,
-        "laserPointerBlueColor": 48127, "laserPointerRedColor": 16711680, "locallyVisible": false
+        "laserPointerBlueColor": 48127, "laserPointerRedColor": 16711680, "locallyVisible": true
       }
     }, {
       "auto_aiming_down": 0.2617993877991494, "auto_aiming_up": 0.20943951023931956, "num_rays_down": 120, "num_rays_up": 96,
@@ -190,7 +206,7 @@
         "shrubs_hiding_radius_min": 20, "shrubs_hiding_radius_max": 80, "afterShotPause": 500, "aimingImpact": 7.4776,
         "fastShotEnergy": 399.4, "minAimedShotEnergy": 1000, "rotationCoeffKmin": 1, "rotationCoeffT1": 0, "rotationCoeffT2": 0.95,
         "targetingAcceleration": 0.47123889803846897, "targetingTransitionTime": 500, "reticleImageId": 575434, "fadeInTimeMs": 3000,
-        "laserPointerBlueColor": 48127, "laserPointerRedColor": 16711680, "locallyVisible": false
+        "laserPointerBlueColor": 48127, "laserPointerRedColor": 16711680, "locallyVisible": true
       }
     }, {
       "auto_aiming_down": 0.2617993877991494, "auto_aiming_up": 0.20943951023931956, "num_rays_down": 120, "num_rays_up": 96,
@@ -202,7 +218,7 @@
         "shrubs_hiding_radius_min": 20, "shrubs_hiding_radius_max": 80, "afterShotPause": 500, "aimingImpact": 8, "fastShotEnergy": 390,
         "minAimedShotEnergy": 1000, "rotationCoeffKmin": 1, "rotationCoeffT1": 0, "rotationCoeffT2": 0.95,
         "targetingAcceleration": 0.47123889803846897, "targetingTransitionTime": 500, "reticleImageId": 213443, "fadeInTimeMs": 3000,
-        "laserPointerBlueColor": 48127, "laserPointerRedColor": 16711680, "locallyVisible": false
+        "laserPointerBlueColor": 48127, "laserPointerRedColor": 16711680, "locallyVisible": true
       }
     }, {
       "auto_aiming_down": 0, "auto_aiming_up": 0, "num_rays_down": 0, "num_rays_up": 0, "reload": 0, "id": "flamethrower_xt_m0",

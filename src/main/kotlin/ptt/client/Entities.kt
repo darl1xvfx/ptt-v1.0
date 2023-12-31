@@ -201,7 +201,7 @@ data class InitMineModelSettings(
   @Json val activationTimeMsec: Int = 1000,
   @Json val farVisibilityRadius: Int = 10,
   @Json val nearVisibilityRadius: Int = 7,
-  @Json val impactForce: Int = 4,
+  @Json val impactForce: Int = 3,
   @Json val minDistanceFromBase: Int = 5,
   @Json val radius: Double = 0.5,
   @Json val minDamage: Int = 300,
