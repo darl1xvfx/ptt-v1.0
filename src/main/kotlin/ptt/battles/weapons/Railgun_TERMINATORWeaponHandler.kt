@@ -34,13 +34,9 @@ class Railgun_TERMINATORWeaponHandler(
       .filter { tank -> target.targets.contains(tank.id) }
       .filter { tank -> tank.state == TankState.Active }
 
-    var damage = random.nextInt(750, 864).coerceAtMost(864).toDouble() // так ну а тут будет такая генерация случайного урона от 750 до 864
-
     targetTanks.forEach { targetTank ->
-      battle.damageProcessor.dealDamage(sourceTank, targetTank, damage, isCritical = false)
-
-      // Генерация нового случайного урона для следующей итерации
-      damage = random.nextInt(750, 864).coerceAtMost(864).toDouble()
+      val damage = damageCalculator.calculate(sourceTank, targetTank)
+      battle.damageProcessor.dealDamage(sourceTank, targetTank, damage.damage, isCritical = false)
     }
 
     Command(CommandName.ShotTarget, sourceTank.id, target.toJson()).send(battle.players.exclude(player).ready())

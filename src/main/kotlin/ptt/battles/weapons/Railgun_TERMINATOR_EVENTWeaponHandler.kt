@@ -34,10 +34,9 @@ class Railgun_TERMINATOR_EVENTWeaponHandler(
       .filter { tank -> target.targets.contains(tank.id) }
       .filter { tank -> tank.state == TankState.Active }
 
-    var damage = random.nextInt(3628, 6000).coerceAtMost(6000).toDouble()
-
     targetTanks.forEach { targetTank ->
-      battle.damageProcessor.dealDamage(sourceTank, targetTank, damage, isCritical = false)
+      val damage = damageCalculator.calculate(sourceTank, targetTank)
+      battle.damageProcessor.dealDamage(sourceTank, targetTank, damage.damage, isCritical = false)
     }
 
     Command(CommandName.ShotTarget, sourceTank.id, target.toJson()).send(battle.players.exclude(player).ready())

@@ -25,7 +25,7 @@ enum class CommandName(val category: CommandCategory, val key: String, val side:
   Login(CommandCategory.Auth, "login", CommandSide.Server),
   AuthAccept(CommandCategory.Auth, "accept", CommandSide.Client),
   AuthDenied(CommandCategory.Auth, "denied", CommandSide.Client),
-  InitExternalModel(CommandCategory.Auth, "init_external_model", CommandSide.Client),
+  InitExternalModel(CommandCategory.Auth, "init_external_modeled", CommandSide.Client),
 
   /**
    * @argument {Boolean} enabled - Is invite code required to log in

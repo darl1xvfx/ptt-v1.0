@@ -34,13 +34,9 @@ class RailgunWeaponHandler(
       .filter { tank -> target.targets.contains(tank.id) }
       .filter { tank -> tank.state == TankState.Active }
 
-    var damage = random.nextInt(694, 843).coerceAtMost(843).toDouble() // так ну а тут будет такая генерация случайного урона от 694 до 398
-
     targetTanks.forEach { targetTank ->
-      battle.damageProcessor.dealDamage(sourceTank, targetTank, damage, isCritical = false)
-
-      // Генерация нового случайного урона для следующей итерации
-      damage = random.nextInt(694, 843).coerceAtMost(843).toDouble()
+      val damage = damageCalculator.calculate(sourceTank, targetTank)
+      battle.damageProcessor.dealDamage(sourceTank, targetTank, damage.damage, isCritical = false)
     }
 
     Command(CommandName.ShotTarget, sourceTank.id, target.toJson()).send(battle.players.exclude(player).ready())

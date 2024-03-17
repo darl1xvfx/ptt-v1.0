@@ -143,7 +143,7 @@
     }, {
       "auto_aiming_down": 0.20943951023931956, "auto_aiming_up": 0.15707963267948966, "num_rays_down": 96, "num_rays_up": 72,
       "reload": 1650, "id": "thunder_m3", "max_damage_radius": 70, "min_damage_radius": 140, "min_damage_percent": 50, "has_wwd": true,
-      "special_entity": { "impactForce": 6.0, "radiusOfMaxSplashDamage": 0, "minSplashDamagePercent": 25, "splashDamageRadius": 14 }
+      "special_entity": { "impactForce": 6, "radiusOfMaxSplashDamage": 0, "minSplashDamagePercent": 25, "splashDamageRadius": 12 }
     }, {
       "auto_aiming_down": 0.20943951023931956, "auto_aiming_up": 0.15707963267948966, "num_rays_down": 96, "num_rays_up": 72,
       "reload": 6400, "id": "thunder_magnum_m0", "max_damage_radius": 70, "min_damage_radius": 140, "min_damage_percent": 50, "has_wwd": true,

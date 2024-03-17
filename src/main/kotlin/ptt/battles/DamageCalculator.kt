@@ -37,10 +37,12 @@ class DamageCalculator : IDamageCalculator {
                      ?: config.fixed?.value
                      ?: throw IllegalStateException("No base damage component found for ${weapon.item.mountName}")
     val weakening = config.weakening?.let { getWeakeningMultiplier(it, distance) } ?: 1.0
-    val splashDamage = if(splash) config.splash?.let { getSplashMultiplier(it, distance) } ?: 1.0 else 1.0
+    val splashDamage = 0.65
+
+//  val splashDamage = if(splash) config.splash?.let { getSplashMultiplier(it, distance) } ?: 1.0 else 1.0
 
     var damage = baseDamage
-    damage *= weakening
+      damage *= weakening
     damage *= splashDamage
 
     logger.debug {

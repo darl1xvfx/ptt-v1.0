@@ -17,7 +17,7 @@ class BattleGoldBonus(battle: Battle, id: Int, position: Vector3, rotation: Quat
   override val type: BonusType = BonusType.Gold
 
   override suspend fun spawn() {
-    Command(CommandName.SpawnGold, "Скоро будет сброшен золотой ящик", 9.toString()).sendTo(battle)
+    Command(CommandName.SpawnGold, "penis", 9.toString()).sendTo(battle)
     delay(20.seconds.inWholeMilliseconds)
     super.spawn()
   }

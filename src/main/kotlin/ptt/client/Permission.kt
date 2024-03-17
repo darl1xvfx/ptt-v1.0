@@ -1,9 +1,9 @@
 package ptt.client
 
 enum class Permissions(bit: Int) : IBitfield {
-    Owner(1),
-    Moderator(2),
-    User(3);
+    Owner(0),
+    Moderator(1),
+    User(2);
 
     override val bitfield = 1L shl bit
 

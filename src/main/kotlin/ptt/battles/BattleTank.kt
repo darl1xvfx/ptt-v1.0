@@ -7,6 +7,7 @@ import mu.KotlinLogging
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import ptt.ISocketServer
+import ptt.battles.effect.NitroEffect
 import ptt.battles.effect.TankEffect
 import ptt.battles.mode.CaptureTheFlagModeHandler
 import ptt.battles.mode.FlagCarryingState
@@ -17,9 +18,8 @@ import ptt.battles.weapons.WeaponHandler
 import ptt.client.*
 import ptt.commands.Command
 import ptt.commands.CommandName
-import ptt.garage.ServerGarageItemHullModification
-import ptt.garage.ServerGarageUserItemHull
-import ptt.garage.ServerGarageUserItemPaint
+import ptt.extensions.singleOrNullOf
+import ptt.garage.*
 import ptt.math.Quaternion
 import ptt.math.Vector3
 import ptt.math.distanceTo
@@ -288,35 +288,32 @@ class BattleTank(
       CommandName.InitTank,
       getInitTank().toJson()
     ).send(battle.players.ready())
+
+    val tankId = getInitTank().hull_id
+    val useCrisisSpeed = tankId == "wasp_xt_m0"
+
   }
 
   suspend fun spawn() {
     state = TankState.SemiActive
 
     // ptt-(Drlxzar): Add spawn event?
-    if(player.equipmentChanged) {
+    if (player.equipmentChanged) {
       player.equipmentChanged = false
       player.changeEquipment()
     }
 
     updateHealth()
 
+    val spawnTankData = getSpawnTank()
     Command(
       CommandName.SpawnTank,
-      getSpawnTank().toJson()
+      spawnTankData.toJson()
     ).send(battle.players.ready())
 
-    if (weapon is Railgun_TERMINATOR_EVENTWeaponHandler) {
-      val battleplayers = battle.players.mapNotNull { it.tank }
-      val playerName = player.user.username
-      val message = when (socket.locale) {
-        SocketLocale.Russian   -> "$playerName — новый Джаггернаут!"
-        SocketLocale.English   -> "$playerName — new Juggernaut!"
-        else                   -> "$playerName — new Juggernaut!"
-      }
-      Command(CommandName.JuggernautSpawn, message, 60.toString()).send(battleplayers)
-    }
   }
+
+
 
   suspend fun updateHealth() {
 
@@ -378,26 +375,28 @@ fun BattleTank.getInitTank() = InitTankData(
   sfxData = (weapon.item.modification.visual ?: weapon.item.marketItem.modifications[0]!!.visual)!!.toJson() // ptt-(Drlxzar)
 )
 
-fun BattleTank.getSpawnTank() = SpawnTankData(
-  tank_id = id,
-  health = clientHealth,
-  incration_id = player.incarnation,
-  team_type = player.team,
-  x = position.x,
-  y = position.y,
-  z = position.z,
-  rot = orientation.toEulerAngles().z,
+fun BattleTank.getSpawnTank(): SpawnTankData {
+  return SpawnTankData(
+    tank_id = id,
+    health = clientHealth,
+    incration_id = player.incarnation,
+    team_type = player.team,
+    x = position.x,
+    y = position.y,
+    z = position.z,
+    rot = orientation.toEulerAngles().z,
 
-  // Hull physics
-  speed = hull.modification.physics.speed,
-  turn_speed = hull.modification.physics.turnSpeed,
-  acceleration = hull.modification.physics.acceleration,
-  reverseAcceleration = hull.modification.physics.reverseAcceleration,
-  sideAcceleration = hull.modification.physics.sideAcceleration,
-  turnAcceleration = hull.modification.physics.turnAcceleration,
-  reverseTurnAcceleration = hull.modification.physics.reverseTurnAcceleration,
+    // Физика корпуса
+    speed = hull.modification.physics.speed,
+    turn_speed = hull.modification.physics.turnSpeed,
+    acceleration = hull.modification.physics.acceleration,
+    reverseAcceleration = hull.modification.physics.reverseAcceleration,
+    sideAcceleration = hull.modification.physics.sideAcceleration,
+    turnAcceleration = hull.modification.physics.turnAcceleration,
+    reverseTurnAcceleration = hull.modification.physics.reverseTurnAcceleration,
 
-  // Weapon physics
-  turret_rotation_speed = weapon.item.modification.physics.turretRotationSpeed,
-  turretTurnAcceleration = weapon.item.modification.physics.turretTurnAcceleration
-)
+    // Физика оружия
+    turret_rotation_speed = weapon.item.modification.physics.turretRotationSpeed,
+    turretTurnAcceleration = weapon.item.modification.physics.turretTurnAcceleration
+  )
+}

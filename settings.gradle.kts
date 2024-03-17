@@ -1,1 +1,1 @@
-rootProject.name = "ptt v1.0 new start"
+rootProject.name = "ptt v2.0"

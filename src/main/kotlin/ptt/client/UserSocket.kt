@@ -382,7 +382,7 @@ class UserSocket(
     Command(
       CommandName.InitPanel,
       InitPanelData(
-        //name = "[Penis] ${user.username}",
+        // name = "[Penis] ${user.username}",
         name = user.username,
         crystall = user.crystals,
         rang = user.rank.value,
@@ -612,6 +612,9 @@ class UserSocket(
     battle?.let { battle ->
       Command(CommandName.SetBattleRank, user.username, user.rank.value.toString()).sendTo(battle)
     }
+    user.crystals = (user.crystals + user.rank.bonusCrystals).coerceAtLeast(0)
+    this.updateCrystals()
+    userRepository.updateUser(user)
 
     if(screen == Screen.Garage) {
       // Refresh garage to prevent items from being duplicated (client-side bug)

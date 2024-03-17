@@ -109,6 +109,7 @@ class DamageProcessor(
     }
   }
 
+
     override suspend fun dealDamage(target: BattleTank, damage: Double, isCritical: Boolean): DamageType {
     var damageType = if(isCritical) DamageType.Critical else DamageType.Normal
 

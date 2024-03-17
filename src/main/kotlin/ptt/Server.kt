@@ -9,9 +9,11 @@ import org.reflections.Reflections
 import org.reflections.scanners.Scanners
 import ptt.api.IApiServer
 import ptt.battles.BattleProperty
+import ptt.battles.BattleTank
 import ptt.battles.IBattleProcessor
 import ptt.battles.bonus.BattleGoldBonus
 import ptt.battles.bonus.BattleGoldKilledBonus
+import ptt.battles.effect.NitroEffect
 import ptt.battles.map.IMapRegistry
 import ptt.bot.discord.CommandHandler
 import ptt.bot.discord.DiscordBot
@@ -434,6 +436,84 @@ class Server : KoinComponent {
           reply("Успешно добавленно $amount очков опыта администратору ${user.username}")
         }
       }
+
+
+      command("addpermission") {
+        permissions(Permissions.Owner, Permissions.Moderator)
+        description("Добавить разрешения пользователю")
+        alias("addpermissions")
+
+        argument("permissions", String::class) {
+          description("Количество разрешений для добавления")
+        }
+
+        argument("user", String::class) {
+          description("Имя пользователя для добавления разрешений")
+          optional()
+        }
+
+        handler {
+          val permissionsToAddString: String? = arguments["permissions"]
+          val permissionsToAdd: Int = (permissionsToAddString?.toIntOrNull() ?: Permissions.User.toBitfield()) as Int
+          val username: String = arguments["user"]
+
+          val targetUser = userRepository.getUser(username)
+          if (targetUser == null) {
+            reply("Пользователь не найден: $username")
+            return@handler
+          }
+
+          val permissions = Bitfield<Permissions>(permissionsToAdd.toLong())
+          targetUser.permissions.plusAssign(permissions)
+          userRepository.updateUser(targetUser)
+
+          val addedPermissionsNames = Permissions.values()
+            .filter { permissions has it }
+            .joinToString(", ") { it.name }
+
+          reply("Успешно добавлены разрешения: $addedPermissionsNames пользователю: ${targetUser.username}")
+        }
+      }
+
+      command("removepermission") {
+        permissions(Permissions.Owner, Permissions.Moderator)
+        description("Удалить разрешения у пользователя")
+        alias("removepermissions")
+
+        argument("permissions", String::class) {
+          description("Количество разрешений для удаления")
+        }
+
+        argument("user", String::class) {
+          description("Имя пользователя для удаления разрешений")
+          optional()
+        }
+
+        handler {
+          val permissionsToRemoveString: String? = arguments["permissions"]
+          val permissionsToRemove: Int = permissionsToRemoveString?.toIntOrNull() ?: 0 // По умолчанию ничего не удаляем
+          val username: String = arguments["user"]
+
+          val targetUser = userRepository.getUser(username)
+          if (targetUser == null) {
+            reply("Пользователь не найден: $username")
+            return@handler
+          }
+
+          val permissions = Bitfield<Permissions>(permissionsToRemove.toLong())
+          targetUser.permissions.minusAssign(permissions)
+          userRepository.updateUser(targetUser)
+
+          val removedPermissionsNames = Permissions.values()
+            .filter { permissions has it }
+            .joinToString(", ") { it.name }
+
+          reply("Успешно удалены разрешения: $removedPermissionsNames у пользователя: ${targetUser.username}")
+        }
+      }
+
+
+
       command("addcry") {
         permissions(Permissions.Owner, Permissions.Moderator, Permissions.User)
         description("Add crystals to a player")

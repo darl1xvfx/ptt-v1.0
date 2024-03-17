@@ -48,18 +48,17 @@ class Isida_XTWeaponHandler(
       else               -> IsidaFireMode.Damage
     }
 
-    // Генерация случайного урона от 127 до 372
-    val randomDamage = random.nextInt(127, 372).coerceAtMost(372).toDouble()
+    val damage = damageCalculator.calculate(sourceTank, targetTank)
 
     // ptt-(Drlxzar): Damage timing is not checked on server, exploitation is possible
     if(fireStarted) {
       when(fireMode) {
         IsidaFireMode.Damage -> {
-          battle.damageProcessor.dealDamage(sourceTank, targetTank, randomDamage.toDouble(), isCritical = false)
-          battle.damageProcessor.heal(sourceTank, randomDamage.toDouble())
+          battle.damageProcessor.dealDamage(sourceTank, targetTank, damage.damage, isCritical = false)
+          battle.damageProcessor.heal(sourceTank, damage.damage)
         }
 
-        IsidaFireMode.Heal   -> battle.damageProcessor.heal(sourceTank, targetTank, randomDamage.toDouble())
+        IsidaFireMode.Heal   -> battle.damageProcessor.heal(sourceTank, targetTank, damage.damage)
       }
       return
     }
